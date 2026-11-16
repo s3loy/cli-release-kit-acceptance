@@ -1,4 +1,4 @@
-name: private Linux compatibility comparison
+name: Linux compatibility comparison
 
 on:
   push:
@@ -13,7 +13,7 @@ concurrency:
 
 jobs:
   build:
-    if: github.repository == 's3loy/cli-release-kit-acceptance' && github.event.repository.private == true
+    if: github.repository == 's3loy/cli-release-kit-acceptance'
     runs-on: ${{ matrix.runner }}
     timeout-minutes: 40
     strategy:
@@ -34,7 +34,7 @@ jobs:
         run: rustup toolchain install 1.96.0 --profile minimal
       - name: Build, self-package and probe common userspaces
         run: python3 compatibility/run.py --runner '${{ matrix.runner }}' --output "$RUNNER_TEMP/compatibility"
-      - name: Preserve private evidence and artifacts
+      - name: Preserve evidence and artifacts
         if: always()
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
@@ -57,7 +57,7 @@ jobs:
         with:
           persist-credentials: false
           fetch-depth: 1
-      - name: Download this run's private reports
+      - name: Download this run's reports
         uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
         with:
           pattern: compatibility-ubuntu-*
