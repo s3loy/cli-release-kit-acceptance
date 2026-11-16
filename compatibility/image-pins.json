@@ -1,0 +1,30 @@
+[
+  {
+    "name": "ubuntu:20.04",
+    "reference": "library/ubuntu@sha256:c664f8f86ed5a386b0a340d981b8f81714e21a8b9c73f658c4bea56aa179d54a",
+    "index_digest": "sha256:8feb4d8ca5354def3d8fce243717141ce31e2c428701f6682bd2fafe15388214",
+    "platform": "linux/amd64",
+    "registry": "https://registry-1.docker.io"
+  },
+  {
+    "name": "ubuntu:22.04",
+    "reference": "library/ubuntu@sha256:45e9ddc6895604674618a409ca9f73d301da8fdb75fe330e8e9a27b3b219e4ad",
+    "index_digest": "sha256:9abcaffc92a5279fff3a6a41635c0800ea33e528425fb389658806476e7defde",
+    "platform": "linux/amd64",
+    "registry": "https://registry-1.docker.io"
+  },
+  {
+    "name": "ubuntu:24.04",
+    "reference": "library/ubuntu@sha256:77eb101c607d6e3d4f5ad0c8a02c2136c689b98aba1f359e6502ba517e5c57ec",
+    "index_digest": "sha256:73b999393d07f2bf65a40373778a44dc9a6d54ad7718d29247d8ff9413c4d6a8",
+    "platform": "linux/amd64",
+    "registry": "https://registry-1.docker.io"
+  },
+  {
+    "name": "debian:bullseye-slim",
+    "reference": "library/debian@sha256:70509c95d1857a3704c0a5d92ee2e0adac95f612a9386889d70760bfd7c1ebba",
+    "index_digest": "sha256:e5b6442dd2e9684cf5e87d8338b5968f3b348636fc0be6d7850a381e3731a2bd",
+    "platform": "linux/amd64",
+    "registry": "https://registry-1.docker.io"
+  }
+]
