@@ -14,6 +14,7 @@ import sys
 import tarfile
 import time
 import traceback
+from perl_dependencies import prepare as prepare_perl_dependencies
 
 
 SCRIPT_DIR = Path(__file__).resolve().parent
@@ -50,14 +51,16 @@ def sha(path):
     return digest.hexdigest()
 
 
-def run(name, argv, cwd=None, timeout=300):
+def run(name, argv, cwd=None, timeout=300, stdin_path=None, stdout_path=None):
     remaining = min(timeout, DEADLINE - time.monotonic())
     if remaining <= 0:
         raise TimeoutError("40-minute case build budget exhausted")
     started = time.monotonic()
-    with (LOGS / (name + ".stdout")).open("wb") as stdout, (LOGS / (name + ".stderr")).open("wb") as stderr:
+    output_path = stdout_path or LOGS / (name + ".stdout")
+    with output_path.open("wb") as stdout, (LOGS / (name + ".stderr")).open("wb") as stderr, \
+            (stdin_path or Path(os.devnull)).open("rb") as stdin:
         process = subprocess.Popen([str(x) for x in argv], cwd=cwd, env=ENV,
-                                   stdout=stdout, stderr=stderr, start_new_session=True)
+                                   stdin=stdin, stdout=stdout, stderr=stderr, start_new_session=True)
         timed_out = False
         try:
             code = process.wait(timeout=remaining)
@@ -72,12 +75,13 @@ def run(name, argv, cwd=None, timeout=300):
     COMMANDS.append({"name": name, "stage": STAGE, "argv": [str(x) for x in argv],
                      "cwd": str(cwd) if cwd else None, "exit_code": code,
                      "timed_out": timed_out, "seconds": round(time.monotonic() - started, 3),
-                     "stdout": "logs/" + name + ".stdout", "stderr": "logs/" + name + ".stderr"})
+                     "stdin": str(stdin_path.relative_to(OUT)) if stdin_path else None,
+                     "stdout": str(output_path.relative_to(OUT)), "stderr": "logs/" + name + ".stderr"})
     dump(EVIDENCE / "commands.json", COMMANDS)
     print(name, "exit=" + str(code), "seconds=" + str(COMMANDS[-1]["seconds"]), flush=True)
     if code != 0 or timed_out:
         raise RuntimeError(name + " failed; preserve its first stdout/stderr")
-    return (LOGS / (name + ".stdout")).read_text(errors="replace")
+    return output_path.read_text(errors="replace") if stdout_path is None else ""
 
 
 def extract(archive, destination):
@@ -131,6 +135,8 @@ def main():
     libc = (LOGS / "libc-version.stdout").read_text().strip()
     assert libc == "glibc 2.17", libc
     assert "x86_64" in (LOGS / "c-compiler-target.stdout").read_text()
+    STAGE = "perl-dependency-preparation"
+    prepare_perl_dependencies(PINS, INPUTS, OUT, ENV, run, dump, inventory, sha)
     STAGE = "native-dependency-build"
     openssl_build = work / "openssl-build"
     openssl_build.mkdir()

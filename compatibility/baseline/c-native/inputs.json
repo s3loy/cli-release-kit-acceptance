@@ -90,6 +90,120 @@
       "url": "https://openssl-library.org/source/pubkeys.asc",
       "sha256": "56e106cd1c44bdb117aec24795f6dfbecaa9bfa0a2901b85331f0059aad16d53",
       "size": 45049
+    },
+    {
+      "filename": "perl-IPC-Cmd-0.80-4.el7.noarch.rpm",
+      "url": "https://vault.centos.org/7.9.2009/os/x86_64/Packages/perl-IPC-Cmd-0.80-4.el7.noarch.rpm",
+      "sha256": "b47d1612ddc56b12e176de011456c1b141e5661418f2ae6e8340ce652e9d2682",
+      "size": 34724
+    },
+    {
+      "filename": "perl-ExtUtils-MakeMaker-6.68-3.el7.noarch.rpm",
+      "url": "https://vault.centos.org/7.9.2009/os/x86_64/Packages/perl-ExtUtils-MakeMaker-6.68-3.el7.noarch.rpm",
+      "sha256": "d3ae58b2bad3b494352f86e35d098f251ec527cd5a3d66ca820c4898e4c9ec68",
+      "size": 281444
+    },
+    {
+      "filename": "perl-Locale-Maketext-Simple-0.21-299.el7_9.noarch.rpm",
+      "url": "https://vault.centos.org/7.9.2009/updates/x86_64/Packages/perl-Locale-Maketext-Simple-0.21-299.el7_9.noarch.rpm",
+      "sha256": "d357914edfc5e38eb99a385b00d0fb43d1c581d9af1d12406c5dbae63542e08e",
+      "size": 51900
+    },
+    {
+      "filename": "perl-Module-Load-Conditional-0.54-3.el7.noarch.rpm",
+      "url": "https://vault.centos.org/7.9.2009/os/x86_64/Packages/perl-Module-Load-Conditional-0.54-3.el7.noarch.rpm",
+      "sha256": "3d772781a375a5cecfef82aaed2158a15f2882407317d495fdf19bbf1b4e3118",
+      "size": 18304
+    },
+    {
+      "filename": "perl-Params-Check-0.38-2.el7.noarch.rpm",
+      "url": "https://vault.centos.org/7.9.2009/os/x86_64/Packages/perl-Params-Check-0.38-2.el7.noarch.rpm",
+      "sha256": "a9e44da66f5fd0d7076d1c9220ad49559c49251fd2035f3044e9f9ab5b81e849",
+      "size": 18840
+    },
+    {
+      "filename": "perl-ExtUtils-Install-1.58-299.el7_9.noarch.rpm",
+      "url": "https://vault.centos.org/7.9.2009/updates/x86_64/Packages/perl-ExtUtils-Install-1.58-299.el7_9.noarch.rpm",
+      "sha256": "03c52d5fc8024d804e827e048d07e835a984ac5f5d9391614c51b0905c9772a0",
+      "size": 76948
+    },
+    {
+      "filename": "perl-ExtUtils-Manifest-1.61-244.el7.noarch.rpm",
+      "url": "https://vault.centos.org/7.9.2009/os/x86_64/Packages/perl-ExtUtils-Manifest-1.61-244.el7.noarch.rpm",
+      "sha256": "6f56b7c9a284a11caa5cdf775f3e34928b22176998fcfb60587ee01c8a2ba386",
+      "size": 31356
+    },
+    {
+      "filename": "perl-Locale-Maketext-1.23-3.el7.noarch.rpm",
+      "url": "https://vault.centos.org/7.9.2009/os/x86_64/Packages/perl-Locale-Maketext-1.23-3.el7.noarch.rpm",
+      "sha256": "3bb53192682ff63af3e3b9bcc32ef8430de931b4c7795374bcab4038ee696b21",
+      "size": 95368
+    },
+    {
+      "filename": "perl-Module-CoreList-2.76.02-299.el7_9.noarch.rpm",
+      "url": "https://vault.centos.org/7.9.2009/updates/x86_64/Packages/perl-Module-CoreList-2.76.02-299.el7_9.noarch.rpm",
+      "sha256": "6bc5d11d6925535123b8762c2ad80e64d81a9fc384b6def702e2585966637c24",
+      "size": 88316
+    },
+    {
+      "filename": "perl-Module-Load-0.24-3.el7.noarch.rpm",
+      "url": "https://vault.centos.org/7.9.2009/os/x86_64/Packages/perl-Module-Load-0.24-3.el7.noarch.rpm",
+      "sha256": "b0dc38a60ddf72cd3d030df03b1497d7e1fe6542491ac91e021b6afbdd642de9",
+      "size": 11456
+    },
+    {
+      "filename": "perl-Module-Metadata-1.000018-2.el7.noarch.rpm",
+      "url": "https://vault.centos.org/7.9.2009/os/x86_64/Packages/perl-Module-Metadata-1.000018-2.el7.noarch.rpm",
+      "sha256": "85c7125288c6cc926e4a5ec009a3f1240c7fdbf4140b4728be2e4860f53cc4a2",
+      "size": 27072
+    },
+    {
+      "filename": "perl-version-0.99.07-6.el7.x86_64.rpm",
+      "url": "https://vault.centos.org/7.9.2009/os/x86_64/Packages/perl-version-0.99.07-6.el7.x86_64.rpm",
+      "sha256": "e09e651a08769228e3255303e08ed0dff9134aa5ac412dfeda857f0ae80428c8",
+      "size": 86328
+    },
+    {
+      "filename": "perl-devel-5.16.3-299.el7_9.x86_64.rpm",
+      "url": "https://vault.centos.org/7.9.2009/updates/x86_64/Packages/perl-devel-5.16.3-299.el7_9.x86_64.rpm",
+      "sha256": "ed34b500e7e1951b8208f45e26b323c12c4fe5f89a8823445ddeeb1f28d5e93e",
+      "size": 464804
+    },
+    {
+      "filename": "gdbm-devel-1.10-8.el7.x86_64.rpm",
+      "url": "https://vault.centos.org/7.9.2009/os/x86_64/Packages/gdbm-devel-1.10-8.el7.x86_64.rpm",
+      "sha256": "fc02a803f89c0d68de96bcc7a46d7cdf8768e62577b27aed9c531e6fb2818c30",
+      "size": 48240
+    },
+    {
+      "filename": "libdb-devel-5.3.21-25.el7.x86_64.rpm",
+      "url": "https://vault.centos.org/7.9.2009/os/x86_64/Packages/libdb-devel-5.3.21-25.el7.x86_64.rpm",
+      "sha256": "87bc061cbab0538af239488420ba01378e212fc882f1cfa6a23c652687c47ba4",
+      "size": 39456
+    },
+    {
+      "filename": "perl-ExtUtils-ParseXS-3.18-3.el7.noarch.rpm",
+      "url": "https://vault.centos.org/7.9.2009/os/x86_64/Packages/perl-ExtUtils-ParseXS-3.18-3.el7.noarch.rpm",
+      "sha256": "fbd72e0cc1c3411194469e74e329707ba670d7e4e2eb546c02d4fbe1ad5ea287",
+      "size": 78696
+    },
+    {
+      "filename": "systemtap-sdt-devel-4.0-13.el7.x86_64.rpm",
+      "url": "https://vault.centos.org/7.9.2009/os/x86_64/Packages/systemtap-sdt-devel-4.0-13.el7.x86_64.rpm",
+      "sha256": "9fcd703556e70b4ad73d56c02c0d3a1961eb7435b4374a9a37d526356da0d5fa",
+      "size": 78152
+    },
+    {
+      "filename": "pyparsing-1.5.6-9.el7.noarch.rpm",
+      "url": "https://vault.centos.org/7.9.2009/os/x86_64/Packages/pyparsing-1.5.6-9.el7.noarch.rpm",
+      "sha256": "44987aea8a0b5d8d47a0aa31a6b90be291a8f9d1162e656a14736312f13a604d",
+      "size": 96088
+    },
+    {
+      "filename": "RPM-GPG-KEY-CentOS-7",
+      "url": "https://www.centos.org/keys/RPM-GPG-KEY-CentOS-7",
+      "sha256": "8b48b04b336bd725b9e611c441c65456a4168083c4febc28e88828d8ec14827f",
+      "size": 1690
     }
   ],
   "signatures": [
@@ -140,5 +254,1496 @@
     "original_sha256": "5c77b154ff0f0a08f68913530e70baf8898d9291588a74262263b23b4a8a4971",
     "adapted_sha256": "22af7fcb27803d45c4f089292bdb742589334e7b127dacbe3c4a4703e90bca21",
     "assertion_count": 12
+  },
+  "rpm_build_dependencies": {
+    "scope": "Only offline, signed CentOS 7 Perl build-tool dependency payloads. No package installation or image upgrade. Native rpm --test on a copied database is mandatory.",
+    "key": {
+      "filename": "RPM-GPG-KEY-CentOS-7",
+      "url": "https://www.centos.org/keys/RPM-GPG-KEY-CentOS-7",
+      "sha256": "8b48b04b336bd725b9e611c441c65456a4168083c4febc28e88828d8ec14827f",
+      "size": 1690,
+      "primary_fingerprint": "6341AB2753D78A78A7C27BB124C6A8A7F4A80EB5",
+      "key_id": "f4a80eb5",
+      "trust_source": "https://www.centos.org/keys/#centos-7"
+    },
+    "packages": [
+      {
+        "filename": "perl-IPC-Cmd-0.80-4.el7.noarch.rpm",
+        "url": "https://vault.centos.org/7.9.2009/os/x86_64/Packages/perl-IPC-Cmd-0.80-4.el7.noarch.rpm",
+        "sha256": "b47d1612ddc56b12e176de011456c1b141e5661418f2ae6e8340ce652e9d2682",
+        "size": 34724,
+        "nvra": "perl-IPC-Cmd-0.80-4.el7.noarch",
+        "name": "perl-IPC-Cmd",
+        "epoch": "1",
+        "version": "0.80",
+        "release": "4.el7",
+        "arch": "noarch",
+        "repository": "os",
+        "requires": [
+          {
+            "name": "perl(:MODULE_COMPAT_5.16.3)"
+          },
+          {
+            "name": "perl(Carp)"
+          },
+          {
+            "name": "perl(Exporter)"
+          },
+          {
+            "name": "perl(ExtUtils::MakeMaker)"
+          },
+          {
+            "name": "perl(File::Spec)"
+          },
+          {
+            "name": "perl(Locale::Maketext::Simple)"
+          },
+          {
+            "name": "perl(Module::Load::Conditional)"
+          },
+          {
+            "name": "perl(POSIX)"
+          },
+          {
+            "name": "perl(Params::Check)",
+            "flags": "GE",
+            "epoch": "0",
+            "ver": "0.20"
+          },
+          {
+            "name": "perl(Socket)"
+          },
+          {
+            "name": "perl(Symbol)"
+          },
+          {
+            "name": "perl(Text::ParseWords)"
+          },
+          {
+            "name": "perl(constant)"
+          },
+          {
+            "name": "perl(strict)"
+          },
+          {
+            "name": "perl(vars)"
+          }
+        ],
+        "provides": [
+          {
+            "name": "perl(IPC::Cmd)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "0.80"
+          },
+          {
+            "name": "perl-IPC-Cmd",
+            "flags": "EQ",
+            "epoch": "1",
+            "ver": "0.80",
+            "rel": "4.el7"
+          }
+        ]
+      },
+      {
+        "filename": "perl-ExtUtils-MakeMaker-6.68-3.el7.noarch.rpm",
+        "url": "https://vault.centos.org/7.9.2009/os/x86_64/Packages/perl-ExtUtils-MakeMaker-6.68-3.el7.noarch.rpm",
+        "sha256": "d3ae58b2bad3b494352f86e35d098f251ec527cd5a3d66ca820c4898e4c9ec68",
+        "size": 281444,
+        "nvra": "perl-ExtUtils-MakeMaker-6.68-3.el7.noarch",
+        "name": "perl-ExtUtils-MakeMaker",
+        "epoch": "0",
+        "version": "6.68",
+        "release": "3.el7",
+        "arch": "noarch",
+        "repository": "os",
+        "requires": [
+          {
+            "name": "/usr/bin/perl"
+          },
+          {
+            "name": "perl",
+            "flags": "GE",
+            "epoch": "0",
+            "ver": "5.006"
+          },
+          {
+            "name": "perl(:MODULE_COMPAT_5.16.3)"
+          },
+          {
+            "name": "perl(AutoSplit)"
+          },
+          {
+            "name": "perl(Carp)"
+          },
+          {
+            "name": "perl(Config)"
+          },
+          {
+            "name": "perl(Cwd)"
+          },
+          {
+            "name": "perl(DirHandle)"
+          },
+          {
+            "name": "perl(Exporter)"
+          },
+          {
+            "name": "perl(ExtUtils::Command)"
+          },
+          {
+            "name": "perl(ExtUtils::Install)"
+          },
+          {
+            "name": "perl(ExtUtils::Installed)"
+          },
+          {
+            "name": "perl(ExtUtils::Manifest)"
+          },
+          {
+            "name": "perl(ExtUtils::Packlist)"
+          },
+          {
+            "name": "perl(File::Basename)"
+          },
+          {
+            "name": "perl(File::Find)"
+          },
+          {
+            "name": "perl(File::Path)"
+          },
+          {
+            "name": "perl(File::Spec)",
+            "flags": "GE",
+            "epoch": "0",
+            "ver": "0.8"
+          },
+          {
+            "name": "perl(Getopt::Long)"
+          },
+          {
+            "name": "perl(IO::File)"
+          },
+          {
+            "name": "perl(Pod::Man)"
+          },
+          {
+            "name": "perl(Test::Harness)"
+          },
+          {
+            "name": "perl(lib)"
+          },
+          {
+            "name": "perl(strict)"
+          },
+          {
+            "name": "perl(vars)"
+          },
+          {
+            "name": "perl(warnings)"
+          }
+        ],
+        "provides": [
+          {
+            "name": "perl(ExtUtils::Command::MM)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "6.68"
+          },
+          {
+            "name": "perl(ExtUtils::Liblist)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "6.68"
+          },
+          {
+            "name": "perl(ExtUtils::Liblist::Kid)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "6.68"
+          },
+          {
+            "name": "perl(ExtUtils::MM)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "6.68"
+          },
+          {
+            "name": "perl(ExtUtils::MM_AIX)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "6.68"
+          },
+          {
+            "name": "perl(ExtUtils::MM_Any)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "6.68"
+          },
+          {
+            "name": "perl(ExtUtils::MM_BeOS)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "6.68"
+          },
+          {
+            "name": "perl(ExtUtils::MM_Cygwin)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "6.68"
+          },
+          {
+            "name": "perl(ExtUtils::MM_DOS)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "6.68"
+          },
+          {
+            "name": "perl(ExtUtils::MM_Darwin)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "6.68"
+          },
+          {
+            "name": "perl(ExtUtils::MM_MacOS)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "6.68"
+          },
+          {
+            "name": "perl(ExtUtils::MM_NW5)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "6.68"
+          },
+          {
+            "name": "perl(ExtUtils::MM_OS2)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "6.68"
+          },
+          {
+            "name": "perl(ExtUtils::MM_QNX)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "6.68"
+          },
+          {
+            "name": "perl(ExtUtils::MM_UWIN)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "6.68"
+          },
+          {
+            "name": "perl(ExtUtils::MM_Unix)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "6.68"
+          },
+          {
+            "name": "perl(ExtUtils::MM_VMS)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "6.68"
+          },
+          {
+            "name": "perl(ExtUtils::MM_VOS)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "6.68"
+          },
+          {
+            "name": "perl(ExtUtils::MM_Win32)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "6.68"
+          },
+          {
+            "name": "perl(ExtUtils::MM_Win95)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "6.68"
+          },
+          {
+            "name": "perl(ExtUtils::MY)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "6.68"
+          },
+          {
+            "name": "perl(ExtUtils::MakeMaker)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "6.68"
+          },
+          {
+            "name": "perl(ExtUtils::MakeMaker::Config)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "6.68"
+          },
+          {
+            "name": "perl(ExtUtils::Mkbootstrap)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "6.68"
+          },
+          {
+            "name": "perl(ExtUtils::Mksymlists)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "6.68"
+          },
+          {
+            "name": "perl(ExtUtils::testlib)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "6.68"
+          },
+          {
+            "name": "perl(MM)"
+          },
+          {
+            "name": "perl(MY)"
+          },
+          {
+            "name": "perl-ExtUtils-MakeMaker",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "6.68",
+            "rel": "3.el7"
+          },
+          {
+            "name": "/usr/bin/instmodsh"
+          }
+        ]
+      },
+      {
+        "filename": "perl-Locale-Maketext-Simple-0.21-299.el7_9.noarch.rpm",
+        "url": "https://vault.centos.org/7.9.2009/updates/x86_64/Packages/perl-Locale-Maketext-Simple-0.21-299.el7_9.noarch.rpm",
+        "sha256": "d357914edfc5e38eb99a385b00d0fb43d1c581d9af1d12406c5dbae63542e08e",
+        "size": 51900,
+        "nvra": "perl-Locale-Maketext-Simple-0.21-299.el7_9.noarch",
+        "name": "perl-Locale-Maketext-Simple",
+        "epoch": "1",
+        "version": "0.21",
+        "release": "299.el7_9",
+        "arch": "noarch",
+        "repository": "updates",
+        "requires": [
+          {
+            "name": "perl",
+            "flags": "GE",
+            "epoch": "0",
+            "ver": "5.005"
+          },
+          {
+            "name": "perl(:MODULE_COMPAT_5.16.3)"
+          },
+          {
+            "name": "perl(Locale::Maketext)"
+          },
+          {
+            "name": "perl(base)"
+          },
+          {
+            "name": "perl(strict)"
+          }
+        ],
+        "provides": [
+          {
+            "name": "perl(Locale::Maketext::Simple)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "0.21"
+          },
+          {
+            "name": "perl-Locale-Maketext-Simple",
+            "flags": "EQ",
+            "epoch": "1",
+            "ver": "0.21",
+            "rel": "299.el7_9"
+          }
+        ]
+      },
+      {
+        "filename": "perl-Module-Load-Conditional-0.54-3.el7.noarch.rpm",
+        "url": "https://vault.centos.org/7.9.2009/os/x86_64/Packages/perl-Module-Load-Conditional-0.54-3.el7.noarch.rpm",
+        "sha256": "3d772781a375a5cecfef82aaed2158a15f2882407317d495fdf19bbf1b4e3118",
+        "size": 18304,
+        "nvra": "perl-Module-Load-Conditional-0.54-3.el7.noarch",
+        "name": "perl-Module-Load-Conditional",
+        "epoch": "0",
+        "version": "0.54",
+        "release": "3.el7",
+        "arch": "noarch",
+        "repository": "os",
+        "requires": [
+          {
+            "name": "perl(:MODULE_COMPAT_5.16.3)"
+          },
+          {
+            "name": "perl(Carp)"
+          },
+          {
+            "name": "perl(Config)"
+          },
+          {
+            "name": "perl(Exporter)"
+          },
+          {
+            "name": "perl(File::Spec)"
+          },
+          {
+            "name": "perl(FileHandle)"
+          },
+          {
+            "name": "perl(Locale::Maketext::Simple)"
+          },
+          {
+            "name": "perl(Module::CoreList)",
+            "flags": "GE",
+            "epoch": "0",
+            "ver": "2.22"
+          },
+          {
+            "name": "perl(Module::Load)",
+            "flags": "GE",
+            "epoch": "0",
+            "ver": "0.11"
+          },
+          {
+            "name": "perl(Module::Metadata)",
+            "flags": "GE",
+            "epoch": "0",
+            "ver": "1.000005"
+          },
+          {
+            "name": "perl(Params::Check)"
+          },
+          {
+            "name": "perl(constant)"
+          },
+          {
+            "name": "perl(strict)"
+          },
+          {
+            "name": "perl(vars)"
+          },
+          {
+            "name": "perl(version)",
+            "flags": "GE",
+            "epoch": "0",
+            "ver": "0.69"
+          }
+        ],
+        "provides": [
+          {
+            "name": "perl(Module::Load::Conditional)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "0.54"
+          },
+          {
+            "name": "perl-Module-Load-Conditional",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "0.54",
+            "rel": "3.el7"
+          }
+        ]
+      },
+      {
+        "filename": "perl-Params-Check-0.38-2.el7.noarch.rpm",
+        "url": "https://vault.centos.org/7.9.2009/os/x86_64/Packages/perl-Params-Check-0.38-2.el7.noarch.rpm",
+        "sha256": "a9e44da66f5fd0d7076d1c9220ad49559c49251fd2035f3044e9f9ab5b81e849",
+        "size": 18840,
+        "nvra": "perl-Params-Check-0.38-2.el7.noarch",
+        "name": "perl-Params-Check",
+        "epoch": "1",
+        "version": "0.38",
+        "release": "2.el7",
+        "arch": "noarch",
+        "repository": "os",
+        "requires": [
+          {
+            "name": "perl(:MODULE_COMPAT_5.16.3)"
+          },
+          {
+            "name": "perl(Carp)"
+          },
+          {
+            "name": "perl(Exporter)"
+          },
+          {
+            "name": "perl(Locale::Maketext::Simple)"
+          },
+          {
+            "name": "perl(strict)"
+          },
+          {
+            "name": "perl(vars)"
+          }
+        ],
+        "provides": [
+          {
+            "name": "perl(Params::Check)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "0.38"
+          },
+          {
+            "name": "perl-Params-Check",
+            "flags": "EQ",
+            "epoch": "1",
+            "ver": "0.38",
+            "rel": "2.el7"
+          }
+        ]
+      },
+      {
+        "filename": "perl-ExtUtils-Install-1.58-299.el7_9.noarch.rpm",
+        "url": "https://vault.centos.org/7.9.2009/updates/x86_64/Packages/perl-ExtUtils-Install-1.58-299.el7_9.noarch.rpm",
+        "sha256": "03c52d5fc8024d804e827e048d07e835a984ac5f5d9391614c51b0905c9772a0",
+        "size": 76948,
+        "nvra": "perl-ExtUtils-Install-1.58-299.el7_9.noarch",
+        "name": "perl-ExtUtils-Install",
+        "epoch": "0",
+        "version": "1.58",
+        "release": "299.el7_9",
+        "arch": "noarch",
+        "repository": "updates",
+        "requires": [
+          {
+            "name": "perl",
+            "flags": "GE",
+            "epoch": "0",
+            "ver": "5.00503"
+          },
+          {
+            "name": "perl(:MODULE_COMPAT_5.16.3)"
+          },
+          {
+            "name": "perl(AutoSplit)"
+          },
+          {
+            "name": "perl(Carp)"
+          },
+          {
+            "name": "perl(Config)"
+          },
+          {
+            "name": "perl(Cwd)"
+          },
+          {
+            "name": "perl(Exporter)"
+          },
+          {
+            "name": "perl(ExtUtils::MakeMaker)"
+          },
+          {
+            "name": "perl(File::Basename)"
+          },
+          {
+            "name": "perl(File::Compare)"
+          },
+          {
+            "name": "perl(File::Copy)"
+          },
+          {
+            "name": "perl(File::Find)"
+          },
+          {
+            "name": "perl(File::Path)"
+          },
+          {
+            "name": "perl(File::Spec)"
+          },
+          {
+            "name": "perl(strict)"
+          },
+          {
+            "name": "perl(vars)"
+          },
+          {
+            "name": "perl-devel"
+          }
+        ],
+        "provides": [
+          {
+            "name": "perl(ExtUtils::Install)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "1.58"
+          },
+          {
+            "name": "perl(ExtUtils::Install::Warn)"
+          },
+          {
+            "name": "perl(ExtUtils::Installed)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "1.999002"
+          },
+          {
+            "name": "perl(ExtUtils::Packlist)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "1.46"
+          },
+          {
+            "name": "perl-ExtUtils-Install",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "1.58",
+            "rel": "299.el7_9"
+          }
+        ]
+      },
+      {
+        "filename": "perl-ExtUtils-Manifest-1.61-244.el7.noarch.rpm",
+        "url": "https://vault.centos.org/7.9.2009/os/x86_64/Packages/perl-ExtUtils-Manifest-1.61-244.el7.noarch.rpm",
+        "sha256": "6f56b7c9a284a11caa5cdf775f3e34928b22176998fcfb60587ee01c8a2ba386",
+        "size": 31356,
+        "nvra": "perl-ExtUtils-Manifest-1.61-244.el7.noarch",
+        "name": "perl-ExtUtils-Manifest",
+        "epoch": "0",
+        "version": "1.61",
+        "release": "244.el7",
+        "arch": "noarch",
+        "repository": "os",
+        "requires": [
+          {
+            "name": "perl(:MODULE_COMPAT_5.16.3)"
+          },
+          {
+            "name": "perl(Carp)"
+          },
+          {
+            "name": "perl(Config)"
+          },
+          {
+            "name": "perl(Exporter)"
+          },
+          {
+            "name": "perl(File::Basename)"
+          },
+          {
+            "name": "perl(File::Copy)"
+          },
+          {
+            "name": "perl(File::Find)"
+          },
+          {
+            "name": "perl(File::Path)"
+          },
+          {
+            "name": "perl(File::Spec)",
+            "flags": "GE",
+            "epoch": "0",
+            "ver": "0.8"
+          },
+          {
+            "name": "perl(strict)"
+          },
+          {
+            "name": "perl(vars)"
+          }
+        ],
+        "provides": [
+          {
+            "name": "perl(ExtUtils::Manifest)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "1.61"
+          },
+          {
+            "name": "perl-ExtUtils-Manifest",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "1.61",
+            "rel": "244.el7"
+          }
+        ]
+      },
+      {
+        "filename": "perl-Locale-Maketext-1.23-3.el7.noarch.rpm",
+        "url": "https://vault.centos.org/7.9.2009/os/x86_64/Packages/perl-Locale-Maketext-1.23-3.el7.noarch.rpm",
+        "sha256": "3bb53192682ff63af3e3b9bcc32ef8430de931b4c7795374bcab4038ee696b21",
+        "size": 95368,
+        "nvra": "perl-Locale-Maketext-1.23-3.el7.noarch",
+        "name": "perl-Locale-Maketext",
+        "epoch": "0",
+        "version": "1.23",
+        "release": "3.el7",
+        "arch": "noarch",
+        "repository": "os",
+        "requires": [
+          {
+            "name": "perl(:MODULE_COMPAT_5.16.3)"
+          },
+          {
+            "name": "perl(Carp)"
+          },
+          {
+            "name": "perl(I18N::LangTags)",
+            "flags": "GE",
+            "epoch": "0",
+            "ver": "0.31"
+          },
+          {
+            "name": "perl(I18N::LangTags::Detect)"
+          },
+          {
+            "name": "perl(integer)"
+          },
+          {
+            "name": "perl(strict)"
+          },
+          {
+            "name": "perl(vars)"
+          }
+        ],
+        "provides": [
+          {
+            "name": "perl(Locale::Maketext)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "1.23"
+          },
+          {
+            "name": "perl(Locale::Maketext::Guts)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "1.20"
+          },
+          {
+            "name": "perl(Locale::Maketext::GutsLoader)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "1.20"
+          },
+          {
+            "name": "perl-Locale-Maketext",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "1.23",
+            "rel": "3.el7"
+          }
+        ]
+      },
+      {
+        "filename": "perl-Module-CoreList-2.76.02-299.el7_9.noarch.rpm",
+        "url": "https://vault.centos.org/7.9.2009/updates/x86_64/Packages/perl-Module-CoreList-2.76.02-299.el7_9.noarch.rpm",
+        "sha256": "6bc5d11d6925535123b8762c2ad80e64d81a9fc384b6def702e2585966637c24",
+        "size": 88316,
+        "nvra": "perl-Module-CoreList-2.76.02-299.el7_9.noarch",
+        "name": "perl-Module-CoreList",
+        "epoch": "1",
+        "version": "2.76.02",
+        "release": "299.el7_9",
+        "arch": "noarch",
+        "repository": "updates",
+        "requires": [
+          {
+            "name": "/usr/bin/perl"
+          },
+          {
+            "name": "perl(:MODULE_COMPAT_5.16.3)"
+          },
+          {
+            "name": "perl(Getopt::Long)"
+          },
+          {
+            "name": "perl(Module::CoreList::TieHashDelta)"
+          },
+          {
+            "name": "perl(Pod::Usage)"
+          },
+          {
+            "name": "perl(strict)"
+          },
+          {
+            "name": "perl(vars)"
+          },
+          {
+            "name": "perl(version)"
+          },
+          {
+            "name": "perl(warnings)"
+          }
+        ],
+        "provides": [
+          {
+            "name": "perl(Module::CoreList)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "2.76"
+          },
+          {
+            "name": "perl-Module-CoreList",
+            "flags": "EQ",
+            "epoch": "1",
+            "ver": "2.76.02",
+            "rel": "299.el7_9"
+          },
+          {
+            "name": "/usr/bin/corelist"
+          }
+        ]
+      },
+      {
+        "filename": "perl-Module-Load-0.24-3.el7.noarch.rpm",
+        "url": "https://vault.centos.org/7.9.2009/os/x86_64/Packages/perl-Module-Load-0.24-3.el7.noarch.rpm",
+        "sha256": "b0dc38a60ddf72cd3d030df03b1497d7e1fe6542491ac91e021b6afbdd642de9",
+        "size": 11456,
+        "nvra": "perl-Module-Load-0.24-3.el7.noarch",
+        "name": "perl-Module-Load",
+        "epoch": "1",
+        "version": "0.24",
+        "release": "3.el7",
+        "arch": "noarch",
+        "repository": "os",
+        "requires": [
+          {
+            "name": "perl(:MODULE_COMPAT_5.16.3)"
+          },
+          {
+            "name": "perl(File::Spec)"
+          },
+          {
+            "name": "perl(strict)"
+          }
+        ],
+        "provides": [
+          {
+            "name": "perl(Module::Load)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "0.24"
+          },
+          {
+            "name": "perl-Module-Load",
+            "flags": "EQ",
+            "epoch": "1",
+            "ver": "0.24",
+            "rel": "3.el7"
+          }
+        ]
+      },
+      {
+        "filename": "perl-Module-Metadata-1.000018-2.el7.noarch.rpm",
+        "url": "https://vault.centos.org/7.9.2009/os/x86_64/Packages/perl-Module-Metadata-1.000018-2.el7.noarch.rpm",
+        "sha256": "85c7125288c6cc926e4a5ec009a3f1240c7fdbf4140b4728be2e4860f53cc4a2",
+        "size": 27072,
+        "nvra": "perl-Module-Metadata-1.000018-2.el7.noarch",
+        "name": "perl-Module-Metadata",
+        "epoch": "0",
+        "version": "1.000018",
+        "release": "2.el7",
+        "arch": "noarch",
+        "repository": "os",
+        "requires": [
+          {
+            "name": "perl(:MODULE_COMPAT_5.16.3)"
+          },
+          {
+            "name": "perl(Carp)"
+          },
+          {
+            "name": "perl(File::Find)"
+          },
+          {
+            "name": "perl(File::Spec)"
+          },
+          {
+            "name": "perl(IO::File)"
+          },
+          {
+            "name": "perl(strict)"
+          },
+          {
+            "name": "perl(version)",
+            "flags": "GE",
+            "epoch": "0",
+            "ver": "0.87"
+          },
+          {
+            "name": "perl(warnings)"
+          }
+        ],
+        "provides": [
+          {
+            "name": "perl(Module::Metadata)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "1.000018"
+          },
+          {
+            "name": "perl-Module-Metadata",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "1.000018",
+            "rel": "2.el7"
+          }
+        ]
+      },
+      {
+        "filename": "perl-version-0.99.07-6.el7.x86_64.rpm",
+        "url": "https://vault.centos.org/7.9.2009/os/x86_64/Packages/perl-version-0.99.07-6.el7.x86_64.rpm",
+        "sha256": "e09e651a08769228e3255303e08ed0dff9134aa5ac412dfeda857f0ae80428c8",
+        "size": 86328,
+        "nvra": "perl-version-0.99.07-6.el7.x86_64",
+        "name": "perl-version",
+        "epoch": "3",
+        "version": "0.99.07",
+        "release": "6.el7",
+        "arch": "x86_64",
+        "repository": "os",
+        "requires": [
+          {
+            "name": "libc.so.6(GLIBC_2.4)(64bit)"
+          },
+          {
+            "name": "perl",
+            "flags": "GE",
+            "epoch": "0",
+            "ver": "5.006002"
+          },
+          {
+            "name": "perl",
+            "flags": "GE",
+            "epoch": "1",
+            "ver": "5.10"
+          },
+          {
+            "name": "perl(:MODULE_COMPAT_5.16.3)"
+          },
+          {
+            "name": "perl(Config)"
+          },
+          {
+            "name": "perl(POSIX)"
+          },
+          {
+            "name": "perl(UNIVERSAL)"
+          },
+          {
+            "name": "perl(XSLoader)"
+          },
+          {
+            "name": "perl(constant)"
+          },
+          {
+            "name": "perl(if)"
+          },
+          {
+            "name": "perl(overload)"
+          },
+          {
+            "name": "perl(strict)"
+          },
+          {
+            "name": "perl(vars)"
+          },
+          {
+            "name": "rtld(GNU_HASH)"
+          }
+        ],
+        "provides": [
+          {
+            "name": "perl(charstar)"
+          },
+          {
+            "name": "perl(version)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "0.9907"
+          },
+          {
+            "name": "perl(version::regex)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "0.9907"
+          },
+          {
+            "name": "perl(version::vpp)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "0.9907"
+          },
+          {
+            "name": "perl-version",
+            "flags": "EQ",
+            "epoch": "3",
+            "ver": "0.99.07",
+            "rel": "6.el7"
+          },
+          {
+            "name": "perl-version(x86-64)",
+            "flags": "EQ",
+            "epoch": "3",
+            "ver": "0.99.07",
+            "rel": "6.el7"
+          }
+        ]
+      },
+      {
+        "filename": "perl-devel-5.16.3-299.el7_9.x86_64.rpm",
+        "url": "https://vault.centos.org/7.9.2009/updates/x86_64/Packages/perl-devel-5.16.3-299.el7_9.x86_64.rpm",
+        "sha256": "ed34b500e7e1951b8208f45e26b323c12c4fe5f89a8823445ddeeb1f28d5e93e",
+        "size": 464804,
+        "nvra": "perl-devel-5.16.3-299.el7_9.x86_64",
+        "name": "perl-devel",
+        "epoch": "4",
+        "version": "5.16.3",
+        "release": "299.el7_9",
+        "arch": "x86_64",
+        "repository": "updates",
+        "requires": [
+          {
+            "name": "/usr/bin/perl"
+          },
+          {
+            "name": "gdbm-devel"
+          },
+          {
+            "name": "glibc-devel"
+          },
+          {
+            "name": "libdb-devel"
+          },
+          {
+            "name": "perl(:MODULE_COMPAT_5.16.3)"
+          },
+          {
+            "name": "perl(Config)"
+          },
+          {
+            "name": "perl(ExtUtils::Constant)"
+          },
+          {
+            "name": "perl(ExtUtils::Installed)"
+          },
+          {
+            "name": "perl(ExtUtils::MakeMaker)"
+          },
+          {
+            "name": "perl(ExtUtils::ParseXS)"
+          },
+          {
+            "name": "perl(File::Compare)"
+          },
+          {
+            "name": "perl(File::Path)"
+          },
+          {
+            "name": "perl(File::Spec)"
+          },
+          {
+            "name": "perl(Getopt::Long)"
+          },
+          {
+            "name": "perl(Getopt::Std)"
+          },
+          {
+            "name": "perl(IO::File)"
+          },
+          {
+            "name": "perl(Text::Wrap)"
+          },
+          {
+            "name": "perl(strict)"
+          },
+          {
+            "name": "perl(vars)"
+          },
+          {
+            "name": "perl(warnings)"
+          },
+          {
+            "name": "systemtap-sdt-devel"
+          }
+        ],
+        "provides": [
+          {
+            "name": "perl-devel",
+            "flags": "EQ",
+            "epoch": "4",
+            "ver": "5.16.3",
+            "rel": "299.el7_9"
+          },
+          {
+            "name": "perl-devel(x86-64)",
+            "flags": "EQ",
+            "epoch": "4",
+            "ver": "5.16.3",
+            "rel": "299.el7_9"
+          },
+          {
+            "name": "/usr/bin/h2xs"
+          },
+          {
+            "name": "/usr/bin/libnetcfg"
+          },
+          {
+            "name": "/usr/bin/perlivp"
+          }
+        ]
+      },
+      {
+        "filename": "gdbm-devel-1.10-8.el7.x86_64.rpm",
+        "url": "https://vault.centos.org/7.9.2009/os/x86_64/Packages/gdbm-devel-1.10-8.el7.x86_64.rpm",
+        "sha256": "fc02a803f89c0d68de96bcc7a46d7cdf8768e62577b27aed9c531e6fb2818c30",
+        "size": 48240,
+        "nvra": "gdbm-devel-1.10-8.el7.x86_64",
+        "name": "gdbm-devel",
+        "epoch": "0",
+        "version": "1.10",
+        "release": "8.el7",
+        "arch": "x86_64",
+        "repository": "os",
+        "requires": [
+          {
+            "name": "/bin/sh"
+          },
+          {
+            "name": "/bin/sh",
+            "pre": "1"
+          },
+          {
+            "name": "gdbm",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "1.10",
+            "rel": "8.el7"
+          },
+          {
+            "name": "info"
+          },
+          {
+            "name": "info",
+            "pre": "1"
+          },
+          {
+            "name": "libgdbm.so.4()(64bit)"
+          },
+          {
+            "name": "libgdbm_compat.so.4()(64bit)"
+          }
+        ],
+        "provides": [
+          {
+            "name": "gdbm-devel",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "1.10",
+            "rel": "8.el7"
+          },
+          {
+            "name": "gdbm-devel(x86-64)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "1.10",
+            "rel": "8.el7"
+          }
+        ]
+      },
+      {
+        "filename": "libdb-devel-5.3.21-25.el7.x86_64.rpm",
+        "url": "https://vault.centos.org/7.9.2009/os/x86_64/Packages/libdb-devel-5.3.21-25.el7.x86_64.rpm",
+        "sha256": "87bc061cbab0538af239488420ba01378e212fc882f1cfa6a23c652687c47ba4",
+        "size": 39456,
+        "nvra": "libdb-devel-5.3.21-25.el7.x86_64",
+        "name": "libdb-devel",
+        "epoch": "0",
+        "version": "5.3.21",
+        "release": "25.el7",
+        "arch": "x86_64",
+        "repository": "os",
+        "requires": [
+          {
+            "name": "libdb(x86-64)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "5.3.21",
+            "rel": "25.el7"
+          }
+        ],
+        "provides": [
+          {
+            "name": "libdb-devel",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "5.3.21",
+            "rel": "25.el7"
+          },
+          {
+            "name": "libdb-devel(x86-64)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "5.3.21",
+            "rel": "25.el7"
+          }
+        ]
+      },
+      {
+        "filename": "perl-ExtUtils-ParseXS-3.18-3.el7.noarch.rpm",
+        "url": "https://vault.centos.org/7.9.2009/os/x86_64/Packages/perl-ExtUtils-ParseXS-3.18-3.el7.noarch.rpm",
+        "sha256": "fbd72e0cc1c3411194469e74e329707ba670d7e4e2eb546c02d4fbe1ad5ea287",
+        "size": 78696,
+        "nvra": "perl-ExtUtils-ParseXS-3.18-3.el7.noarch",
+        "name": "perl-ExtUtils-ParseXS",
+        "epoch": "1",
+        "version": "3.18",
+        "release": "3.el7",
+        "arch": "noarch",
+        "repository": "os",
+        "requires": [
+          {
+            "name": "/usr/bin/perl"
+          },
+          {
+            "name": "perl",
+            "flags": "GE",
+            "epoch": "0",
+            "ver": "5.006"
+          },
+          {
+            "name": "perl",
+            "flags": "GE",
+            "epoch": "0",
+            "ver": "5.006001"
+          },
+          {
+            "name": "perl(:MODULE_COMPAT_5.16.3)"
+          },
+          {
+            "name": "perl(Config)"
+          },
+          {
+            "name": "perl(Cwd)"
+          },
+          {
+            "name": "perl(Exporter)"
+          },
+          {
+            "name": "perl(File::Basename)"
+          },
+          {
+            "name": "perl(File::Spec)"
+          },
+          {
+            "name": "perl(Getopt::Long)"
+          },
+          {
+            "name": "perl(Symbol)"
+          },
+          {
+            "name": "perl(lib)"
+          },
+          {
+            "name": "perl(re)"
+          },
+          {
+            "name": "perl(strict)"
+          },
+          {
+            "name": "perl(warnings)"
+          },
+          {
+            "name": "perl-devel"
+          }
+        ],
+        "provides": [
+          {
+            "name": "perl(ExtUtils::ParseXS)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "3.18"
+          },
+          {
+            "name": "perl(ExtUtils::ParseXS::Constants)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "3.18"
+          },
+          {
+            "name": "perl(ExtUtils::ParseXS::CountLines)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "3.18"
+          },
+          {
+            "name": "perl(ExtUtils::ParseXS::Utilities)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "3.18"
+          },
+          {
+            "name": "perl(ExtUtils::Typemaps)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "3.18"
+          },
+          {
+            "name": "perl(ExtUtils::Typemaps::Cmd)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "3.18"
+          },
+          {
+            "name": "perl(ExtUtils::Typemaps::InputMap)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "3.18"
+          },
+          {
+            "name": "perl(ExtUtils::Typemaps::OutputMap)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "3.18"
+          },
+          {
+            "name": "perl(ExtUtils::Typemaps::Type)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "3.18"
+          },
+          {
+            "name": "perl-ExtUtils-ParseXS",
+            "flags": "EQ",
+            "epoch": "1",
+            "ver": "3.18",
+            "rel": "3.el7"
+          },
+          {
+            "name": "/usr/bin/xsubpp"
+          }
+        ]
+      },
+      {
+        "filename": "systemtap-sdt-devel-4.0-13.el7.x86_64.rpm",
+        "url": "https://vault.centos.org/7.9.2009/os/x86_64/Packages/systemtap-sdt-devel-4.0-13.el7.x86_64.rpm",
+        "sha256": "9fcd703556e70b4ad73d56c02c0d3a1961eb7435b4374a9a37d526356da0d5fa",
+        "size": 78152,
+        "nvra": "systemtap-sdt-devel-4.0-13.el7.x86_64",
+        "name": "systemtap-sdt-devel",
+        "epoch": "0",
+        "version": "4.0",
+        "release": "13.el7",
+        "arch": "x86_64",
+        "repository": "os",
+        "requires": [
+          {
+            "name": "/usr/bin/python2"
+          },
+          {
+            "name": "pyparsing"
+          }
+        ],
+        "provides": [
+          {
+            "name": "systemtap-sdt-devel",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "4.0",
+            "rel": "13.el7"
+          },
+          {
+            "name": "systemtap-sdt-devel(x86-64)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "4.0",
+            "rel": "13.el7"
+          },
+          {
+            "name": "/usr/bin/dtrace"
+          }
+        ]
+      },
+      {
+        "filename": "pyparsing-1.5.6-9.el7.noarch.rpm",
+        "url": "https://vault.centos.org/7.9.2009/os/x86_64/Packages/pyparsing-1.5.6-9.el7.noarch.rpm",
+        "sha256": "44987aea8a0b5d8d47a0aa31a6b90be291a8f9d1162e656a14736312f13a604d",
+        "size": 96088,
+        "nvra": "pyparsing-1.5.6-9.el7.noarch",
+        "name": "pyparsing",
+        "epoch": "0",
+        "version": "1.5.6",
+        "release": "9.el7",
+        "arch": "noarch",
+        "repository": "os",
+        "requires": [
+          {
+            "name": "python(abi)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "2.7"
+          }
+        ],
+        "provides": [
+          {
+            "name": "pyparsing",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "1.5.6",
+            "rel": "9.el7"
+          }
+        ]
+      }
+    ],
+    "metadata": [
+      {
+        "repository": "os",
+        "repomd_url": "https://vault.centos.org/7.9.2009/os/x86_64/repodata/repomd.xml",
+        "repomd_sha256": "8b45b07b03813d3248c4fe4f407c4d9e4ebe91ca63591cc9e13243ec719c69e8",
+        "primary_url": "https://vault.centos.org/7.9.2009/os/x86_64/repodata/2b479c0f3efa73f75b7fb76c82687744275fff78e4a138b5b3efba95f91e099e-primary.xml.gz",
+        "primary_sha256": "2b479c0f3efa73f75b7fb76c82687744275fff78e4a138b5b3efba95f91e099e"
+      },
+      {
+        "repository": "updates",
+        "repomd_url": "https://vault.centos.org/7.9.2009/updates/x86_64/repodata/repomd.xml",
+        "repomd_sha256": "d165598c04def2f2e8771309282c7a586b6cc981847676f811ee931f41d46392",
+        "primary_url": "https://vault.centos.org/7.9.2009/updates/x86_64/repodata/04fc3905eafcdc8422d475812ed81841986f18e3150b571c6920ba94b9c1898e-primary.xml.gz",
+        "primary_sha256": "04fc3905eafcdc8422d475812ed81841986f18e3150b571c6920ba94b9c1898e"
+      }
+    ],
+    "image_tools": {
+      "rpm2cpio_provider": "rpm-4.11.3-48.el7_9.x86_64",
+      "cpio_provider": "cpio-2.11-28.el7.x86_64",
+      "rpm2cpio_source": "https://gitlab.com/CentOS/archives/git.centos.org/rpms/rpm/-/raw/c7/SPECS/rpm.spec"
+    },
+    "perl5lib": [
+      "usr/share/perl5/vendor_perl",
+      "usr/share/perl5",
+      "usr/lib64/perl5/vendor_perl",
+      "usr/lib64/perl5"
+    ],
+    "probe_modules": [
+      "IPC::Cmd",
+      "Locale::Maketext::Simple",
+      "Locale::Maketext",
+      "Module::Load::Conditional",
+      "Params::Check",
+      "Module::CoreList",
+      "Module::Load",
+      "Module::Metadata",
+      "version",
+      "ExtUtils::MakeMaker",
+      "ExtUtils::Install",
+      "ExtUtils::Manifest",
+      "ExtUtils::ParseXS"
+    ],
+    "preparation": {
+      "source_inventory_artifact": "run-43944148767/baseline-c/c-case/logs/rpm-inventory.stdout",
+      "source_inventory_sha256": "194bfa46ca51a31463b9acff4448367af2fd1509545337994b2d299491007086",
+      "matched_installed_packages": 266,
+      "installed_packages": 280,
+      "new_packages": 18,
+      "metadata_unresolved_requires": [],
+      "installed_package_replacements": [],
+      "native_rpm_signature_and_requires_test": "not run during macOS preparation; enforced in native CI"
+    }
   }
 }

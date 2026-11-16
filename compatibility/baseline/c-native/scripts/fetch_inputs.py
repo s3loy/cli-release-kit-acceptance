@@ -50,6 +50,12 @@ home = destination / "gnupg"
 home.mkdir(mode=0o700, exist_ok=True)
 os.chmod(home, 0o700)
 verification = []
+rpm_key = manifest.get("rpm_build_dependencies", {}).get("key")
+if rpm_key:
+    observed = run("centos7-key-fingerprint", ["gpg", "--homedir", str(home), "--no-autostart", "--batch",
+                                               "--with-colons", "--show-keys", str(destination / rpm_key["filename"])], 30)
+    fingerprints = [line.split(":")[9] for line in observed.splitlines() if line.startswith("fpr:")]
+    assert fingerprints == [rpm_key["primary_fingerprint"]], fingerprints
 for item in manifest["signatures"]:
     keyring = destination / (item["name"] + "-signing.gpg")
     run(item["name"] + "-dearmor", ["gpg", "--homedir", str(home), "--no-autostart", "--batch", "--yes", "--dearmor",

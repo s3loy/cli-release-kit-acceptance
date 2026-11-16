@@ -15,6 +15,15 @@ the dependency-control container could not write its runner-owned output
 directory. Containers now use the runner UID/GID and a writable temporary HOME;
 the original capabilities, image pins, ABI candidate and assertions remain.
 
+The [next run](https://github.com/s3loy/cli-release-kit-acceptance/actions/runs/43944148767)
+passed both ripgrep cases and all rejection controls. The engine built and
+passed its three clean launch environments, then its source reader fixture
+rejected a tracked symlink. Go stopped at an unsupported GNU tar option, and
+OpenSSL Configure stopped at a missing Perl module. The harness now preserves
+the explicitly pinned source link and passes Go's fixed archive-member list as
+ordinary arguments supported by the existing tar. These changes leave the
+application inputs and checks unchanged.
+
 ## Execution and cases
 
 An Ubuntu 24.04 GitHub-hosted x86_64 VM orchestrates pinned build and runtime
@@ -81,6 +90,7 @@ inputs, without installing compilers, Git or a replacement libc.
 | CMake | 3.31.12 Linux x86_64 archive SHA256 and signed checksum |
 | curl | 8.23.0 official tar.xz SHA256 and detached signature |
 | OpenSSL | 3.5.9 official archive SHA256 and detached signature; built inside the selected baseline |
+| Perl tool dependencies | Fixed official CentOS RPMs and signing key; native signature and dependency checks precede offline prefix extraction |
 | C compiler, linker, Make, Perl and ELF tools | Fixed by the build image digest; actual paths, versions and package inventories retained |
 
 Exact URLs, hashes, source inventories and signature fingerprints are in
@@ -91,6 +101,14 @@ Exact URLs, hashes, source inventories and signature fingerprints are in
 source on the native host; compilation is offline. Native libraries are built
 from the frozen source inputs in the old build environment. Go module access
 is disabled. Input mismatches stop the affected role.
+
+The C-only Perl supplement closes the missing `IPC::Cmd` tool dependency using
+18 fixed RPMs (1,627,492 bytes), without replacing installed image packages. The
+native RPM transaction is checked against a copied package database, with
+scripts disabled. Payloads are extracted into an owned prefix; only its Perl
+module directories enter `PERL5LIB`. Supplementary development headers remain
+outside the application's compiler search paths. The image, Perl interpreter,
+GCC, glibc, OpenSSL source and TLS flags stay fixed.
 
 The build image's exact `LD_LIBRARY_PATH` and `PKG_CONFIG_PATH` values are
 declared in the engine pins. Other unrequested Cargo/profile overrides fail.
