@@ -68,7 +68,7 @@ def main():
             expected = {"git-head": pins["source_commit"], "git-tree": pins["source_tree"], "git-status": ""}
             if name in expected and result["stdout"].strip() != expected[name]:
                 raise RuntimeError("Reconstructed source identity differs: " + name)
-        verify(source, pins["source_files"], exact=False)
+        verify(source, pins["source_files"], exact=False, source_symlinks=pins["source_symlinks"])
         report.update(status="prepared; no consumer payload executed", source_commit=pins["source_commit"],
                       source_tree=pins["source_tree"], source_git_files=inventory(source / ".git"))
     except Exception as error:

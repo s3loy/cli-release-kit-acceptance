@@ -47,17 +47,21 @@ def main():
     try:
         if env.get("BASELINE_IMAGE") != pins["build_image"]:
             raise RuntimeError("Declare the reviewed BASELINE_IMAGE digest for functional scope")
+        source_symlinks = pins["reader_fixture"]["source_symlinks"]
+        fixture_symlinks = {"source/" + name: target for name, target in source_symlinks.items()}
         verify(fixture, pins["reader_fixture"]["materialized_files"], exact=False)
-        verify(fixture / "source", pins["reader_fixture"]["source_files"], exact=False)
+        verify(fixture / "source", pins["reader_fixture"]["source_files"], exact=False,
+               source_symlinks=source_symlinks)
         prepared = json.loads((fixture / "prepared-fixture.json").read_text())
         verify(fixture / "source/.git", prepared["source_git_files"])
-        before = inventory(fixture)
+        before = inventory(fixture, source_symlinks=fixture_symlinks)
         source = out / "verify-work/source"
         source.parent.mkdir()
         # Docker's executing UID owns this copy, so Git's ownership guard stays enabled.
         # The fixture mount remains read-only and never needs a safe.directory exception.
-        shutil.copytree(fixture / "source", source)
-        verify(source, pins["reader_fixture"]["source_files"], exact=False)
+        shutil.copytree(fixture / "source", source, symlinks=True)
+        verify(source, pins["reader_fixture"]["source_files"], exact=False,
+               source_symlinks=source_symlinks)
         verify(source / ".git", prepared["source_git_files"])
         report["source_copy"] = {"path": str(source), "owner_uid": source.stat().st_uid,
                                  "executing_uid": os.getuid(), "git_inputs_preserved": True}
@@ -88,9 +92,10 @@ def main():
             raise RuntimeError("Status did not read the retained same-engine complete attempt")
         run("verify", [str(args.binary.resolve()), "--project", str(source),
                        "verify", "--output", str(collection), "--policy", str(fixture / "trust-policy.toml")])
-        if before != inventory(fixture):
+        if before != inventory(fixture, source_symlinks=fixture_symlinks):
             raise RuntimeError("Reader modified frozen public fixture inputs")
-        verify(source, pins["reader_fixture"]["source_files"], exact=False)
+        verify(source, pins["reader_fixture"]["source_files"], exact=False,
+               source_symlinks=source_symlinks)
         report.update(status="passed", passed=2, fixture_preserved=True)
     except Exception as error:
         report.update(status="failed", failure=str(error))

@@ -1708,6 +1708,9 @@
     "upstream_commit": "e89fff89ac9af12e8d4ce9d5fd07beb408ca730f",
     "source_commit": "3e561d40f3e19ec70067a145d75f2598e6842942",
     "source_tree": "0c0da19d43c02dac7334b48f2de64e8c8b03397c",
+    "source_symlinks": {
+      "HomebrewFormula": "pkg/brew"
+    },
     "source_files": [
       {
         "path": ".cargo/config.toml",
