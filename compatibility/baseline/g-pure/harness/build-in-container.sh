@@ -18,9 +18,10 @@ mkdir -p "$CASE_OUT/source" "$CASE_OUT/sdk" "$CASE_OUT/payload" "$CASE_OUT/work"
     cd "$INPUTS_ROOT"
     sha256sum --check "$SCRIPT_DIR/archive-sha256.txt"
 )
+mapfile -t SOURCE_MEMBERS < "$SCRIPT_DIR/source-archive-members.txt"
 tar --extract --gzip --file "$INPUTS_ROOT/goawk-v1.30.1.tar.gz" \
     --directory "$CASE_OUT/source" --strip-components=1 \
-    --verbatim-files-from --files-from "$SCRIPT_DIR/source-archive-members.txt"
+    -- "${SOURCE_MEMBERS[@]}"
 tar --extract --gzip --file "$INPUTS_ROOT/go1.27.4.linux-amd64.tar.gz" --directory "$CASE_OUT/sdk"
 (
     cd "$CASE_OUT/source"
