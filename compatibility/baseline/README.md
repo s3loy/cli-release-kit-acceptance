@@ -103,7 +103,7 @@ from the frozen source inputs in the old build environment. Go module access
 is disabled. Input mismatches stop the affected role.
 
 The C-only Perl supplement closes the missing `IPC::Cmd` tool dependency using
-18 fixed RPMs (1,627,492 bytes), without replacing installed image packages. The
+19 fixed RPMs (1,699,092 bytes), without replacing installed image packages. The
 native RPM transaction is checked against a copied package database, with
 scripts disabled. Payloads are extracted into an owned prefix; only its Perl
 module directories enter `PERL5LIB`. Supplementary development headers remain
@@ -114,6 +114,12 @@ RPM's dependency-only dry-run uses `--ignoresize` because its default space
 preflight targets the read-only `/` filesystem. Staging bytes and inodes are
 checked on the actual owned output filesystem; CPIO creation and extraction
 must still succeed. Signature and dependency checks remain mandatory.
+
+After that gate passed, OpenSSL's Makefile generation identified a separate
+`Time::Piece` core-module package. The supplement includes that fixed RPM and
+probes both `Time::Piece` and `Time::Seconds` before configuring OpenSSL. A
+review of the selected configure/templates/non-test utility and x86_64
+assembly-generator imports found no other definite missing build module.
 
 The build image's exact `LD_LIBRARY_PATH` and `PKG_CONFIG_PATH` values are
 declared in the engine pins. Other unrequested Cargo/profile overrides fail.

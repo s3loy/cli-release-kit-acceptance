@@ -204,6 +204,12 @@
       "url": "https://www.centos.org/keys/RPM-GPG-KEY-CentOS-7",
       "sha256": "8b48b04b336bd725b9e611c441c65456a4168083c4febc28e88828d8ec14827f",
       "size": 1690
+    },
+    {
+      "filename": "perl-Time-Piece-1.20.1-299.el7_9.x86_64.rpm",
+      "url": "https://vault.centos.org/7.9.2009/updates/x86_64/Packages/perl-Time-Piece-1.20.1-299.el7_9.x86_64.rpm",
+      "sha256": "16c4eac47cfb42c7b2453290f21172024727ffd7444425d48a2170493b43db78",
+      "size": 71600
     }
   ],
   "signatures": [
@@ -1691,6 +1697,82 @@
             "rel": "9.el7"
           }
         ]
+      },
+      {
+        "name": "perl-Time-Piece",
+        "arch": "x86_64",
+        "requires": [
+          {
+            "name": "libc.so.6(GLIBC_2.4)(64bit)"
+          },
+          {
+            "name": "perl(:MODULE_COMPAT_5.16.3)"
+          },
+          {
+            "name": "perl(Carp)"
+          },
+          {
+            "name": "perl(DynaLoader)"
+          },
+          {
+            "name": "perl(Exporter)"
+          },
+          {
+            "name": "perl(Time::Local)"
+          },
+          {
+            "name": "perl(constant)"
+          },
+          {
+            "name": "perl(integer)"
+          },
+          {
+            "name": "perl(overload)"
+          },
+          {
+            "name": "perl(strict)"
+          },
+          {
+            "name": "perl(vars)"
+          },
+          {
+            "name": "rtld(GNU_HASH)"
+          }
+        ],
+        "provides": [
+          {
+            "name": "perl(Time::Piece)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "1.20"
+          },
+          {
+            "name": "perl(Time::Seconds)"
+          },
+          {
+            "name": "perl-Time-Piece",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "1.20.1",
+            "rel": "299.el7_9"
+          },
+          {
+            "name": "perl-Time-Piece(x86-64)",
+            "flags": "EQ",
+            "epoch": "0",
+            "ver": "1.20.1",
+            "rel": "299.el7_9"
+          }
+        ],
+        "sha256": "16c4eac47cfb42c7b2453290f21172024727ffd7444425d48a2170493b43db78",
+        "size": 71600,
+        "filename": "perl-Time-Piece-1.20.1-299.el7_9.x86_64.rpm",
+        "url": "https://vault.centos.org/7.9.2009/updates/x86_64/Packages/perl-Time-Piece-1.20.1-299.el7_9.x86_64.rpm",
+        "nvra": "perl-Time-Piece-1.20.1-299.el7_9.x86_64",
+        "epoch": "0",
+        "version": "1.20.1",
+        "release": "299.el7_9",
+        "repository": "updates"
       }
     ],
     "metadata": [
@@ -1733,17 +1815,29 @@
       "ExtUtils::MakeMaker",
       "ExtUtils::Install",
       "ExtUtils::Manifest",
-      "ExtUtils::ParseXS"
+      "ExtUtils::ParseXS",
+      "Time::Piece",
+      "Time::Seconds"
     ],
     "preparation": {
       "source_inventory_artifact": "run-43944148767/baseline-c/c-case/logs/rpm-inventory.stdout",
       "source_inventory_sha256": "194bfa46ca51a31463b9acff4448367af2fd1509545337994b2d299491007086",
       "matched_installed_packages": 266,
       "installed_packages": 280,
-      "new_packages": 18,
+      "new_packages": 19,
       "metadata_unresolved_requires": [],
       "installed_package_replacements": [],
-      "native_rpm_signature_and_requires_test": "not run during macOS preparation; enforced in native CI"
+      "native_rpm_signature_and_requires_test": "not run during macOS preparation; enforced in native CI",
+      "additional_openssl_core_dependency": {
+        "observed_failure_run": 43952851345,
+        "source": "Configurations/unix-Makefile.tmpl:6",
+        "package": "perl-Time-Piece-1.20.1-299.el7_9.x86_64",
+        "additional_rpms": 1,
+        "all_requires_satisfied_by_actual_image_provides": true,
+        "actual_image_provides_sha256": "7bd061d7bbb5e59b918f69fc44eebb4276276ea4e4dae6aa5627bd3dddbb1933",
+        "existing_18_packages_unchanged": true,
+        "native_signature_and_load_probe": "pending next native CI"
+      }
     }
   }
 }
