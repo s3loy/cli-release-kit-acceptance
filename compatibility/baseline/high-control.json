@@ -1,0 +1,18 @@
+{
+  "repository": "s3loy/cli-release-kit-acceptance",
+  "run_id": 43917006870,
+  "artifact_id": 14252290940,
+  "artifact_name": "compatibility-ubuntu-24.04",
+  "artifact_sha256": "13df5d3164ef2ab215fb9bc5df84f55dc7da489df613f2b5af12f8e30c18e6d8",
+  "binary_sha256": "3c21ab89fa2264ed955e0a2ecf1abb62e32b60f8970684d56cb93722bff88e54",
+  "engine_source_id": "776378e8a5d4d2dd0bef41985f753415de6d2a8b637044f00ddc52f5608b30ff",
+  "required_numeric_glibc": "2.39",
+  "availability": "Retained fixture bytes are part of this draft; execution does not download the expiring Actions artifact.",
+  "fixture_path": "controls/known-high-relship.gz",
+  "fixture_sha256": "845f9f8450fce35b8e5b49b9275a941384bfedb99b552ecd92def442625788d8",
+  "uncompressed_bytes": 14998392,
+  "fixture_bytes": 5405146,
+  "fixture_recipe": "gzip -9 equivalent, empty filename, mtime=0; exact bin/relship-payload bytes from the SHA256-verified prior artifact",
+  "source_run_url": "https://github.com/s3loy/cli-release-kit-acceptance/actions/runs/43917006870",
+  "original_artifact_expires_at": "2026-11-19T17:23:04Z"
+}

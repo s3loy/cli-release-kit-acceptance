@@ -1,0 +1,202 @@
+{
+  "case": "G-pure",
+  "source": {
+    "id": "goawk-source",
+    "filename": "goawk-v1.30.1.tar.gz",
+    "url": "https://github.com/benhoyt/goawk/archive/refs/tags/v1.30.1.tar.gz",
+    "sha256": "7f2964b474ac3d2d41b5a9bf5a18cd3ee369b2c1cd7aa405299b385ff20ea5db",
+    "upstream_commit": "fa6df5c3ff1e6532e76faa6c756784836731f4e4",
+    "tag": "v1.30.1",
+    "provenance": "The retained archive hash and all copied files were reverified against the frozen source snapshot. This is a hash/replay observation, not a source signature claim."
+  },
+  "sdk": {
+    "id": "go-sdk",
+    "filename": "go1.27.4.linux-amd64.tar.gz",
+    "url": "https://go.dev/dl/go1.27.4.linux-amd64.tar.gz",
+    "sha256": "7226736c2339719cda28fbf3a54d71aa63bcefe376e98cef00034268dab24840",
+    "size": 70680823,
+    "version": "go1.27.4",
+    "official_checksum_source": "https://go.dev/dl/?mode=json&include=all",
+    "official_checksum_observed_utc": "2026-11-16T18:37:44.050755+00:00"
+  },
+  "source_allowlist": [
+    {
+      "path": "LICENSE.txt",
+      "sha256": "b4140c3fc88007a9fef095447104c8977a3a1c728f485d231b56f73425e6cdce",
+      "mode": "0o664",
+      "size": 1065,
+      "archive_bytes_match": true
+    },
+    {
+      "path": "README.md",
+      "sha256": "bf6afe06634c92e38d40a3f3a68265a5f28792564d27d01472fa8762e6bd63f4",
+      "mode": "0o664",
+      "size": 5575,
+      "archive_bytes_match": true
+    },
+    {
+      "path": "go.mod",
+      "sha256": "e60ef213503061b871841a374bcf5cc556c2f593d5396161df511546c4206a0f",
+      "mode": "0o664",
+      "size": 41,
+      "archive_bytes_match": true
+    },
+    {
+      "path": "goawk.go",
+      "sha256": "959e1e2be49fd1229185c0057df855db1148ce0d4de8046984a5d836afc21707",
+      "mode": "0o664",
+      "size": 13126,
+      "archive_bytes_match": true
+    },
+    {
+      "path": "internal/ast/ast.go",
+      "sha256": "5b3f9038bcddfeb7ca0ce3d98ae42759d0196d832a7bce65acafbee1557a13dc",
+      "mode": "0o664",
+      "size": 19301,
+      "archive_bytes_match": true
+    },
+    {
+      "path": "internal/ast/specialvars.go",
+      "sha256": "cba9a6e50ab157a51d9b2ed9264ba1f7a2fb749e87ca68fbeab535ea6a9f7d82",
+      "mode": "0o664",
+      "size": 1639,
+      "archive_bytes_match": true
+    },
+    {
+      "path": "internal/ast/walk.go",
+      "sha256": "6d143025beb25230bfdf2462f1fc102cadb2bb62f8ee040daff21b42142b9ce5",
+      "mode": "0o664",
+      "size": 3337,
+      "archive_bytes_match": true
+    },
+    {
+      "path": "internal/compiler/compiler.go",
+      "sha256": "79eba5583c2c3191ce66e7b60253d37bf61ed22f071ff241356dd75cfc3cdb40",
+      "mode": "0o664",
+      "size": 29527,
+      "archive_bytes_match": true
+    },
+    {
+      "path": "internal/compiler/disassembler.go",
+      "sha256": "77f1cf9942a8fd32f5db65d52a7b6239142b50a685d112569aec3273964a4204",
+      "mode": "0o664",
+      "size": 12673,
+      "archive_bytes_match": true
+    },
+    {
+      "path": "internal/compiler/opcode_string.go",
+      "sha256": "804bd5cf16749a3a5503cd2a02521eeddb72450cd55bd763cfca2e007cebb589",
+      "mode": "0o664",
+      "size": 5944,
+      "archive_bytes_match": true
+    },
+    {
+      "path": "internal/compiler/opcodes.go",
+      "sha256": "5f09286160a05320117f4e77dbb60173b91b9cfaa3c7e6d4b4ff3248bed04ad0",
+      "mode": "0o664",
+      "size": 3982,
+      "archive_bytes_match": true
+    },
+    {
+      "path": "internal/cover/cover.go",
+      "sha256": "fefac0d1eeab660539e09864f95d64e6fefedbc15f18888064dc0b37881783bd",
+      "mode": "0o664",
+      "size": 6408,
+      "archive_bytes_match": true
+    },
+    {
+      "path": "internal/parseutil/filereader.go",
+      "sha256": "c129be4775cf03f82a47764ed031f3fbeb1444112af580cafa2797b74a448bd8",
+      "mode": "0o664",
+      "size": 1438,
+      "archive_bytes_match": true
+    },
+    {
+      "path": "internal/resolver/resolve.go",
+      "sha256": "14b4c41cba850c78cde9481bca72bfe994e01736e08e185ff87ddfc4cab151d3",
+      "mode": "0o664",
+      "size": 16201,
+      "archive_bytes_match": true
+    },
+    {
+      "path": "internal/resolver/toposort.go",
+      "sha256": "291352e3ac1aa56418c6b5598e5cb0c66ada17d10961e7302b7749446abcc129",
+      "mode": "0o664",
+      "size": 1404,
+      "archive_bytes_match": true
+    },
+    {
+      "path": "interp/functions.go",
+      "sha256": "4098047d644ff7e5d476dd0104bd689135ad4254642137243990604ae3230eec",
+      "mode": "0o664",
+      "size": 12730,
+      "archive_bytes_match": true
+    },
+    {
+      "path": "interp/interp.go",
+      "sha256": "a3ee2765307f826b8c2dfdb18ca6897b664082f1c5ccb0794abcaff4f9993dc9",
+      "mode": "0o664",
+      "size": 32601,
+      "archive_bytes_match": true
+    },
+    {
+      "path": "interp/io.go",
+      "sha256": "5919b6b778fc765d773e6af98537525c7554759b51ca028dddf8c61e74b70115",
+      "mode": "0o664",
+      "size": 24668,
+      "archive_bytes_match": true
+    },
+    {
+      "path": "interp/iostream.go",
+      "sha256": "f5167deff02dc03cdc75173d2483bd277574245cead44f3e91bf49dedc81b152",
+      "mode": "0o664",
+      "size": 4734,
+      "archive_bytes_match": true
+    },
+    {
+      "path": "interp/newexecute.go",
+      "sha256": "ba182988d75106add59edc22a3f575da04849c0af901223269992d861e81a2fb",
+      "mode": "0o664",
+      "size": 5393,
+      "archive_bytes_match": true
+    },
+    {
+      "path": "interp/value.go",
+      "sha256": "d897fec59af3d3ac6c5160c2194bbdc79f417219b1a7d682d5e7180caa68e406",
+      "mode": "0o664",
+      "size": 6668,
+      "archive_bytes_match": true
+    },
+    {
+      "path": "interp/vm.go",
+      "sha256": "7676fd0351a5676d4c653dc88ef7cb98406995f4c821412da726b4b7cadfd712",
+      "mode": "0o664",
+      "size": 29594,
+      "archive_bytes_match": true
+    },
+    {
+      "path": "lexer/lexer.go",
+      "sha256": "3274708dd84578bb24df6320b1c55749672d5fdf2b1f0e696e6cbb1cdbd4ce51",
+      "mode": "0o664",
+      "size": 11629,
+      "archive_bytes_match": true
+    },
+    {
+      "path": "lexer/token.go",
+      "sha256": "0a5ba1e1a21988d7a85f1b24cf7b83d5f941368d8ab26b910e206710faee17cd",
+      "mode": "0o664",
+      "size": 3970,
+      "archive_bytes_match": true
+    },
+    {
+      "path": "parser/parser.go",
+      "sha256": "804ebb72fcbba887ae94941ab6815f9769de135acec0a637db5930fc539bb62b",
+      "mode": "0o664",
+      "size": 29489,
+      "archive_bytes_match": true
+    }
+  ],
+  "original_check_sha256": "7f0229c850e924458aa70ba8b6f741b38d1f474d5630ceb6c34db37f65df534c",
+  "source_module": "module github.com/benhoyt/goawk\n\ngo 1.18\n",
+  "go_official_emulation_limitation": "https://go.dev/wiki/MinimumRequirements#linux"
+}

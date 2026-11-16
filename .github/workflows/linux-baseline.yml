@@ -1,0 +1,95 @@
+name: Native x86_64 Linux baseline
+run-name: Native old-ABI baseline experiment
+
+on:
+  push:
+    branches:
+      - acceptance/linux-baseline-20261117
+
+permissions:
+  contents: read
+
+concurrency:
+  group: linux-baseline-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  preparation:
+    if: github.repository == 's3loy/cli-release-kit-acceptance'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Check frozen source and experiment scripts
+        run: python3 compatibility/baseline/run.py check
+
+  controls:
+    needs: preparation
+    runs-on: ubuntu-24.04
+    timeout-minutes: 50
+    env:
+      BASELINE_OWNER: baseline-${{ github.run_id }}-${{ github.run_attempt }}-controls
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Check native execution and rejection controls
+        timeout-minutes: 45
+        env:
+          BASELINE_OUT: ${{ runner.temp }}/relship-baseline-controls
+        run: python3 compatibility/baseline/run.py controls
+      - name: Retain control reports
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: baseline-controls
+          path: ${{ runner.temp }}/relship-baseline-controls/reports
+          if-no-files-found: warn
+          retention-days: 3
+
+  experiments:
+    needs: controls
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        role: [rust-engine, rust-default, rust-pcre2, go, c]
+    env:
+      BASELINE_OWNER: baseline-${{ github.run_id }}-${{ github.run_attempt }}-${{ matrix.role }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Run the frozen language cases
+        timeout-minutes: 85
+        env:
+          BASELINE_OUT: ${{ runner.temp }}/relship-baseline-${{ matrix.role }}
+        run: python3 compatibility/baseline/run.py ${{ matrix.role }}
+      - name: Retain reports without executable packages
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: baseline-${{ matrix.role }}
+          path: ${{ runner.temp }}/relship-baseline-${{ matrix.role }}/reports
+          if-no-files-found: warn
+          retention-days: 3
+
+  summary:
+    needs: [controls, experiments]
+    if: always()
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          pattern: baseline-*
+          path: reports
+      - name: Require every planned result
+        run: python3 compatibility/baseline/summarize.py reports

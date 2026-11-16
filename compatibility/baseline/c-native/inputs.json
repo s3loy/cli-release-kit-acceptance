@@ -1,0 +1,144 @@
+{
+  "scope": "isolated native x86_64 glibc 2.17 C-native experiment; manual CMake control, not relship C integration",
+  "baseline": "2.17",
+  "archives": [
+    {
+      "filename": "cmake-3.31.12-linux-x86_64.tar.gz",
+      "url": "https://github.com/Kitware/CMake/releases/download/v3.31.12/cmake-3.31.12-linux-x86_64.tar.gz",
+      "sha256": "0dc2e9a6860f06bf10bd8fadc03e35d9eeb4df46e33763a7e480e987758f385c",
+      "size": 55005786,
+      "role": "cmake-tool"
+    },
+    {
+      "filename": "curl-8.23.0.tar.xz",
+      "url": "https://curl.se/download/curl-8.23.0.tar.xz",
+      "sha256": "8dadd7d2536a314f982ad05a651b713f426bf7d02cc2c76cffb9796f2218e6c5",
+      "size": 2990916,
+      "role": "curl-source"
+    },
+    {
+      "filename": "openssl-3.5.9.tar.gz",
+      "url": "https://github.com/openssl/openssl/releases/download/openssl-3.5.9/openssl-3.5.9.tar.gz",
+      "sha256": "603f5602e2eef00d77fbd429d34dcd5822bb301757a1bc9cdb24c670f1eb859a",
+      "size": 53279637,
+      "role": "openssl-source"
+    }
+  ],
+  "downloads": [
+    {
+      "filename": "cmake-3.31.12-SHA-256.txt",
+      "url": "https://github.com/Kitware/CMake/releases/download/v3.31.12/cmake-3.31.12-SHA-256.txt",
+      "sha256": "159eb3b123ba8c8403a154c9d3389432276bf3bd21b274f0396fe17a6a7a7d9d",
+      "size": 1663
+    },
+    {
+      "filename": "cmake-3.31.12-SHA-256.txt.asc",
+      "url": "https://github.com/Kitware/CMake/releases/download/v3.31.12/cmake-3.31.12-SHA-256.txt.asc",
+      "sha256": "af2c668941be2f3ec852f42b1e825e14b05dbc5d11c1f1a91e3986356672ded2",
+      "size": 833
+    },
+    {
+      "filename": "cmake-3.31.12-linux-x86_64.tar.gz",
+      "url": "https://github.com/Kitware/CMake/releases/download/v3.31.12/cmake-3.31.12-linux-x86_64.tar.gz",
+      "sha256": "0dc2e9a6860f06bf10bd8fadc03e35d9eeb4df46e33763a7e480e987758f385c",
+      "size": 55005786
+    },
+    {
+      "filename": "cmake-key.asc",
+      "url": "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0xcba23971357c2e6590d9efd3ec8fef3a7bfb4eda",
+      "sha256": "aa00e8536082a5dac61372decaee67e982bac013164e7d3f0ebebc86c85efb4b",
+      "size": 43109
+    },
+    {
+      "filename": "curl-8.23.0.tar.xz",
+      "url": "https://curl.se/download/curl-8.23.0.tar.xz",
+      "sha256": "8dadd7d2536a314f982ad05a651b713f426bf7d02cc2c76cffb9796f2218e6c5",
+      "size": 2990916
+    },
+    {
+      "filename": "curl-8.23.0.tar.xz.asc",
+      "url": "https://curl.se/download/curl-8.23.0.tar.xz.asc",
+      "sha256": "dba1562fec2bf698a1226054e6757940e4bf2ab87b3b222a5e7b91348f0b82e2",
+      "size": 488
+    },
+    {
+      "filename": "daniel-key.asc",
+      "url": "https://daniel.haxx.se/mykey.asc",
+      "sha256": "64619d3c1a2b68da837014b2ab02a049ed2c69aaebfa10a20a4f29dab003ecb8",
+      "size": 4741
+    },
+    {
+      "filename": "openssl-3.5.9.tar.gz",
+      "url": "https://github.com/openssl/openssl/releases/download/openssl-3.5.9/openssl-3.5.9.tar.gz",
+      "sha256": "603f5602e2eef00d77fbd429d34dcd5822bb301757a1bc9cdb24c670f1eb859a",
+      "size": 53279637
+    },
+    {
+      "filename": "openssl-3.5.9.tar.gz.asc",
+      "url": "https://github.com/openssl/openssl/releases/download/openssl-3.5.9/openssl-3.5.9.tar.gz.asc",
+      "sha256": "bdccf2057a7c4ae377b40e832cb8c632ae8b532d4fb64cc7b843066eee748f89",
+      "size": 931
+    },
+    {
+      "filename": "openssl-3.5.9.tar.gz.sha256",
+      "url": "https://github.com/openssl/openssl/releases/download/openssl-3.5.9/openssl-3.5.9.tar.gz.sha256",
+      "sha256": "f482705825eb43b47ce08d5cf4287ae062cdbada1a142d728a8d89c387300bf0",
+      "size": 87
+    },
+    {
+      "filename": "openssl-pubkeys.asc",
+      "url": "https://openssl-library.org/source/pubkeys.asc",
+      "sha256": "56e106cd1c44bdb117aec24795f6dfbecaa9bfa0a2901b85331f0059aad16d53",
+      "size": 45049
+    }
+  ],
+  "signatures": [
+    {
+      "name": "curl",
+      "key_file": "daniel-key.asc",
+      "signature_file": "curl-8.23.0.tar.xz.asc",
+      "signed_file": "curl-8.23.0.tar.xz",
+      "signing_fingerprint": "27EDEAF22F3ABCEB50DB9A125CC908FDB71E12C2",
+      "primary_fingerprint": "27EDEAF22F3ABCEB50DB9A125CC908FDB71E12C2",
+      "trust_source": "https://curl.se/docs/verify.html"
+    },
+    {
+      "name": "openssl",
+      "key_file": "openssl-pubkeys.asc",
+      "signature_file": "openssl-3.5.9.tar.gz.asc",
+      "signed_file": "openssl-3.5.9.tar.gz",
+      "signing_fingerprint": "C46ED3F2CBEFDA1FDAADA44264ED7B1DCCE71CB2",
+      "primary_fingerprint": "B146647E45A7B33947AB226B2A2C87D161692D40",
+      "trust_source": "https://openssl-library.org/source/"
+    },
+    {
+      "name": "cmake",
+      "key_file": "cmake-key.asc",
+      "signature_file": "cmake-3.31.12-SHA-256.txt.asc",
+      "signed_file": "cmake-3.31.12-SHA-256.txt",
+      "signing_fingerprint": "C6C265324BBEBDC350B513D02D2CEF1034921684",
+      "primary_fingerprint": "CBA23971357C2E6590D9EFD3EC8FEF3A7BFB4EDA",
+      "trust_source": "https://cmake.org/download/"
+    }
+  ],
+  "tool_choice": {
+    "cmake": "Official legacy release 3.31.12; supports File API codemodel-v2. Verify actual ELF and bootstrap in the selected image.",
+    "cmake_download_source": "https://cmake.org/download/",
+    "cmake_abi_context": "https://cmake.org/cmake/help/v3.31/release/3.28.html",
+    "openssl": "Official 3.5 LTS release 3.5.9, source-built static inside the same baseline image.",
+    "openssl_download_source": "https://openssl-library.org/source/"
+  },
+  "resource_limits": {
+    "build_seconds": 2400,
+    "compiler_jobs": 2,
+    "container_cpu": 2,
+    "container_memory_gib": 2,
+    "functional_process_seconds": 300
+  },
+  "harness_provenance": {
+    "original_path": "target/curl-consumer-20261117/scripts/accept_curl.py",
+    "original_sha256": "5c77b154ff0f0a08f68913530e70baf8898d9291588a74262263b23b4a8a4971",
+    "adapted_sha256": "22af7fcb27803d45c4f089292bdb742589334e7b127dacbe3c4a4703e90bca21",
+    "assertion_count": 12
+  }
+}
