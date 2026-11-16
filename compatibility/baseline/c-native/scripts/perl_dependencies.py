@@ -1,6 +1,7 @@
 """Stage signed CentOS Perl build dependencies without installing packages."""
 
 from pathlib import Path
+import os
 import re
 import shutil
 
@@ -58,8 +59,27 @@ def prepare(pins, inputs, out, env, run, dump, inventory, sha):
                     ignore=shutil.ignore_patterns("__db.*", ".rpm.lock", "log.*"))
     run("rpm-dependency-key-import", [tool_paths["rpm"], "--dbpath", dependency_db, "--import", key])
     run("rpm-image-provides", [tool_paths["rpm"], "--dbpath", dependency_db, "--query", "--all", "--provides"])
+    sizes = run("rpm-package-installed-sizes", [tool_paths["rpm"], "--dbpath", key_db,
+                "--query", "--package", "--qf", "%{SIZE}\n"] + files)
+    size_rows = [int(value) for value in sizes.splitlines()]
+    assert len(size_rows) == len(packages) and all(value > 0 for value in size_rows), sizes
+    file_names = run("rpm-package-file-names", [tool_paths["rpm"], "--dbpath", key_db,
+                     "--query", "--package", "--list"] + files)
+    # CPIO streams and extracted files coexist in work. Reserve header/block overhead too.
+    space = os.statvfs(work)
+    space_check = {"path": str(work), "available_bytes": space.f_bavail * space.f_frsize,
+                   "required_bytes": 2 * sum(size_rows) + 4 * 1024 * 1024,
+                   "available_inodes": space.f_favail,
+                   "required_inodes": 2 * len(file_names.splitlines()) + len(packages) + 32,
+                   "inode_accounting": space.f_files != 0,
+                   "scope": "actual owned output filesystem; no installation into the read-only root"}
+    dump(out / "evidence/perl-dependency-space.json", space_check)
+    assert space_check["available_bytes"] >= space_check["required_bytes"], space_check
+    if space_check["inode_accounting"]:
+        assert space_check["available_inodes"] >= space_check["required_inodes"], space_check
+    # RPM's dependency test otherwise checks hypothetical installation into read-only /.
     run("rpm-requires-test", [tool_paths["rpm"], "--noplugins", "--dbpath", dependency_db,
-                               "--install", "--test", "--noscripts", "--notriggers"] + files)
+                               "--install", "--test", "--ignoresize", "--noscripts", "--notriggers"] + files)
     assert database_inventory() == before, "the real image RPM database changed"
 
     prefix = work / "perl-dependencies"
@@ -108,6 +128,7 @@ print "COMPILER\\t$gcc\\n";
         "scope": "signed build-tool RPM payloads staged in an owned prefix; no package installation",
         "packages": packages, "key": pin["key"], "signature_check_passed": True,
         "copied_database_requires_test_passed": True, "image_database_unchanged": True,
+        "owned_output_space_check": space_check,
         "image_database_snapshot": before,
         "image_tools_unchanged": tool_hashes, "perl_version": "5.16.3", "perl5lib": env["PERL5LIB"],
         "loaded_modules": loaded, "payloads": payloads, "prefix_inventory": inventory(prefix),

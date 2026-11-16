@@ -110,6 +110,11 @@ module directories enter `PERL5LIB`. Supplementary development headers remain
 outside the application's compiler search paths. The image, Perl interpreter,
 GCC, glibc, OpenSSL source and TLS flags stay fixed.
 
+RPM's dependency-only dry-run uses `--ignoresize` because its default space
+preflight targets the read-only `/` filesystem. Staging bytes and inodes are
+checked on the actual owned output filesystem; CPIO creation and extraction
+must still succeed. Signature and dependency checks remain mandatory.
+
 The build image's exact `LD_LIBRARY_PATH` and `PKG_CONFIG_PATH` values are
 declared in the engine pins. Other unrequested Cargo/profile overrides fail.
 No case changes the original ripgrep profile or silently substitutes a newer
