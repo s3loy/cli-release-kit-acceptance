@@ -15,8 +15,11 @@ import zipfile
 
 
 def digest(path):
+    state = hashlib.sha256()
     with Path(path).open("rb") as stream:
-        return hashlib.file_digest(stream, "sha256").hexdigest()
+        for chunk in iter(lambda: stream.read(1024 * 1024), b""):
+            state.update(chunk)
+    return state.hexdigest()
 
 
 def write_json(path, value):
@@ -70,6 +73,8 @@ def main(root, out, runner):
     assert out != root and not out.is_relative_to(root)
     assert not out.exists(), "Use a fresh output directory"
     out.mkdir(parents=True)
+    environment = {"python": sys.version, "python_executable": sys.executable}
+    write_json(out / "report/environment-python.json", environment)
     expected = json.loads((root / "compatibility/source-snapshot.json").read_text())
     assert engine_source_id(root) == expected["engine_source_id"]
     assert all(digest(root / name) == value for name, value in expected["files"].items())
@@ -77,7 +82,6 @@ def main(root, out, runner):
     assert clean["stdout"] == "", "The reviewed fixture must be committed before the real experiment"
     source_commit = command(out, "source-commit", ["git", "rev-parse", "HEAD"], root)["stdout"].strip()
     source_tree = command(out, "source-tree", ["git", "rev-parse", "HEAD^{tree}"], root)["stdout"].strip()
-    environment = {}
     for label, argv in [
         ("rustc", ["rustc", "-vV"]), ("cargo", ["cargo", "--version"]),
         ("compiler", ["cc", "--version"]), ("libc", ["ldd", "--version"]),
