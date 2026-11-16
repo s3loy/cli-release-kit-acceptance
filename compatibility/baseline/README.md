@@ -1,15 +1,19 @@
 # Native x86_64 Linux baseline experiment
 
-This is a review draft for `s3loy/cli-release-kit-acceptance`, prepared on
-2026-11-17. Native builds and runtime checks have not run under this draft.
+This isolated experiment for `s3loy/cli-release-kit-acceptance` was prepared on
+2026-11-17. Actual execution evidence is retained in its Actions run reports.
 The experiment asks whether the selected current toolchains and applications
 can retain a GNU/glibc 2.17 baseline. Failures keep that candidate and their
 original evidence for diagnosis.
 
 The workflow is [linux-baseline.yml](../../.github/workflows/linux-baseline.yml).
-Its proposed branch is `acceptance/linux-baseline-20261117`, based on
+Its execution branch is `acceptance/linux-baseline-20261117`, based on
 `c0c8d70f28c3225b2a5b90474c8e22d6053c898b`. Only that branch triggers it.
-Preparing this draft does not commit, push, start Actions or publish a Release.
+The first [native run](https://github.com/s3loy/cli-release-kit-acceptance/actions/runs/43942673302)
+passed the high-glibc loader control, then stopped before language builds when
+the dependency-control container could not write its runner-owned output
+directory. Containers now use the runner UID/GID and a writable temporary HOME;
+the original capabilities, image pins, ABI candidate and assertions remain.
 
 ## Execution and cases
 
@@ -126,6 +130,8 @@ explicit writable output mounts and no network. Functional tests use host-side
 Python and clean containers. Curl alone uses host networking to reach its
 loopback HTTP/TLS fixture; the fixture is locally generated. No Docker socket,
 checkout credentials or entire historical consumer directory enters a guest.
+Container UID/GID matches the host runner so owned output and mode-0700 test
+fixtures are accessible without restoring capabilities or broadening modes.
 
 | Role | Shared controller budget | Actions step | Whole job |
 | --- | ---: | ---: | ---: |
@@ -169,17 +175,16 @@ python3 compatibility/baseline/run.py check
 actionlint .github/workflows/linux-baseline.yml
 ```
 
-The draft has received static checks, retained-input hash checks and controlled
-host-side failure-path checks. It has not received native Linux build, ELF,
-runtime or package acceptance under this workflow. Containers share the
+Static checks, retained-input hash checks and controlled host-side failure-path
+checks support the harness. Build, ELF, runtime and package acceptance must be
+read from each native run's reports. Containers share the
 Ubuntu runner kernel and CPU; passing does not qualify a minimum old kernel,
 minimum CPU, every distribution or every application feature. This experiment
 does not cover ARM, musl or native package-manager installation.
 
-Only `.github/workflows/linux-baseline.yml` and `compatibility/baseline/**` are
-proposed additions to the isolated acceptance branch. Product code remains
-unchanged. No staging, commit, push, tag or Release is part of preparing this
-review draft.
+Only `.github/workflows/linux-baseline.yml` and `compatibility/baseline/**`
+belong to this experiment. Product code remains unchanged. Execution on this
+acceptance branch does not publish a tag or Release.
 
 Workflow semantics follow GitHub's
 [matrix controls](https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/run-job-variations),

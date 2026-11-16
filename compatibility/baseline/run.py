@@ -111,6 +111,8 @@ def native():
     dump(OUT / "native-host.json", {"system": platform.system(), "machine": platform.machine(),
          "kernel": platform.release(), "docker_architecture": arch.strip(),
          "python_version": sys.version, "python_sha256": sha(Path(sys.executable).resolve()),
+         "host_uid": os.getuid(), "host_gid": os.getgid(),
+         "container_user": str(os.getuid()) + ":" + str(os.getgid()),
          "runner_image": {k: os.environ.get(k) for k in ("ImageOS", "ImageVersion", "RUNNER_ARCH")},
          "containers_share_kernel": True, "minimum_cpu_kernel_qualified": False})
 
@@ -134,6 +136,7 @@ def docker(name, ref, argv, mounts=(), env=None, network="none", detach=False):
     owned = "baseline-" + name + "-" + str(os.getpid())
     OWNED.add(owned)
     cmd = ["docker", "run", "--name", owned, "--platform", "linux/amd64",
+           "--user", str(os.getuid()) + ":" + str(os.getgid()), "--env", "HOME=/tmp",
            "--label", "relship.baseline.owner=" + OWNER,
            "--network", network, "--read-only", "--cap-drop", "ALL",
            "--security-opt", "no-new-privileges", "--cpus", "2", "--memory", "2g",
@@ -289,6 +292,7 @@ def rust_case(role):
         for label in ("runtime217", "runtime231", "runtime239"):
             resultdir = out / "runtime" / label
             prefix = ["docker", "run", "--rm", "--platform", "linux/amd64",
+                      "--user", str(os.getuid()) + ":" + str(os.getgid()), "--env", "HOME=/tmp",
                       "--label", "relship.baseline.owner=" + OWNER,
                       "--network", "none", "--read-only", "--cap-drop", "ALL",
                       "--security-opt", "no-new-privileges", "--cpus", "2", "--memory", "2g",

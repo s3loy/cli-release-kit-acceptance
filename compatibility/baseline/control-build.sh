@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 cd /out
+id
+stat -c '%u:%g %a %n' /out
 test "$(getconf GNU_LIBC_VERSION)" = "glibc 2.17"
 cc --version > compiler.txt
 ld --version > linker.txt

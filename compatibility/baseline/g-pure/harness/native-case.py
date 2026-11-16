@@ -101,6 +101,7 @@ def container(label, image, command, mounts=(), env=(), data=None, timeout=300, 
     SEQ += 1
     name = "baseline-g-pure-{}-{}".format(os.getpid(), SEQ)
     argv = ["docker", "run", "--rm", "--name", name, "--platform", "linux/amd64",
+            "--user", str(os.getuid()) + ":" + str(os.getgid()), "--env", "HOME=/tmp",
             "--network", "none", "--read-only", "--cap-drop", "ALL",
             "--security-opt", "no-new-privileges", "--cpus", "2", "--memory", "2g",
             "--pids-limit", "256", "--tmpfs", "/tmp:rw,nosuid,size=512m"]
