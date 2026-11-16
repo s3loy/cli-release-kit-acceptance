@@ -68,6 +68,12 @@ def command(name, argv, timeout=300, env=None, required=True):
               "stderr_sha256": sha(logs / (name + ".stderr"))}
     COMMANDS.append(record)
     dump(OUT / "commands.json", COMMANDS)
+    if code or expired:
+        print("Command " + name + " exited " + str(code)
+              + (" after timeout" if expired else "") + "; original logs retained", flush=True)
+        tail = (logs / (name + ".stderr")).read_text(errors="replace").splitlines()[-20:]
+        if tail:
+            print("\n".join(tail), file=sys.stderr, flush=True)
     if required and (code or expired):
         raise RuntimeError(name + " failed; inspect controller-logs")
     return code, (logs / (name + ".stdout")).read_text(errors="replace")
@@ -426,6 +432,12 @@ def main():
             passed = rust_case(args.role)
         else:
             passed = {"go": go_case, "c": c_case, "controls": controls}[args.role]()
+        if not passed:
+            failed = [{"name": row["name"], "exit": row["exit"], "timed_out": row["timed_out"],
+                       "stderr": "controller-logs/" + row["name"] + ".stderr"}
+                      for row in COMMANDS if row["exit"] or row["timed_out"]]
+            error = {"message": "Required experiment role failed; inspect retained case reports",
+                     "failed_commands": failed}
     except Exception as exc:
         error = {"message": str(exc), "traceback": traceback.format_exc()}
     finally:
