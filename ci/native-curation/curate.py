@@ -138,6 +138,20 @@ def pe_machine(path):
         return hex(struct.unpack("<H", stream.read(2))[0])
 
 
+def windows_sdk_roots(environment, tools):
+    roots = {Path(tool).parent.resolve(strict=True) for tool in tools}
+    for key in ("INCLUDE", "LIB", "LIBPATH"):
+        for value in environment[key].split(";"):
+            if not value:
+                continue
+            path = Path(value)
+            if not path.is_absolute() or not path.is_dir():
+                raise ValueError(f"Windows {key} search directory is unavailable: {value}")
+            roots.add(path.resolve(strict=True))
+    # A parent inventory already binds a nested search directory's full tree.
+    return sorted(path for path in roots if not any(other in path.parents for other in roots))
+
+
 def windows_candidate():
     vswhere = Path(os.environ["ProgramFiles(x86)"]) / "Microsoft Visual Studio/Installer/vswhere.exe"
     installations = json.loads(run("vswhere", [vswhere, "-all", "-products", "*", "-format", "json", "-utf8"]))
@@ -186,8 +200,7 @@ def windows_candidate():
     expected_machine = "0xaa64" if target_arch == "arm64" else "0x8664"
     if any(pe_machine(p) != expected_machine for p in tools[:4]):
         raise ValueError("MSVC candidate compiler tools do not run natively on this host")
-    roots = [toolset, sdkroot / "Include" / sdkversion, sdkroot / "Lib" / sdkversion,
-             sdkroot / "bin" / sdkversion]
+    roots = windows_sdk_roots(normalized, tools)
     redist = sorted((vs / "VC/Redist/MSVC").glob("*"))
     license_candidates = []
     patterns = ["[Ll]icense*", "*[Ee][Uu][Ll][Aa]*", "VC/Redist/MSVC/**/[Ll]icense*", "VC/Redist/MSVC/**/[Rr]edist*.txt",
@@ -212,6 +225,8 @@ def windows_candidate():
     env.update({"CC": str(tools[0]), "AR": str(tools[2]), "LD": str(tools[1])})
     return {"id": "msvc-c-sdk-candidate", "version": toolset.name + "+sdk-" + sdkversion,
             "roots": [str(p.resolve()) for p in roots], "tools": [str(p.resolve()) for p in tools],
+            "root_selection": "Native tool directories and complete INCLUDE/LIB/LIBPATH search directories",
+            "environment_search_paths": {key: normalized[key] for key in ("INCLUDE", "LIB", "LIBPATH")},
             "generator_candidate": "NMake Makefiles"}, env
 
 
