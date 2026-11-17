@@ -71,5 +71,6 @@ jobs:
             ${{ runner.temp }}/relship-native-consumer/job/ci-manifest.json
             ${{ runner.temp }}/relship-native-consumer/job/result/**
             ${{ runner.temp }}/relship-native-consumer/job/invocations/*/logs/**
+            ${{ runner.temp }}/relship-native-consumer/job/invocations/*/native-sdk.json
             ${{ runner.temp }}/relship-native-consumer/job/validations/**
             ${{ runner.temp }}/relship-native-consumer/job/evidence/**

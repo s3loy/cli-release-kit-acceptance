@@ -57,7 +57,7 @@ fn regular(path: &Path, limit: u64) -> Result<()> {
     Ok(())
 }
 fn private(path: &Path) -> Result<()> {
-    let mut builder = fs::DirBuilder::new();
+    let builder = &mut fs::DirBuilder::new();
     #[cfg(unix)]
     {
         use std::os::unix::fs::DirBuilderExt;

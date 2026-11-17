@@ -284,8 +284,8 @@ fn native_sdk(
         host_os: std::env::consts::OS.into(),
         host_arch: Architecture::parse(std::env::consts::ARCH)?,
     };
-    sdk.verify(&observed, &p.os, p.arch)?;
     io::write_json_atomic(&logs.join("native-sdk.json"), &observed)?;
+    sdk.verify(&observed, &p.os, p.arch)?;
     Ok(observed)
 }
 struct Driver<'a> {

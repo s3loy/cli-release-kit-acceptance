@@ -276,7 +276,17 @@ impl NativeSdkExpectation {
                 && observed.tool_sha256 == self.tool_sha256
                 && observed.roots == self.roots
                 && observed.environment == self.environment,
-            "observed native SDK or tool identity differs from the saved expectation"
+            "observed native SDK or tool identity differs from the saved expectation; changed roots: {}",
+            self.roots
+                .keys()
+                .chain(observed.roots.keys())
+                .collect::<std::collections::BTreeSet<_>>()
+                .into_iter()
+                .filter(|path| self.roots.get(*path) != observed.roots.get(*path))
+                .take(8)
+                .map(String::as_str)
+                .collect::<Vec<_>>()
+                .join(", ")
         );
         ensure!(
             self.tool_sha256.keys().all(|p| observed

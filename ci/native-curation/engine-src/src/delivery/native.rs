@@ -258,7 +258,7 @@ fn package_inner(
     );
     let parent = output.parent().unwrap();
     let work = parent.join(format!(".native-{}", spec.id));
-    let mut directory = fs::DirBuilder::new();
+    let directory = &mut fs::DirBuilder::new();
     #[cfg(unix)]
     {
         use std::os::unix::fs::DirBuilderExt;

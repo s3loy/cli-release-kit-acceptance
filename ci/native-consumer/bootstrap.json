@@ -1,5 +1,5 @@
 {
-  "engine_source_id": "c6f27ab28402b4904ac22dc396d6cb5d7299ec6b190b8e9423f8417e71204a28",
+  "engine_source_id": "31ed2dd16c4605bdd3ab7a423f9326aba4bce2a3ef37763b927dce3c94686d0c",
   "hosts": {
     "linux-x86_64": {
       "run_id": 44094675424,
@@ -20,28 +20,32 @@
       "artifact_name": "native-curation-macos-x86_64-44094675424-1",
       "engine_sha256": "771b6a677520d4d5db49f613cb2f4d0ad7eb9c8995d67e29441c2fefcf153ffd",
       "engine_filename": "relship",
-      "rust_host": "x86_64-apple-darwin"
+      "rust_host": "x86_64-apple-darwin",
+      "sdk_component_capture_run_id": 44112076579
     },
     "macos-aarch64": {
       "run_id": 44094675424,
       "artifact_name": "native-curation-macos-aarch64-44094675424-1",
       "engine_sha256": "e2ba43ba39ac216b717c4e3b56b857ecb75e3ffb2d5d191fa0b077869925494e",
       "engine_filename": "relship",
-      "rust_host": "aarch64-apple-darwin"
+      "rust_host": "aarch64-apple-darwin",
+      "sdk_component_capture_run_id": 44112076579
     },
     "windows-x86_64": {
       "run_id": 44091811814,
       "artifact_name": "native-curation-windows-x86_64-44091811814-1",
       "engine_sha256": "ca0430eac28d7c21ccbb2c11de3a61632a3f7dbb16799825e6b3ce59553c7775",
       "engine_filename": "relship.exe",
-      "rust_host": "x86_64-pc-windows-msvc"
+      "rust_host": "x86_64-pc-windows-msvc",
+      "sdk_component_capture_run_id": 44112076579
     },
     "windows-aarch64": {
       "run_id": 44091811814,
       "artifact_name": "native-curation-windows-aarch64-44091811814-1",
       "engine_sha256": "2c00baf8399de1a3b48082a392ff7edcb43e41dc308552f6e388c981a03f645d",
       "engine_filename": "relship.exe",
-      "rust_host": "aarch64-pc-windows-msvc"
+      "rust_host": "aarch64-pc-windows-msvc",
+      "sdk_component_capture_run_id": 44112076579
     }
   }
 }

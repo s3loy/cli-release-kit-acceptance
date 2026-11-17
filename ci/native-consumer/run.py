@@ -65,7 +65,7 @@ try:
     rustup = shutil.which("rustup")
     assert rustup
     toolchain = "1.96.0-" + spec["rust_host"]
-    run("provision-exact-rust", [rustup, "toolchain", "install", toolchain, "--profile", "minimal", "--no-self-update"], timeout=300)
+    run("provision-exact-rust", [rustup, "toolchain", "install", toolchain, "--profile", "minimal", "--component", "rustfmt,clippy", "--no-self-update"], timeout=300)
     settings = tomllib.loads((ROOT / "release-ci.toml").read_text())
     environment = os.environ.copy()
     if HOST in settings["environments"]:

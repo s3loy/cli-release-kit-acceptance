@@ -198,7 +198,7 @@ fn run_existing(
 }
 
 fn create_private_directory(output: &Path) -> Result<()> {
-    let mut builder = fs::DirBuilder::new();
+    let builder = &mut fs::DirBuilder::new();
     #[cfg(unix)]
     {
         use std::os::unix::fs::DirBuilderExt;

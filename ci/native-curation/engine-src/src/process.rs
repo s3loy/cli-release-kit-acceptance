@@ -13,11 +13,23 @@ const OUTPUT_LIMIT: u64 = 16 * 1024 * 1024;
 static CAPTURE_ID: AtomicU64 = AtomicU64::new(0);
 
 pub fn environment() -> BTreeMap<String, String> {
+    filtered_environment(
+        std::env::vars_os()
+            .filter_map(|(key, value)| Some((key.into_string().ok()?, value.into_string().ok()?))),
+        cfg!(windows),
+    )
+}
+
+fn filtered_environment(
+    values: impl Iterator<Item = (String, String)>,
+    windows: bool,
+) -> BTreeMap<String, String> {
     const EXACT: &[&str] = &[
         "PATH",
         "HOME",
         "USER",
         "USERPROFILE",
+        "LOCALAPPDATA",
         "SYSTEMROOT",
         "COMSPEC",
         "PATHEXT",
@@ -60,8 +72,17 @@ pub fn environment() -> BTreeMap<String, String> {
         "CXX_",
         "AR_",
     ];
-    std::env::vars_os()
-        .filter_map(|(key, value)| Some((key.into_string().ok()?, value.into_string().ok()?)))
+    values
+        .map(|(key, value)| {
+            (
+                if windows {
+                    key.to_ascii_uppercase()
+                } else {
+                    key
+                },
+                value,
+            )
+        })
         .filter(|(key, _)| {
             (EXACT.contains(&key.as_str()) || PREFIXES.iter().any(|p| key.starts_with(p)))
                 && !crate::config::secret_name(key)
@@ -289,7 +310,7 @@ pub fn capture_spec(
     let path = loop {
         let id = CAPTURE_ID.fetch_add(1, Ordering::Relaxed);
         let candidate = base.join(format!("release-kit-capture-{}-{id}", std::process::id()));
-        let mut builder = fs::DirBuilder::new();
+        let builder = &mut fs::DirBuilder::new();
         #[cfg(unix)]
         {
             use std::os::unix::fs::DirBuilderExt;
@@ -309,6 +330,27 @@ pub fn capture_spec(
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn windows_environment_keeps_cache_location_without_credentials() {
+        let values = BTreeMap::from([
+            ("Path".into(), r"C:\tools".into()),
+            (
+                "LocalAppData".into(),
+                r"C:\Users\runner\AppData\Local".into(),
+            ),
+            ("SystemRoot".into(), r"C:\Windows".into()),
+            ("GitHub_Token".into(), "credential".into()),
+            ("CARGO_TARGET_SECRET".into(), "credential".into()),
+        ]);
+        let windows = filtered_environment(values.clone().into_iter(), true);
+        assert_eq!(windows.len(), 3);
+        assert_eq!(windows["LOCALAPPDATA"], values["LocalAppData"]);
+        assert_eq!(windows["SYSTEMROOT"], values["SystemRoot"]);
+        assert_eq!(windows["PATH"], values["Path"]);
+        let unix = filtered_environment(values.into_iter(), false);
+        assert!(unix.is_empty());
+    }
 
     #[test]
     #[cfg(unix)]
