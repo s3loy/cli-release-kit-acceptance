@@ -1,0 +1,278 @@
+[
+  {
+    "os": "linux",
+    "arch": "x86_64",
+    "language": "rust",
+    "tools": [
+      {
+        "kind": "archive",
+        "name": "rustc",
+        "version": "1.96.0",
+        "url": "https://static.rust-lang.org/dist/2026-05-28/rustc-1.96.0-x86_64-unknown-linux-gnu.tar.gz",
+        "sha256": "71143d6075582b7e65233992c77e375aadbec4dfda6df2675160bf05b89410f9",
+        "filename": "rustc-1.96.0-x86_64-unknown-linux-gnu.tar.gz"
+      },
+      {
+        "kind": "archive",
+        "name": "cargo",
+        "version": "1.96.0",
+        "url": "https://static.rust-lang.org/dist/2026-05-28/cargo-1.96.0-x86_64-unknown-linux-gnu.tar.gz",
+        "sha256": "b691a9e31b1e5498017be91155a1e7501eccf6437e7dc9ff1896e38aa1584dbf",
+        "filename": "cargo-1.96.0-x86_64-unknown-linux-gnu.tar.gz"
+      },
+      {
+        "kind": "archive",
+        "name": "rust-std",
+        "version": "1.96.0",
+        "url": "https://static.rust-lang.org/dist/2026-05-28/rust-std-1.96.0-x86_64-unknown-linux-gnu.tar.gz",
+        "sha256": "36e577b66f7b2f8fc6493f97f81329e5f6e1514360d0c6c31d5d8463184e6773",
+        "filename": "rust-std-1.96.0-x86_64-unknown-linux-gnu.tar.gz"
+      }
+    ]
+  },
+  {
+    "os": "linux",
+    "arch": "x86_64",
+    "language": "go",
+    "tools": [
+      {
+        "kind": "archive",
+        "name": "go",
+        "version": "1.27.4",
+        "url": "https://go.dev/dl/go1.27.4.linux-amd64.tar.gz",
+        "sha256": "7226736c2339719cda28fbf3a54d71aa63bcefe376e98cef00034268dab24840",
+        "filename": "go1.27.4.linux-amd64.tar.gz"
+      }
+    ]
+  },
+  {
+    "os": "linux",
+    "arch": "aarch64",
+    "language": "rust",
+    "tools": [
+      {
+        "kind": "archive",
+        "name": "rustc",
+        "version": "1.96.0",
+        "url": "https://static.rust-lang.org/dist/2026-05-28/rustc-1.96.0-aarch64-unknown-linux-gnu.tar.gz",
+        "sha256": "ba3c19a8e3a54efce3bd8d6c8ceb21173c8c64a100dd84e62fdfd8313c1ea7ed",
+        "filename": "rustc-1.96.0-aarch64-unknown-linux-gnu.tar.gz"
+      },
+      {
+        "kind": "archive",
+        "name": "cargo",
+        "version": "1.96.0",
+        "url": "https://static.rust-lang.org/dist/2026-05-28/cargo-1.96.0-aarch64-unknown-linux-gnu.tar.gz",
+        "sha256": "aff68544337c835a58ff303c47fc1ddb0a1a0bd9df332e37c8d466d8f78eaa32",
+        "filename": "cargo-1.96.0-aarch64-unknown-linux-gnu.tar.gz"
+      },
+      {
+        "kind": "archive",
+        "name": "rust-std",
+        "version": "1.96.0",
+        "url": "https://static.rust-lang.org/dist/2026-05-28/rust-std-1.96.0-aarch64-unknown-linux-gnu.tar.gz",
+        "sha256": "66ad5d73e79dd44b93c260ee61752abce3ce5ccb5031832beaccd1c248b88586",
+        "filename": "rust-std-1.96.0-aarch64-unknown-linux-gnu.tar.gz"
+      }
+    ]
+  },
+  {
+    "os": "linux",
+    "arch": "aarch64",
+    "language": "go",
+    "tools": [
+      {
+        "kind": "archive",
+        "name": "go",
+        "version": "1.27.4",
+        "url": "https://go.dev/dl/go1.27.4.linux-arm64.tar.gz",
+        "sha256": "3392582988a273a87ab5043ee1b2c9c17a2c3c00580bf9326c47a2e0aaaeac92",
+        "filename": "go1.27.4.linux-arm64.tar.gz"
+      }
+    ]
+  },
+  {
+    "os": "macos",
+    "arch": "x86_64",
+    "language": "rust",
+    "tools": [
+      {
+        "kind": "archive",
+        "name": "rustc",
+        "version": "1.96.0",
+        "url": "https://static.rust-lang.org/dist/2026-05-28/rustc-1.96.0-x86_64-apple-darwin.tar.gz",
+        "sha256": "316060175a1dadca74cc8a16ed52c19c9a0d68c70c3937b33694f56c79bf1036",
+        "filename": "rustc-1.96.0-x86_64-apple-darwin.tar.gz"
+      },
+      {
+        "kind": "archive",
+        "name": "cargo",
+        "version": "1.96.0",
+        "url": "https://static.rust-lang.org/dist/2026-05-28/cargo-1.96.0-x86_64-apple-darwin.tar.gz",
+        "sha256": "56229b6257f31496cdeabd3d734debc0e1bc16ac2926e497497a47a84ba9d048",
+        "filename": "cargo-1.96.0-x86_64-apple-darwin.tar.gz"
+      },
+      {
+        "kind": "archive",
+        "name": "rust-std",
+        "version": "1.96.0",
+        "url": "https://static.rust-lang.org/dist/2026-05-28/rust-std-1.96.0-x86_64-apple-darwin.tar.gz",
+        "sha256": "c5dfa11ccc724faec277e420ff6b33cfa6567b9ac6fa9e5d712a19c662d8c36c",
+        "filename": "rust-std-1.96.0-x86_64-apple-darwin.tar.gz"
+      }
+    ]
+  },
+  {
+    "os": "macos",
+    "arch": "x86_64",
+    "language": "go",
+    "tools": [
+      {
+        "kind": "archive",
+        "name": "go",
+        "version": "1.27.4",
+        "url": "https://go.dev/dl/go1.27.4.darwin-amd64.tar.gz",
+        "sha256": "2b799377704ef12db39bd254995d5c348c9cc8d86562ca817724390e56c38f43",
+        "filename": "go1.27.4.darwin-amd64.tar.gz"
+      }
+    ]
+  },
+  {
+    "os": "macos",
+    "arch": "aarch64",
+    "language": "rust",
+    "tools": [
+      {
+        "kind": "archive",
+        "name": "rustc",
+        "version": "1.96.0",
+        "url": "https://static.rust-lang.org/dist/2026-05-28/rustc-1.96.0-aarch64-apple-darwin.tar.gz",
+        "sha256": "c1a23d0ac24da25eca730d87d74d7f6f771d48167fc93e45d79f0e12f486c8d9",
+        "filename": "rustc-1.96.0-aarch64-apple-darwin.tar.gz"
+      },
+      {
+        "kind": "archive",
+        "name": "cargo",
+        "version": "1.96.0",
+        "url": "https://static.rust-lang.org/dist/2026-05-28/cargo-1.96.0-aarch64-apple-darwin.tar.gz",
+        "sha256": "178581665d8b3af41f3fe21cb8a48aa7eb65ab4c567f53f3661a3a6c9b182f2e",
+        "filename": "cargo-1.96.0-aarch64-apple-darwin.tar.gz"
+      },
+      {
+        "kind": "archive",
+        "name": "rust-std",
+        "version": "1.96.0",
+        "url": "https://static.rust-lang.org/dist/2026-05-28/rust-std-1.96.0-aarch64-apple-darwin.tar.gz",
+        "sha256": "a5c160197236f68cc8627a573545fd883d4d98856fb654a6d6aa5883ff1bdcc7",
+        "filename": "rust-std-1.96.0-aarch64-apple-darwin.tar.gz"
+      }
+    ]
+  },
+  {
+    "os": "macos",
+    "arch": "aarch64",
+    "language": "go",
+    "tools": [
+      {
+        "kind": "archive",
+        "name": "go",
+        "version": "1.27.4",
+        "url": "https://go.dev/dl/go1.27.4.darwin-arm64.tar.gz",
+        "sha256": "91a44a2b8a716600ad94a4f143e156116620db8828086a6e3602291be9bd0bb4",
+        "filename": "go1.27.4.darwin-arm64.tar.gz"
+      }
+    ]
+  },
+  {
+    "os": "windows",
+    "arch": "x86_64",
+    "language": "rust",
+    "tools": [
+      {
+        "kind": "archive",
+        "name": "rustc",
+        "version": "1.96.0",
+        "url": "https://static.rust-lang.org/dist/2026-05-28/rustc-1.96.0-x86_64-pc-windows-msvc.tar.gz",
+        "sha256": "7ac166bfc1be39a9e20c1db8792eb8c2cabaffc1073522276449badb076430c2",
+        "filename": "rustc-1.96.0-x86_64-pc-windows-msvc.tar.gz"
+      },
+      {
+        "kind": "archive",
+        "name": "cargo",
+        "version": "1.96.0",
+        "url": "https://static.rust-lang.org/dist/2026-05-28/cargo-1.96.0-x86_64-pc-windows-msvc.tar.gz",
+        "sha256": "4bbfd36d150623232fed2d9cfa0d909f4edd96390d0466d142add5ac6c678ca6",
+        "filename": "cargo-1.96.0-x86_64-pc-windows-msvc.tar.gz"
+      },
+      {
+        "kind": "archive",
+        "name": "rust-std",
+        "version": "1.96.0",
+        "url": "https://static.rust-lang.org/dist/2026-05-28/rust-std-1.96.0-x86_64-pc-windows-msvc.tar.gz",
+        "sha256": "37cd6872dd7ecc194f542722dcd124a8fbe86d73487ae7c6d4b4b46ae8f9a32c",
+        "filename": "rust-std-1.96.0-x86_64-pc-windows-msvc.tar.gz"
+      }
+    ]
+  },
+  {
+    "os": "windows",
+    "arch": "x86_64",
+    "language": "go",
+    "tools": [
+      {
+        "kind": "archive",
+        "name": "go",
+        "version": "1.27.4",
+        "url": "https://go.dev/dl/go1.27.4.windows-amd64.zip",
+        "sha256": "178ab98950ac69ab25069307dc6ade79f3816e414cce95b4da166a115cde1e7e",
+        "filename": "go1.27.4.windows-amd64.zip"
+      }
+    ]
+  },
+  {
+    "os": "windows",
+    "arch": "aarch64",
+    "language": "rust",
+    "tools": [
+      {
+        "kind": "archive",
+        "name": "rustc",
+        "version": "1.96.0",
+        "url": "https://static.rust-lang.org/dist/2026-05-28/rustc-1.96.0-aarch64-pc-windows-msvc.tar.gz",
+        "sha256": "770589c55dec48b6809d533e30bbc9c35c02f6e1551c191c43cd360e2e82eaa7",
+        "filename": "rustc-1.96.0-aarch64-pc-windows-msvc.tar.gz"
+      },
+      {
+        "kind": "archive",
+        "name": "cargo",
+        "version": "1.96.0",
+        "url": "https://static.rust-lang.org/dist/2026-05-28/cargo-1.96.0-aarch64-pc-windows-msvc.tar.gz",
+        "sha256": "67a38713f833ddc9df999c70777cb13fafaa642fc20e3d2e572958775c93f179",
+        "filename": "cargo-1.96.0-aarch64-pc-windows-msvc.tar.gz"
+      },
+      {
+        "kind": "archive",
+        "name": "rust-std",
+        "version": "1.96.0",
+        "url": "https://static.rust-lang.org/dist/2026-05-28/rust-std-1.96.0-aarch64-pc-windows-msvc.tar.gz",
+        "sha256": "f8769bd4a44c77c0cf885b1a8f25f4b8e3bfb6e5d1262517503ecd16f13d1b18",
+        "filename": "rust-std-1.96.0-aarch64-pc-windows-msvc.tar.gz"
+      }
+    ]
+  },
+  {
+    "os": "windows",
+    "arch": "aarch64",
+    "language": "go",
+    "tools": [
+      {
+        "kind": "archive",
+        "name": "go",
+        "version": "1.27.4",
+        "url": "https://go.dev/dl/go1.27.4.windows-arm64.zip",
+        "sha256": "9e7a72565792b8ab370b37ac9ac109799237abacb39ff2f541c438b963c0cc64",
+        "filename": "go1.27.4.windows-arm64.zip"
+      }
+    ]
+  }
+]

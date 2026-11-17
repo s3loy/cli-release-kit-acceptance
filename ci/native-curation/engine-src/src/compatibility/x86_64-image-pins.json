@@ -1,0 +1,50 @@
+[
+  {
+    "name": "build217",
+    "discovery_reference": "quay.io/pypa/manylinux2014_x86_64:latest",
+    "reference": "quay.io/pypa/manylinux2014_x86_64@sha256:e6a785657009c612fe2a85fa933051d03a50ba62b1c5e47d62abcab546a2e423",
+    "platform": "linux/amd64",
+    "index_digest": "sha256:e6a785657009c612fe2a85fa933051d03a50ba62b1c5e47d62abcab546a2e423",
+    "manifest_digest": "sha256:e6a785657009c612fe2a85fa933051d03a50ba62b1c5e47d62abcab546a2e423",
+    "config_digest": "sha256:6b18250bf05552e58f6bb40f5db23e3ea6eb0d91e788db417bdae79a2f8e6743",
+    "compressed_layer_bytes": 399946030,
+    "created": "2026-11-14T11:16:14.899237183Z",
+    "registry": "https://quay.io"
+  },
+  {
+    "name": "runtime231",
+    "discovery_reference": "registry-1.docker.io/library/ubuntu:sha256:c664f8f86ed5a386b0a340d981b8f81714e21a8b9c73f658c4bea56aa179d54a",
+    "reference": "registry-1.docker.io/library/ubuntu@sha256:c664f8f86ed5a386b0a340d981b8f81714e21a8b9c73f658c4bea56aa179d54a",
+    "platform": "linux/amd64",
+    "index_digest": "sha256:c664f8f86ed5a386b0a340d981b8f81714e21a8b9c73f658c4bea56aa179d54a",
+    "manifest_digest": "sha256:c664f8f86ed5a386b0a340d981b8f81714e21a8b9c73f658c4bea56aa179d54a",
+    "config_digest": "sha256:b7bab04fd9aa0c771e5720bf0cc7cbf993fd6946645983d9096126e5af45d713",
+    "compressed_layer_bytes": 27510394,
+    "created": "2025-04-08T10:42:48.947155373Z",
+    "registry": "https://registry-1.docker.io"
+  },
+  {
+    "name": "runtime239",
+    "discovery_reference": "registry-1.docker.io/library/ubuntu:sha256:77eb101c607d6e3d4f5ad0c8a02c2136c689b98aba1f359e6502ba517e5c57ec",
+    "reference": "registry-1.docker.io/library/ubuntu@sha256:77eb101c607d6e3d4f5ad0c8a02c2136c689b98aba1f359e6502ba517e5c57ec",
+    "platform": "linux/amd64",
+    "index_digest": "sha256:77eb101c607d6e3d4f5ad0c8a02c2136c689b98aba1f359e6502ba517e5c57ec",
+    "manifest_digest": "sha256:77eb101c607d6e3d4f5ad0c8a02c2136c689b98aba1f359e6502ba517e5c57ec",
+    "config_digest": "sha256:7da97f743f397971f35dd21cd2d19a7da070a150e0cfa3eda559e71891ec7533",
+    "compressed_layer_bytes": 29793223,
+    "created": "2026-11-10T08:36:35.098007755Z",
+    "registry": "https://registry-1.docker.io"
+  },
+  {
+    "name": "runtime217",
+    "discovery_reference": "registry-1.docker.io/library/centos:7",
+    "reference": "registry-1.docker.io/library/centos@sha256:dead07b4d8ed7e29e98de0f4504d87e8880d4347859d839686a31da35a3b532f",
+    "platform": "linux/amd64",
+    "index_digest": "sha256:be65f488b7764ad3638f236b7b515b3678369a5124c47b8d32916d6487418ea4",
+    "manifest_digest": "sha256:dead07b4d8ed7e29e98de0f4504d87e8880d4347859d839686a31da35a3b532f",
+    "config_digest": "sha256:eeb6ee3f44bd0b5103bb561b4c16bcb82328cfe5809ab675bb17ab3a16c517c9",
+    "compressed_layer_bytes": 76097157,
+    "created": "2021-09-15T18:20:23.99863383Z",
+    "registry": "https://registry-1.docker.io"
+  }
+]

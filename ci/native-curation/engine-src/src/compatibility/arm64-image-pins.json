@@ -1,0 +1,58 @@
+[
+  {
+    "name": "build217",
+    "discovery_reference": "quay.io/pypa/manylinux2014_aarch64:latest",
+    "reference": "quay.io/pypa/manylinux2014_aarch64@sha256:c2995cae5e2d433fbe757d1466486727b3edd68ba644cd60df253365f35fda9e",
+    "platform": "linux/arm64",
+    "index_digest": "sha256:c2995cae5e2d433fbe757d1466486727b3edd68ba644cd60df253365f35fda9e",
+    "manifest_digest": "sha256:c2995cae5e2d433fbe757d1466486727b3edd68ba644cd60df253365f35fda9e",
+    "config_digest": "sha256:695b07f5f76c99cca43c0484ab2fe1ff9f294d4649bb9a2adfc886fccfdcdc7d",
+    "compressed_layer_bytes": 387203761,
+    "created": "2026-11-14T11:16:37.868723755Z",
+    "registry": "https://quay.io",
+    "metadata_verified_at": "2026-11-17",
+    "qualification": "registry metadata only; not runtime qualified"
+  },
+  {
+    "name": "runtime217",
+    "discovery_reference": "registry-1.docker.io/library/centos:sha256:be65f488b7764ad3638f236b7b515b3678369a5124c47b8d32916d6487418ea4",
+    "reference": "registry-1.docker.io/library/centos@sha256:73f11afcbb50d8bc70eab9f0850b3fa30e61a419bc48cf426e63527d14a8373b",
+    "platform": "linux/arm64",
+    "index_digest": "sha256:be65f488b7764ad3638f236b7b515b3678369a5124c47b8d32916d6487418ea4",
+    "manifest_digest": "sha256:73f11afcbb50d8bc70eab9f0850b3fa30e61a419bc48cf426e63527d14a8373b",
+    "config_digest": "sha256:c9a1fdca3387618f8634949de4533419327736e2f5c618e3bfebe877aa331352",
+    "compressed_layer_bytes": 108374945,
+    "created": "2022-02-14T19:39:38.447986786Z",
+    "registry": "https://registry-1.docker.io",
+    "metadata_verified_at": "2026-11-17",
+    "qualification": "registry metadata only; not runtime qualified"
+  },
+  {
+    "name": "runtime231",
+    "discovery_reference": "registry-1.docker.io/library/ubuntu:20.04",
+    "reference": "registry-1.docker.io/library/ubuntu@sha256:722ea796ac2d57eeb3627c58a582fc1acc58be51faf815e1bce1682ae5c092f7",
+    "platform": "linux/arm64",
+    "index_digest": "sha256:8feb4d8ca5354def3d8fce243717141ce31e2c428701f6682bd2fafe15388214",
+    "manifest_digest": "sha256:722ea796ac2d57eeb3627c58a582fc1acc58be51faf815e1bce1682ae5c092f7",
+    "config_digest": "sha256:674fd86895a6dffb4ee9bb0ffb45a993e135df0f9e6c6956460f305a8f540d9d",
+    "compressed_layer_bytes": 25977661,
+    "created": "2025-04-08T10:46:45.753004662Z",
+    "registry": "https://registry-1.docker.io",
+    "metadata_verified_at": "2026-11-17",
+    "qualification": "registry metadata only; not runtime qualified"
+  },
+  {
+    "name": "runtime239",
+    "discovery_reference": "registry-1.docker.io/library/ubuntu:24.04",
+    "reference": "registry-1.docker.io/library/ubuntu@sha256:c92376659a7f14cc1f51615d73c9f4b7d8e18d59f370e02b4ed683ab4485c66c",
+    "platform": "linux/arm64",
+    "index_digest": "sha256:73b999393d07f2bf65a40373778a44dc9a6d54ad7718d29247d8ff9413c4d6a8",
+    "manifest_digest": "sha256:c92376659a7f14cc1f51615d73c9f4b7d8e18d59f370e02b4ed683ab4485c66c",
+    "config_digest": "sha256:50ec654248113cf5966e8fcbde7acd5a49a943c9ee9d92512f3a20b6be54b5d7",
+    "compressed_layer_bytes": 28965258,
+    "created": "2026-11-10T08:33:26.688988194Z",
+    "registry": "https://registry-1.docker.io",
+    "metadata_verified_at": "2026-11-17",
+    "qualification": "registry metadata only; not runtime qualified"
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "frozen_at": "2026-11-17",
+  "image_metadata": {
+    "method": "HTTPS registry GET by immutable digest; SHA256 verified for raw index, selected manifest and config; config OS and architecture verified; no layers downloaded or containers executed",
+    "catalogs": [
+      "../x86_64-image-pins.json",
+      "../arm64-image-pins.json"
+    ]
+  },
+  "rust": {
+    "url": "https://static.rust-lang.org/dist/channel-rust-1.96.0.toml",
+    "sha256": "9af50610e1d82699f78a40b985c9277ae1a2c5a0bec86ae430cfe58832038285",
+    "detached_signature": "channel-rust-1.96.0.toml.asc",
+    "key_source": "https://static.rust-lang.org/rust-key.gpg.ascii",
+    "valid_signature_fingerprint": "108F66205EAEB0AAA8DD5E1C85AB96E6FA1BE5FE",
+    "signature_status": "rust-signature-status.txt",
+    "component_selection": "rustc, cargo and rust-std tar.gz archives for the six native target triples; no SDK archive downloaded for catalog discovery"
+  },
+  "go": {
+    "url": "https://go.dev/dl/?mode=json&include=all",
+    "selected_release": "go1.27.4",
+    "retained_release_metadata": "go1.27.4.json",
+    "verification": "HTTPS metadata only; no source signature claim"
+  },
+  "cmake": {
+    "url": "https://github.com/Kitware/CMake/releases/download/v3.31.12/cmake-3.31.12-SHA-256.txt",
+    "retained_checksums": "cmake-3.31.12-SHA-256.txt",
+    "retained_signature": "cmake-3.31.12-SHA-256.txt.asc",
+    "source": "Retained, previously acquired c-native experiment input; checksums reused exactly"
+  }
+}
