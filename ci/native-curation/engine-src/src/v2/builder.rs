@@ -18,7 +18,32 @@ fn directory(root: &Path, name: &str) -> Result<PathBuf> {
     Ok(path)
 }
 
+#[cfg(windows)]
+fn disk_path(path: &Path) -> PathBuf {
+    use std::path::Prefix;
+    let mut result = PathBuf::new();
+    for component in path.components() {
+        match component {
+            Component::Prefix(prefix) => match prefix.kind() {
+                Prefix::VerbatimDisk(drive) => result.push(format!("{}:", drive as char)),
+                Prefix::VerbatimUNC(server, share) => {
+                    result.push(Path::new(r"\\").join(server).join(share));
+                }
+                _ => result.push(component.as_os_str()),
+            },
+            _ => result.push(component.as_os_str()),
+        }
+    }
+    result
+}
+
 fn relative(root: &Path, path: &Path) -> Result<String> {
+    // Cargo reports ordinary Windows paths; canonical source roots are verbatim.
+    // Normalize only the prefix, without resolving aliases past safe_join.
+    #[cfg(windows)]
+    let (root_path, input_path) = (disk_path(root), disk_path(path));
+    #[cfg(windows)]
+    let (root, path) = (root_path.as_path(), input_path.as_path());
     let name = path
         .strip_prefix(root)
         .context("builder input leaves the tracked Git source tree")?
@@ -1139,11 +1164,7 @@ pub fn discover(
                     continue;
                 }
                 let name = text(package, "name")?.to_owned();
-                let manifest = Path::new(text(package, "manifest_path")?)
-                    .strip_prefix(&cwd)?
-                    .to_str()
-                    .context("non-UTF8 Cargo manifest")?
-                    .replace('\\', "/");
+                let manifest = relative(&cwd, Path::new(text(package, "manifest_path")?))?;
                 products.push(product(
                     name.clone(),
                     directory_name,
@@ -1282,6 +1303,24 @@ pub fn can_run(t: &Target, recipe: &Recipe, toolchain: &BTreeMap<String, String>
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[cfg(windows)]
+    #[test]
+    fn cargo_paths_match_verbatim_roots_without_accepting_escapes() {
+        let temp = tempfile::tempdir().unwrap();
+        let root = temp.path().canonicalize().unwrap();
+        let ordinary = disk_path(&root);
+        assert_eq!(
+            relative(&root, &ordinary.join("src/main.rs")).unwrap(),
+            "src/main.rs"
+        );
+        assert!(relative(&root, &ordinary.join("../outside.rs")).is_err());
+        assert!(relative(&root, &ordinary.with_file_name("other").join("main.rs")).is_err());
+        assert_eq!(
+            disk_path(Path::new(r"\\?\UNC\server\share\source")),
+            Path::new(r"\\server\share\source")
+        );
+    }
 
     fn files(root: &Path, values: &[(&str, &str)]) -> BTreeMap<String, String> {
         let mut files = BTreeMap::new();

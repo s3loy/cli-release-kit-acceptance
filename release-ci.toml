@@ -5,7 +5,7 @@
 
 ["engine"]
 "version" = "0.1.0"
-"source-id" = "ab332de89dc5332a1630e9f0403eb8f44c95ffce1f41068f0517b32c969d12bb"
+"source-id" = "c6f27ab28402b4904ac22dc396d6cb5d7299ec6b190b8e9423f8417e71204a28"
 "contract" = 1
 
 ["installs"]
@@ -339,6 +339,8 @@
 ["coordinator"]
 "host" = "linux-x86_64"
 "runs-on" = ["ubuntu-24.04"]
+"rust-version" = "1.96.0"
+"go-version" = "1.27.4"
 
 ["trusted"]
 "branch" = "acceptance/cmake-six-platform-20261117"

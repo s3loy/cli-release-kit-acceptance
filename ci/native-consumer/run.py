@@ -8,6 +8,7 @@ import platform
 import shutil
 import subprocess
 import sys
+import threading
 import time
 import tomllib
 
@@ -22,12 +23,25 @@ LOGS.mkdir()
 def run(name, command, *, environment=None, timeout=1800):
     print(f"native consumer: {name}", flush=True)
     started = time.monotonic()
+    stopped = threading.Event()
+    def progress():
+        while not stopped.wait(30):
+            stderr_path = LOGS / (name + ".stderr")
+            with stderr_path.open("rb") as stream:
+                stream.seek(max(0, stderr_path.stat().st_size - 2048))
+                lines = stream.read().decode(errors="replace").splitlines()
+            print(f"native consumer: {name} elapsed={int(time.monotonic() - started)}s last={lines[-1] if lines else '(no stderr yet)'}", flush=True)
     with (LOGS / (name + ".stdout")).open("wb") as stdout, (LOGS / (name + ".stderr")).open("wb") as stderr:
+        monitor = threading.Thread(target=progress, daemon=True)
+        monitor.start()
         try:
             result = subprocess.run([str(v) for v in command], env=environment, stdout=stdout, stderr=stderr, timeout=timeout)
         except subprocess.TimeoutExpired:
             (LOGS / (name + ".timeout.json")).write_text(json.dumps({"timeout_seconds": timeout}) + "\n")
             raise
+        finally:
+            stopped.set()
+            monitor.join()
     (LOGS / (name + ".command.json")).write_text(json.dumps({"argv": [str(v) for v in command], "exit_code": result.returncode, "elapsed_seconds": round(time.monotonic() - started, 3)}, indent=2) + "\n")
     if result.returncode:
         detail = (LOGS / (name + ".stderr")).read_text(errors="replace")[-12000:]

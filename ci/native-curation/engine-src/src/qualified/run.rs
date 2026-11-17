@@ -2161,6 +2161,10 @@ fn validate_observation(observation: &BinaryObservation, profile: &Profile) -> R
             "libutil.so.1",
             "libresolv.so.2",
             "libgcc_s.so.1",
+            match profile.arch {
+                Architecture::X86_64 => "ld-linux-x86-64.so.2",
+                Architecture::Aarch64 => "ld-linux-aarch64.so.1",
+            },
         ]
         .into_iter()
         .map(str::to_owned)
@@ -2249,4 +2253,50 @@ fn cmake_search_dirs(profile: &Profile) -> Vec<PathBuf> {
             .collect();
     }
     vec![]
+}
+
+#[cfg(test)]
+mod abi_tests {
+    use super::*;
+
+    #[test]
+    fn linux_loader_dependency_is_arch_specific_and_keeps_the_glibc_floor() {
+        for (arch, loader, other) in [
+            (
+                Architecture::X86_64,
+                "ld-linux-x86-64.so.2",
+                "ld-linux-aarch64.so.1",
+            ),
+            (
+                Architecture::Aarch64,
+                "ld-linux-aarch64.so.1",
+                "ld-linux-x86-64.so.2",
+            ),
+        ] {
+            let profile = Profile::linux_glibc217(arch).unwrap();
+            let mut observed = BinaryObservation {
+                format: "elf".into(),
+                arch,
+                machine: 0,
+                interpreter: None,
+                needed: vec!["libc.so.6".into(), loader.into()],
+                required_versions: vec![RequiredVersion {
+                    library: loader.into(),
+                    name: "GLIBC_2.17".into(),
+                }],
+                provided_versions: vec![],
+                minimum_os: None,
+                sdk_version: None,
+                has_search_path: false,
+                has_dynamic_plugins: false,
+                sha256: "1".repeat(64),
+            };
+            validate_observation(&observed, &profile).unwrap();
+            observed.needed.push(other.into());
+            assert!(validate_observation(&observed, &profile).is_err());
+            observed.needed.pop();
+            observed.required_versions[0].name = "GLIBC_2.18".into();
+            assert!(validate_observation(&observed, &profile).is_err());
+        }
+    }
 }
