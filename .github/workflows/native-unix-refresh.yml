@@ -2,12 +2,6 @@ name: Refresh Unix native engines and SDK records
 
 on:
   workflow_dispatch:
-  push:
-    branches: [acceptance/cmake-six-platform-20261117]
-    paths:
-      - .github/workflows/native-unix-refresh.yml
-      - ci/native-curation/engine-src/**
-      - ci/native-curation/engine-source-files.json
 
 permissions:
   contents: read

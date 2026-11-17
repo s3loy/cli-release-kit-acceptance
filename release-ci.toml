@@ -1,0 +1,351 @@
+# Native candidate acceptance builds its engine from the reviewed frozen source.
+# These inert install entries do not exercise controlled URL bootstrap or protected sealing.
+"schema" = 1
+"execution-protocol" = 6
+
+["engine"]
+"version" = "0.1.0"
+"source-id" = "ab332de89dc5332a1630e9f0403eb8f44c95ffce1f41068f0517b32c969d12bb"
+"contract" = 1
+
+["installs"]
+
+["installs"."linux-x86_64"]
+"url" = "https://fixture.invalid/source-bootstrap/linux-x86_64"
+"sha256" = "1111111111111111111111111111111111111111111111111111111111111111"
+"format" = "binary"
+
+["installs"."linux-aarch64"]
+"url" = "https://fixture.invalid/source-bootstrap/linux-aarch64"
+"sha256" = "1111111111111111111111111111111111111111111111111111111111111111"
+"format" = "binary"
+
+["installs"."macos-x86_64"]
+"url" = "https://fixture.invalid/source-bootstrap/macos-x86_64"
+"sha256" = "1111111111111111111111111111111111111111111111111111111111111111"
+"format" = "binary"
+
+["installs"."macos-aarch64"]
+"url" = "https://fixture.invalid/source-bootstrap/macos-aarch64"
+"sha256" = "1111111111111111111111111111111111111111111111111111111111111111"
+"format" = "binary"
+
+["installs"."windows-x86_64"]
+"url" = "https://fixture.invalid/source-bootstrap/windows-x86_64"
+"sha256" = "1111111111111111111111111111111111111111111111111111111111111111"
+"format" = "binary"
+
+["installs"."windows-aarch64"]
+"url" = "https://fixture.invalid/source-bootstrap/windows-aarch64"
+"sha256" = "1111111111111111111111111111111111111111111111111111111111111111"
+"format" = "binary"
+
+["environments"]
+
+["environments"."macos-x86_64"]
+"id" = "native6-macos-x86_64-v1"
+"os" = "macos"
+"arch" = "x86_64"
+"qualification" = "Expected identities captured by the reviewed native bootstrap; consumer package execution is required."
+
+["environments"."macos-x86_64"."environment"]
+"kind" = "native-sdk"
+"os" = "macos"
+"arch" = "x86_64"
+"tools" = [{ "kind" = "archive", "name" = "cmake", "version" = "3.31.12", "url" = "https://github.com/Kitware/CMake/releases/download/v3.31.12/cmake-3.31.12-macos-universal.tar.gz", "sha256" = "799af7fd545db9bf1b9cfe72f8095880e727a2d4e0df0e3dffc3bc7b95c2d3b0", "filename" = "cmake-3.31.12-macos-universal.tar.gz", "link_policy" = "preserve-verified" }]
+
+["environments"."macos-x86_64"."environment"."sdk"]
+"sdk_content_sha256" = "4a68706279d27add00e7f2bf568363b1811e0b76a992174fcbc9cb3eb29b69dc"
+"sdk_id" = "apple-c-sdk-candidate"
+"sdk_version" = "15.5"
+
+["environments"."macos-x86_64"."environment"."sdk"."environment"]
+"AR" = "/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar"
+"CC" = "/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang"
+"DEVELOPER_DIR" = "/Applications/Xcode_16.4.app/Contents/Developer"
+"LD" = "/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld"
+"PATH" = "/usr/local/lib/ruby/gems/3.3.0/bin:/usr/local/opt/ruby@3.3/bin:/usr/local/opt/pipx_bin:/Users/runner/.cargo/bin:/usr/local/opt/curl/bin:/usr/local/bin:/usr/local/sbin:/Users/runner/bin:/Users/runner/.yarn/bin:/Users/runner/Library/Android/sdk/tools:/Users/runner/Library/Android/sdk/platform-tools:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/usr/bin:/bin:/usr/sbin:/sbin:/Users/runner/.dotnet/tools"
+"SDKROOT" = "/Applications/Xcode_16.4.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk"
+
+["environments"."macos-x86_64"."environment"."sdk"."roots"]
+"/Applications/Xcode_16.4.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk" = "8cae231b8950dbf579d5b36cef534539f4234e5cb4761ea3de665b8ad608d945"
+"/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include" = "241d7029847ee665722806c6027aa0b74dd73fd7c187686f13f6d1e1a04f4b8c"
+"/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17" = "dffb8fd3d537129afe465ed6e5bd68c99ace444e7464814c30715ba7a3e96cfb"
+"/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib" = "c74263137635f30923e80a2d792c7c6fcfc93424f92b312b7ae3bffe0ee4aff1"
+"/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libcodedirectory.dylib" = "22bf2c84f116f428d67404b84f563af842ec76805ca326f9152e0f493a8da6ba"
+"/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libswiftDemangle.dylib" = "f3bd5718eff6af51b2659ff17c85e20418d0a2f38565cc8be7729b1d843ef865"
+"/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libtapi.dylib" = "012aab88dc72b96b6aa13a3e43c26de3c651e643ba6a69da669f528f59f64181"
+"/Users/runner/.rustup/toolchains/1.96.0-x86_64-apple-darwin" = "998870b79e09412ea25d40e090e3d3330f594ed6815bf33ced2a0ba11c59db63"
+
+["environments"."macos-x86_64"."environment"."sdk"."tool_sha256"]
+"/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar" = "f362372395c1dd8ef349b6ceaad3b7958f1207a32e95d285721eba4c84ca55ae"
+"/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" = "4c458256bcdf913774de1bb4a37768244d3b41f32ad55afb2dfec3432f46f4fe"
+"/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" = "648a8aac7f6f829a42305d24dddd7a3cfa48ee0bd9d4e7ec1ded5c51edea372b"
+"/Users/runner/.rustup/toolchains/1.96.0-x86_64-apple-darwin/bin/cargo" = "425e08ffa69bcf047b2a82b08b42d1d26ba8488f774bade1c14a62623fc18bad"
+"/Users/runner/.rustup/toolchains/1.96.0-x86_64-apple-darwin/bin/rustc" = "6859de89ddecec2ebaaec50d25c9c471d47f33677a96f7c81666247be062d499"
+"/usr/bin/make" = "7f30f076d0e9c38f772a76449fca9da8cf97f6a3d43b94c90a00e4f9ce7ad39e"
+
+["environments"."macos-aarch64"]
+"id" = "native6-macos-aarch64-v1"
+"os" = "macos"
+"arch" = "aarch64"
+"qualification" = "Expected identities captured by the reviewed native bootstrap; consumer package execution is required."
+
+["environments"."macos-aarch64"."environment"]
+"kind" = "native-sdk"
+"os" = "macos"
+"arch" = "aarch64"
+"tools" = [{ "kind" = "archive", "name" = "cmake", "version" = "3.31.12", "url" = "https://github.com/Kitware/CMake/releases/download/v3.31.12/cmake-3.31.12-macos-universal.tar.gz", "sha256" = "799af7fd545db9bf1b9cfe72f8095880e727a2d4e0df0e3dffc3bc7b95c2d3b0", "filename" = "cmake-3.31.12-macos-universal.tar.gz", "link_policy" = "preserve-verified" }]
+
+["environments"."macos-aarch64"."environment"."sdk"]
+"sdk_content_sha256" = "b5e8fd6c1e4fd57590838c7515bd26f5845d6b53969db1135f68ba9df662b204"
+"sdk_id" = "apple-c-sdk-candidate"
+"sdk_version" = "15.5"
+
+["environments"."macos-aarch64"."environment"."sdk"."environment"]
+"AR" = "/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar"
+"CC" = "/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang"
+"DEVELOPER_DIR" = "/Applications/Xcode_16.4.app/Contents/Developer"
+"LD" = "/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld"
+"PATH" = "/opt/homebrew/opt/rustup/bin:/opt/homebrew/lib/ruby/gems/3.3.0/bin:/opt/homebrew/opt/ruby@3.3/bin:/Users/runner/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/runner/.cargo/bin:/usr/local/opt/curl/bin:/usr/local/bin:/usr/local/sbin:/Users/runner/bin:/Users/runner/.yarn/bin:/Users/runner/Library/Android/sdk/tools:/Users/runner/Library/Android/sdk/platform-tools:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/usr/bin:/bin:/usr/sbin:/sbin:/Users/runner/.dotnet/tools"
+"SDKROOT" = "/Applications/Xcode_16.4.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk"
+
+["environments"."macos-aarch64"."environment"."sdk"."roots"]
+"/Applications/Xcode_16.4.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk" = "8cae231b8950dbf579d5b36cef534539f4234e5cb4761ea3de665b8ad608d945"
+"/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include" = "241d7029847ee665722806c6027aa0b74dd73fd7c187686f13f6d1e1a04f4b8c"
+"/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17" = "dffb8fd3d537129afe465ed6e5bd68c99ace444e7464814c30715ba7a3e96cfb"
+"/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib" = "c74263137635f30923e80a2d792c7c6fcfc93424f92b312b7ae3bffe0ee4aff1"
+"/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libcodedirectory.dylib" = "22bf2c84f116f428d67404b84f563af842ec76805ca326f9152e0f493a8da6ba"
+"/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libswiftDemangle.dylib" = "f3bd5718eff6af51b2659ff17c85e20418d0a2f38565cc8be7729b1d843ef865"
+"/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libtapi.dylib" = "012aab88dc72b96b6aa13a3e43c26de3c651e643ba6a69da669f528f59f64181"
+"/Users/runner/.rustup/toolchains/1.96.0-aarch64-apple-darwin" = "bd136d45671fe219d3ca3da69f011d1e0d7aa1b382336dcf50dbd0a9552137de"
+
+["environments"."macos-aarch64"."environment"."sdk"."tool_sha256"]
+"/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar" = "f362372395c1dd8ef349b6ceaad3b7958f1207a32e95d285721eba4c84ca55ae"
+"/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" = "4c458256bcdf913774de1bb4a37768244d3b41f32ad55afb2dfec3432f46f4fe"
+"/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" = "648a8aac7f6f829a42305d24dddd7a3cfa48ee0bd9d4e7ec1ded5c51edea372b"
+"/Users/runner/.rustup/toolchains/1.96.0-aarch64-apple-darwin/bin/cargo" = "fec239e6b74df873f54ef52912bfcfcc8d8414bc14a7ae1e0be80460bae72841"
+"/Users/runner/.rustup/toolchains/1.96.0-aarch64-apple-darwin/bin/rustc" = "c5922366bfe3d6d028a65d626f4e629b3adad066995cf0b60c8a4b617bba5ffe"
+"/usr/bin/make" = "8291fbbbaa75761bb649970a16af2ef84b4afd5da0bc133f4d8915f0f2f63e98"
+
+["environments"."windows-x86_64"]
+"id" = "native6-windows-x86_64-v1"
+"os" = "windows"
+"arch" = "x86_64"
+"qualification" = "Expected identities captured by the reviewed native bootstrap; consumer package execution is required."
+
+["environments"."windows-x86_64"."environment"]
+"kind" = "native-sdk"
+"os" = "windows"
+"arch" = "x86_64"
+"tools" = [{ "kind" = "archive", "name" = "cmake", "version" = "3.31.12", "url" = "https://github.com/Kitware/CMake/releases/download/v3.31.12/cmake-3.31.12-windows-x86_64.zip", "sha256" = "0c4baa40f28b3f8225eb3fdf6946c987b4fe901403b4eaf2fbbd9378100aaa0c", "filename" = "cmake-3.31.12-windows-x86_64.zip" }]
+
+["environments"."windows-x86_64"."environment"."sdk"]
+"sdk_content_sha256" = "8f65c1273044a46fb4d4448ba76c6fd01a07401722c308c96870f345e04f2c9a"
+"sdk_id" = "msvc-c-sdk-candidate"
+"sdk_version" = "14.44.35207+sdk-10.0.26100.0"
+
+["environments"."windows-x86_64"."environment"."sdk"."environment"]
+"AR" = "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\lib.exe"
+"CC" = "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\cl.exe"
+"INCLUDE" = "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Tools\\MSVC\\14.44.35207\\include;C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Tools\\MSVC\\14.44.35207\\ATLMFC\\include;C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Auxiliary\\VS\\include;C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.26100.0\\ucrt;C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.26100.0\\\\um;C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.26100.0\\\\shared;C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.26100.0\\\\winrt;C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.26100.0\\\\cppwinrt;C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\include\\um"
+"LD" = "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Tools\\MSVC\\14.44.35207\\bin\\HostX64\\x64\\link.exe"
+"LIB" = "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Tools\\MSVC\\14.44.35207\\ATLMFC\\lib\\x64;C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Tools\\MSVC\\14.44.35207\\lib\\x64;C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\lib\\um\\x64;C:\\Program Files (x86)\\Windows Kits\\10\\lib\\10.0.26100.0\\ucrt\\x64;C:\\Program Files (x86)\\Windows Kits\\10\\\\lib\\10.0.26100.0\\\\um\\x64"
+"LIBPATH" = "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Tools\\MSVC\\14.44.35207\\ATLMFC\\lib\\x64;C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Tools\\MSVC\\14.44.35207\\lib\\x64;C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Tools\\MSVC\\14.44.35207\\lib\\x86\\store\\references;C:\\Program Files (x86)\\Windows Kits\\10\\UnionMetadata\\10.0.26100.0;C:\\Program Files (x86)\\Windows Kits\\10\\References\\10.0.26100.0;C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319"
+
+["environments"."windows-x86_64"."environment"."sdk"."roots"]
+"C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.26100.0\\cppwinrt" = "3d581498e5de4cb9736dec38b25b8e4662941a5c92230e1dc48d5ba9df5b7a17"
+"C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.26100.0\\shared" = "b8ca4fa228e2a29deabbae83447c961d238b8811913e50b0dcaf89179fac77ab"
+"C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.26100.0\\ucrt" = "1bb4a183ec5da62d1d0dc8812eaa01a095792cfcbd0d8a7ac79b2d8054031a4b"
+"C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.26100.0\\um" = "18f507aaa4a979dd2ada4af8a370c6caddfe62647442d5fb4a33d603ee23b0ae"
+"C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.26100.0\\winrt" = "9268d59f8fb635d41e3d75977809ff5b923158056708d1b24bb1d8d9c3692826"
+"C:\\Program Files (x86)\\Windows Kits\\10\\Lib\\10.0.26100.0\\ucrt\\x64" = "b3935cd238ecdedbed2db35fb44cee53e02d172a576be2b44a642d9fe6c59385"
+"C:\\Program Files (x86)\\Windows Kits\\10\\Lib\\10.0.26100.0\\um\\x64" = "8e3a5c72025f812a8f08d33d677badc09ccd8236b5ff68c1be509a87dc315bb2"
+"C:\\Program Files (x86)\\Windows Kits\\10\\References\\10.0.26100.0" = "c3b622aa5c0bbd4b88923497f9ce8051b395bdd108aa9b156e86a4a795e1ba28"
+"C:\\Program Files (x86)\\Windows Kits\\10\\UnionMetadata\\10.0.26100.0" = "6de456afa44d9e0f2037ff2797d2cf9708840df08c16efd990416336ee21fab0"
+"C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\x64" = "b33adfccfe44461f78a76bf8ffe4b023520576972fb2cc66c2678b0b077aa6dd"
+"C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\Include\\um" = "9ec0f876ed663f8311bbdd3f89c6760ff974007b1b906a7bb81ed36dce27f630"
+"C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8\\Lib\\um\\x64" = "38b64226bf9a1b1e488d602dd02b4877f5a9e5cda6647003473c890fe02a622f"
+"C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Auxiliary\\VS\\include" = "59130645aa2020c3f17d60f35542592997d3c85cce25c00ec0b26b55bfd62e62"
+"C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Tools\\MSVC\\14.44.35207\\atlmfc\\include" = "fb4405e25cdc974d23c5bc700dd502760da8452e9ba2529f4aa050b2dae201b3"
+"C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Tools\\MSVC\\14.44.35207\\atlmfc\\lib\\x64" = "a70ff3012b1ced790e4cf4854e5492149b4e4f137ce029ea3cf69097e0d909b9"
+"C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64" = "958a2788301df405261b0c4b3b99fdda503f48c66231c100386487e5cb156929"
+"C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Tools\\MSVC\\14.44.35207\\include" = "df77c733fa6853b86d8ef9e002b6cdd68fc14faa5edc7c3792a99ba71ba2d416"
+"C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Tools\\MSVC\\14.44.35207\\lib\\x64" = "e4e8c55f717a6c29134874368d6f3eda95e1a94f02f8ca3d38f060385ee08023"
+"C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Tools\\MSVC\\14.44.35207\\lib\\x86\\store\\references" = "7557bb50ee4ac9f11f7566eac03435148671ec0eae6c7c7a164b72f6934d0345"
+"C:\\Users\\runneradmin\\.rustup\\toolchains\\1.96.0-x86_64-pc-windows-msvc" = "b86f931cbea6414f522f9e63f548a7995188178a618a8acb4711cb3495e968e8"
+"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319" = "dfb2f48f2d38f2de29da6b99aff08a266ab19c13eb2c42fd993855ad62363525"
+"C:/Program Files/Microsoft Visual Studio/2022/Enterprise/VC/Redist/MSVC/14.44.35112/x64/Microsoft.VC143.CRT/concrt140.dll" = "19ad8ac224a9047d8832a74f25a611e79fc0d314701d21cc76863b1adb6cf6b5"
+"C:/Program Files/Microsoft Visual Studio/2022/Enterprise/VC/Redist/MSVC/14.44.35112/x64/Microsoft.VC143.CRT/msvcp140.dll" = "b1b0434f863600b1e082a833f03f8d3be622da9eea77e957404e0289fe791926"
+"C:/Program Files/Microsoft Visual Studio/2022/Enterprise/VC/Redist/MSVC/14.44.35112/x64/Microsoft.VC143.CRT/msvcp140_1.dll" = "5e26357fac38323b2a14d36208d298ca7cc41354c020e8225430b4e4137fe455"
+"C:/Program Files/Microsoft Visual Studio/2022/Enterprise/VC/Redist/MSVC/14.44.35112/x64/Microsoft.VC143.CRT/msvcp140_2.dll" = "9a8df4fa74d48171985b995f4e9d34bbf8f39b4a3241e4420078fe356cd05f17"
+"C:/Program Files/Microsoft Visual Studio/2022/Enterprise/VC/Redist/MSVC/14.44.35112/x64/Microsoft.VC143.CRT/msvcp140_atomic_wait.dll" = "e88b8b98b3e8031ca91167d6e8b099649034b540add224a6fb0392610e294a8d"
+"C:/Program Files/Microsoft Visual Studio/2022/Enterprise/VC/Redist/MSVC/14.44.35112/x64/Microsoft.VC143.CRT/msvcp140_codecvt_ids.dll" = "efcbd3619a3da1965503d583112c46d161cec188d545e9f751f6ef775294dc8d"
+"C:/Program Files/Microsoft Visual Studio/2022/Enterprise/VC/Redist/MSVC/14.44.35112/x64/Microsoft.VC143.CRT/vcruntime140.dll" = "45fbe6e3be9c0bd5fb7f7c73cee0a11327b1a82f084405d2702e8e4fdde6cfb9"
+"C:/Program Files/Microsoft Visual Studio/2022/Enterprise/VC/Redist/MSVC/14.44.35112/x64/Microsoft.VC143.CRT/vcruntime140_1.dll" = "184dd69c0d0da0e0f0462fbabf9af37d6a4d51eb33ee49848b72b603644e4762"
+"C:/Program Files/Microsoft Visual Studio/2022/Enterprise/VC/Redist/MSVC/14.44.35112/x64/Microsoft.VC143.CRT/vcruntime140_threads.dll" = "6a4273d6e0b025df4a99e5c50e3aefe219ecde4073222252aff07387fc00baca"
+"C:/Program Files/Microsoft Visual Studio/2022/Enterprise/Licenses/1033/Redist.txt" = "53d29f6ff98598c946847c8f46e5478f15fea07619f7662cf0048b018c6ed786"
+"C:/Program Files/Microsoft Visual Studio/2022/Enterprise/Licenses/1033/ThirdPartyNotices.txt" = "c7784adca3140aa19f15bcd542f741280f70c0b0b4d5998c64f91f2f4faa7c77"
+
+["environments"."windows-x86_64"."environment"."sdk"."tool_sha256"]
+"C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\x64\\mt.exe" = "fa74dd31612c78de40169599640fb955ef9ccb9f2dfabf80f100022ff1b8bc22"
+"C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\x64\\rc.exe" = "9e2ee68da28b3318f50a9f1008d64567a9b402bda384a007a9b71a3f16bd011b"
+"C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe" = "e87e78b3ef6580b75aebda843f8a22e874612d9f766344046551399f898eb226"
+"C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\lib.exe" = "69317eda3d44fd723b959c87d5a3b0617e3b7be70b02ff3f51ec45288ec559d2"
+"C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\link.exe" = "49a5df25c3182a22684375b1d62a025016deffccea247894fe5ca2c85610c6a6"
+"C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\nmake.exe" = "f54573f6570c8c8831f3e4d2375fccb35590759c9684b5ae38074f5e91610aee"
+"C:\\Users\\runneradmin\\.rustup\\toolchains\\1.96.0-x86_64-pc-windows-msvc\\bin\\cargo.exe" = "122f18d28a63fa358f3db266abee1ff1d8aabf0ab7f2dd9ac38a38da99977ae5"
+"C:\\Users\\runneradmin\\.rustup\\toolchains\\1.96.0-x86_64-pc-windows-msvc\\bin\\rustc.exe" = "acb138286bbe20c6cf3ec39a7e0a68c3fab0cd949baa2912cf466514d0d531ab"
+
+["environments"."windows-x86_64"."windows_runtime"]
+"mode" = "follow-project"
+"libraries" = [{ "filename" = "concrt140.dll", "source" = "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Redist\\MSVC\\14.44.35112\\x64\\Microsoft.VC143.CRT\\concrt140.dll", "sha256" = "2405355f0a58067b258f8df33c327e3a3d716eaac5a3a5aebb757842d85bd376", "arch" = "x86_64" }, { "filename" = "msvcp140.dll", "source" = "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Redist\\MSVC\\14.44.35112\\x64\\Microsoft.VC143.CRT\\msvcp140.dll", "sha256" = "0f885b509a685d2bbfa652fed26b5fb31d88fbdab0a978c641d1c7b8aa460aa9", "arch" = "x86_64" }, { "filename" = "msvcp140_1.dll", "source" = "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Redist\\MSVC\\14.44.35112\\x64\\Microsoft.VC143.CRT\\msvcp140_1.dll", "sha256" = "bfad5aef4c63a669e3c140655cdfdf395b6c979b400a447bd5dcb65ed8826c3d", "arch" = "x86_64" }, { "filename" = "msvcp140_2.dll", "source" = "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Redist\\MSVC\\14.44.35112\\x64\\Microsoft.VC143.CRT\\msvcp140_2.dll", "sha256" = "3ea06f0ee098b4823cb79599df3780e7f23cce52c19aac31d2a0d47efe33a5e9", "arch" = "x86_64" }, { "filename" = "msvcp140_atomic_wait.dll", "source" = "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Redist\\MSVC\\14.44.35112\\x64\\Microsoft.VC143.CRT\\msvcp140_atomic_wait.dll", "sha256" = "640b2aefced484d0368eea5bdd06addd0658a3a70a49256e560d6923b404a479", "arch" = "x86_64" }, { "filename" = "msvcp140_codecvt_ids.dll", "source" = "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Redist\\MSVC\\14.44.35112\\x64\\Microsoft.VC143.CRT\\msvcp140_codecvt_ids.dll", "sha256" = "f2069a52880ec885ee7f0511186100eb7fada0411a2b4948fafea7735b878a18", "arch" = "x86_64" }, { "filename" = "vcruntime140.dll", "source" = "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Redist\\MSVC\\14.44.35112\\x64\\Microsoft.VC143.CRT\\vcruntime140.dll", "sha256" = "d5e4d9a3e835fa679450145d6a7d94e36573a509317111904d9b3712c30d9066", "arch" = "x86_64" }, { "filename" = "vcruntime140_1.dll", "source" = "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Redist\\MSVC\\14.44.35112\\x64\\Microsoft.VC143.CRT\\vcruntime140_1.dll", "sha256" = "1f2d41c4aa5db0bc33ebf7b66d72943a817d7ce6cbe880502a9403823633093f", "arch" = "x86_64" }, { "filename" = "vcruntime140_threads.dll", "source" = "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\VC\\Redist\\MSVC\\14.44.35112\\x64\\Microsoft.VC143.CRT\\vcruntime140_threads.dll", "sha256" = "219915cf20822f34d5e7c1fdd4e21ae7f3396881096c51036225fb8f84b47afa", "arch" = "x86_64" }]
+"licenses" = [{ "source" = "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\Licenses\\1033\\Redist.txt", "sha256" = "da53b097e02b08e0fc69706102a60bc384fe756426ae4dc4a855e96f95cb2b9c", "destination" = "licenses/windows-crt/Redist.txt" }, { "source" = "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\Licenses\\1033\\ThirdPartyNotices.txt", "sha256" = "782815bd1256f9ad798211eee4b0e574ddd113bd07700c6921ab25c591fbcda7", "destination" = "licenses/windows-crt/ThirdPartyNotices.txt" }]
+
+["environments"."windows-aarch64"]
+"id" = "native6-windows-aarch64-v1"
+"os" = "windows"
+"arch" = "aarch64"
+"qualification" = "Expected identities captured by the reviewed native bootstrap; consumer package execution is required."
+
+["environments"."windows-aarch64"."environment"]
+"kind" = "native-sdk"
+"os" = "windows"
+"arch" = "aarch64"
+"tools" = [{ "kind" = "archive", "name" = "cmake", "version" = "3.31.12", "url" = "https://github.com/Kitware/CMake/releases/download/v3.31.12/cmake-3.31.12-windows-arm64.zip", "sha256" = "e4160c1842dea858ad376ff2ec17587104515b51714eca5963b8bdd798105553", "filename" = "cmake-3.31.12-windows-arm64.zip" }]
+
+["environments"."windows-aarch64"."environment"."sdk"]
+"sdk_content_sha256" = "23533aca448787d2d167df33de177af4401c6b7c41aec02fd1246107b7a26bdf"
+"sdk_id" = "msvc-c-sdk-candidate"
+"sdk_version" = "14.52.37025+sdk-10.0.26100.0"
+
+["environments"."windows-aarch64"."environment"."sdk"."environment"]
+"AR" = "C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.52.37025\\bin\\HostARM64\\ARM64\\lib.exe"
+"CC" = "C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.52.37025\\bin\\HostARM64\\ARM64\\cl.exe"
+"INCLUDE" = "C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.52.37025\\include;C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.52.37025\\ATLMFC\\include;C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Auxiliary\\VS\\include;C:\\Program Files (x86)\\Windows Kits\\10\\include\\10.0.26100.0\\ucrt;C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.26100.0\\\\um;C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.26100.0\\\\shared;C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.26100.0\\\\winrt;C:\\Program Files (x86)\\Windows Kits\\10\\\\include\\10.0.26100.0\\\\cppwinrt;C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8.1\\include\\um"
+"LD" = "C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.52.37025\\bin\\HostARM64\\ARM64\\link.exe"
+"LIB" = "C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.52.37025\\ATLMFC\\lib\\ARM64;C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.52.37025\\lib\\ARM64;C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8.1\\lib\\um\\arm64;C:\\Program Files (x86)\\Windows Kits\\10\\lib\\10.0.26100.0\\ucrt\\arm64;C:\\Program Files (x86)\\Windows Kits\\10\\\\lib\\10.0.26100.0\\\\um\\arm64"
+"LIBPATH" = "C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.52.37025\\ATLMFC\\lib\\ARM64;C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.52.37025\\lib\\ARM64;C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.52.37025\\lib\\x86\\store\\references;C:\\Program Files (x86)\\Windows Kits\\10\\UnionMetadata\\10.0.26100.0;C:\\Program Files (x86)\\Windows Kits\\10\\References\\10.0.26100.0;C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319"
+
+["environments"."windows-aarch64"."environment"."sdk"."roots"]
+"C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.26100.0\\cppwinrt" = "3d581498e5de4cb9736dec38b25b8e4662941a5c92230e1dc48d5ba9df5b7a17"
+"C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.26100.0\\shared" = "32c2bddc6828563609b16c49972120f025bb4aefb35d3aca61f8758c3608780f"
+"C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.26100.0\\ucrt" = "1bb4a183ec5da62d1d0dc8812eaa01a095792cfcbd0d8a7ac79b2d8054031a4b"
+"C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.26100.0\\um" = "5dca90da50576e0d51d2d8c4fcf3814ea722c5a37b8550d827934d3a69c90bd1"
+"C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.26100.0\\winrt" = "9268d59f8fb635d41e3d75977809ff5b923158056708d1b24bb1d8d9c3692826"
+"C:\\Program Files (x86)\\Windows Kits\\10\\Lib\\10.0.26100.0\\ucrt\\arm64" = "0d1cccf21c9141439b680a442388097f022c48965b2451e9046af4f1d1f67b25"
+"C:\\Program Files (x86)\\Windows Kits\\10\\Lib\\10.0.26100.0\\um\\arm64" = "23f515fea56d53401d2b7c39a32019911774dacba33d82245b7b37dc7c70c3dd"
+"C:\\Program Files (x86)\\Windows Kits\\10\\References\\10.0.26100.0" = "c3b622aa5c0bbd4b88923497f9ce8051b395bdd108aa9b156e86a4a795e1ba28"
+"C:\\Program Files (x86)\\Windows Kits\\10\\UnionMetadata\\10.0.26100.0" = "6de456afa44d9e0f2037ff2797d2cf9708840df08c16efd990416336ee21fab0"
+"C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\arm64" = "23130a0c361eac681091660f4a2d0d121778649fc4ac617f5e75380b01fa44dc"
+"C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8.1\\Include\\um" = "60b0b6fd883489f5a36d63f49f20995b18c9342ee58e54ba9c82cbd78a6f977a"
+"C:\\Program Files (x86)\\Windows Kits\\NETFXSDK\\4.8.1\\Lib\\um\\arm64" = "a2260a1f6815753f92db60ca6fe464fc95935fedcbe5a1ce9a4f1fb7ebc81e14"
+"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Auxiliary\\VS\\include" = "40d7eee2d2a187f0f43e9fcaf3b9e77c1c521dddfff4972a8135e85020268584"
+"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.52.37025\\atlmfc\\include" = "0216bb01fe3336bfa836fdacaa6316a75c2a0169f3fbc4796eb02294b5735c02"
+"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.52.37025\\atlmfc\\lib\\arm64" = "f78e7af15bd5e80fc3084aafce75041edd399e047d66c4324a9a7c8ba6079d0d"
+"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.52.37025\\bin\\Hostarm64\\arm64" = "1b54a0423700ca991cf30c3c828dd2cc6bf8d8aaab7c7667c34cc9b73c977100"
+"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.52.37025\\include" = "9f194d553d7211ee5a95b5ad76405db31b7c5d45c9a3f16aca5bb383a4b385d0"
+"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.52.37025\\lib\\arm64" = "4962e2860635136d468d8f692c53d585b3ed06e4da7eadf3218d84338d2c6c9b"
+"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.52.37025\\lib\\x86\\store\\references" = "7557bb50ee4ac9f11f7566eac03435148671ec0eae6c7c7a164b72f6934d0345"
+"C:\\Users\\runneradmin\\.rustup\\toolchains\\1.96.0-aarch64-pc-windows-msvc" = "d6e287de6e91bd0f118c7be0597ad609bbab6e22dfaad13fc321522e02df26f4"
+"C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319" = "8d3b5a797ad6e47a1f27a76a7cd9d0d04cc37600aaf33a32077cbac3aa04c69a"
+"C:/Program Files/Microsoft Visual Studio/18/Enterprise/VC/Redist/MSVC/14.52.37025/arm64/Microsoft.VC145.CRT/concrt140.dll" = "fc6d1d408ea67d8800177d4553b81661b4f11153d1aec09961824b32331c6973"
+"C:/Program Files/Microsoft Visual Studio/18/Enterprise/VC/Redist/MSVC/14.52.37025/arm64/Microsoft.VC145.CRT/msvcp140.dll" = "64b700332f8985ed5319bc5e1ae0cdf86e8eb865a6900fa5a5c9eef5dca2329b"
+"C:/Program Files/Microsoft Visual Studio/18/Enterprise/VC/Redist/MSVC/14.52.37025/arm64/Microsoft.VC145.CRT/msvcp140_1.dll" = "0bd97a656abd7c8088a67f9c0b8d8f5d2c600b7b9e0d1b56f1bcb0e23474e3a8"
+"C:/Program Files/Microsoft Visual Studio/18/Enterprise/VC/Redist/MSVC/14.52.37025/arm64/Microsoft.VC145.CRT/msvcp140_2.dll" = "cc8fbb104c6dafcd05280ef50a7d5e087e1629d60076c541923cf04b101a5944"
+"C:/Program Files/Microsoft Visual Studio/18/Enterprise/VC/Redist/MSVC/14.52.37025/arm64/Microsoft.VC145.CRT/msvcp140_atomic_wait.dll" = "da1e44bf6170855d0975cc9f50baa9533972d0765c10738e31b7de90074c4f32"
+"C:/Program Files/Microsoft Visual Studio/18/Enterprise/VC/Redist/MSVC/14.52.37025/arm64/Microsoft.VC145.CRT/msvcp140_codecvt_ids.dll" = "9e43c6319d5aeb2984e243207517d0e374fe04133522c5a27f34071fccd38ad2"
+"C:/Program Files/Microsoft Visual Studio/18/Enterprise/VC/Redist/MSVC/14.52.37025/arm64/Microsoft.VC145.CRT/vcruntime140.dll" = "a38d7c7f459c8ec54b3909600f3fe0d598d35462435af22d774553362264037c"
+"C:/Program Files/Microsoft Visual Studio/18/Enterprise/VC/Redist/MSVC/14.52.37025/arm64/Microsoft.VC145.CRT/vcruntime140_1.dll" = "680589b1237d941fa3baf27b98dcde70b066f00bfd2560eb5f30fbcab3ef2a7e"
+"C:/Program Files/Microsoft Visual Studio/18/Enterprise/VC/Redist/MSVC/14.52.37025/arm64/Microsoft.VC145.CRT/vcruntime140_threads.dll" = "56397d475d4d4e1c6229db390bfe6eff84fa2816554aed80600a4bf697150e7f"
+"C:/Program Files/Microsoft Visual Studio/18/Enterprise/Licenses/1033/Redist.txt" = "848eefc3daf39962bda681b32afcd59b25786b2fca3067d243255f6d2e7fb4f7"
+"C:/Program Files/Microsoft Visual Studio/18/Enterprise/Licenses/1033/ThirdPartyNotices.txt" = "d07083164831030737d7e82b07037aa1d8313721625f7587cb71762b91fb6729"
+
+["environments"."windows-aarch64"."environment"."sdk"."tool_sha256"]
+"C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\arm64\\mt.exe" = "db0cb5b0efc210a65f6bf6527863e148b0020c919f42c9460c6b85abe34491b4"
+"C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\arm64\\rc.exe" = "74a0d1e76b13da53f63bc545e3be6035a4140d5b0637abe738006fb9ebb92094"
+"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.52.37025\\bin\\Hostarm64\\arm64\\cl.exe" = "e989545a94195f3d2d2fdf703803a2822a5618e423004e7052ff23005c4334e3"
+"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.52.37025\\bin\\Hostarm64\\arm64\\lib.exe" = "752980a63d599f652296f0be034049b5d21780f74f42cb10efb1a360ff99cc3b"
+"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.52.37025\\bin\\Hostarm64\\arm64\\link.exe" = "1aff960aa5228bb0e237287833b210733977f98ced6600607c1b15f28f9f7fa3"
+"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.52.37025\\bin\\Hostarm64\\arm64\\nmake.exe" = "b8abf95c0c73b5ac42fb303a0d62d46b11a412e1f490ec48a9df14481a81ee36"
+"C:\\Users\\runneradmin\\.rustup\\toolchains\\1.96.0-aarch64-pc-windows-msvc\\bin\\cargo.exe" = "8d506016f01ba2670978456af6e1aeacada99d1e10b7bf796bc722e0283a6e7b"
+"C:\\Users\\runneradmin\\.rustup\\toolchains\\1.96.0-aarch64-pc-windows-msvc\\bin\\rustc.exe" = "7023752ee5ba58f1affae308f86592327cee6bb6d35197c5c9d62add61119efc"
+
+["environments"."windows-aarch64"."windows_runtime"]
+"mode" = "follow-project"
+"libraries" = [{ "filename" = "concrt140.dll", "source" = "C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Redist\\MSVC\\14.52.37025\\arm64\\Microsoft.VC145.CRT\\concrt140.dll", "sha256" = "5a36fff29270b6bed8529cfaa9d4804895b03ef69c894f4520d8344ba6d0eb91", "arch" = "aarch64" }, { "filename" = "msvcp140.dll", "source" = "C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Redist\\MSVC\\14.52.37025\\arm64\\Microsoft.VC145.CRT\\msvcp140.dll", "sha256" = "a7e89c59986607f06e0e2089da757b928ab98374f6fa7e67126a1d54e0ed5d91", "arch" = "aarch64" }, { "filename" = "msvcp140_1.dll", "source" = "C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Redist\\MSVC\\14.52.37025\\arm64\\Microsoft.VC145.CRT\\msvcp140_1.dll", "sha256" = "8a57e9e55018aa5252448409ea99ae04c6f3d52a4dae9afa36673a218b4a6976", "arch" = "aarch64" }, { "filename" = "msvcp140_2.dll", "source" = "C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Redist\\MSVC\\14.52.37025\\arm64\\Microsoft.VC145.CRT\\msvcp140_2.dll", "sha256" = "0d2c83596f72f8bd7dcdb83624c97d46f4ee0b39ab187cbfde671799ba525498", "arch" = "aarch64" }, { "filename" = "msvcp140_atomic_wait.dll", "source" = "C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Redist\\MSVC\\14.52.37025\\arm64\\Microsoft.VC145.CRT\\msvcp140_atomic_wait.dll", "sha256" = "6b808d89a4a5db1e5ecfdb8300a659f96f14a51b1a897f5534378147f8dfa2e0", "arch" = "aarch64" }, { "filename" = "msvcp140_codecvt_ids.dll", "source" = "C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Redist\\MSVC\\14.52.37025\\arm64\\Microsoft.VC145.CRT\\msvcp140_codecvt_ids.dll", "sha256" = "34e5a61d2b7ed9ad5e97bcc395ba1985f2b4ad6f5f6241df2cec0e31dc729da0", "arch" = "aarch64" }, { "filename" = "vcruntime140.dll", "source" = "C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Redist\\MSVC\\14.52.37025\\arm64\\Microsoft.VC145.CRT\\vcruntime140.dll", "sha256" = "c600aff0ed497ae5c0e4e5cc515b31e0c694f01e893b1b1038441235a037f7f3", "arch" = "aarch64" }, { "filename" = "vcruntime140_1.dll", "source" = "C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Redist\\MSVC\\14.52.37025\\arm64\\Microsoft.VC145.CRT\\vcruntime140_1.dll", "sha256" = "8aff83cdb6989d2ab849429c9b08d9af0623d7c403149a7d4393ac559a4d741e", "arch" = "aarch64" }, { "filename" = "vcruntime140_threads.dll", "source" = "C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Redist\\MSVC\\14.52.37025\\arm64\\Microsoft.VC145.CRT\\vcruntime140_threads.dll", "sha256" = "60058e7ff82ec151b820851d128f5799126f9a973001316b259b338fdfa0a7d5", "arch" = "aarch64" }]
+"licenses" = [{ "source" = "C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\Licenses\\1033\\Redist.txt", "sha256" = "2d69e3b0ac782d5513b503bafdf269a93c4fec0f1f8efac82bfbfa4b6296aef5", "destination" = "licenses/windows-crt/Redist.txt" }, { "source" = "C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\Licenses\\1033\\ThirdPartyNotices.txt", "sha256" = "c18053db908528af47ca838e482442ae822d8bf7fef93b9d6e8f043a38d378db", "destination" = "licenses/windows-crt/ThirdPartyNotices.txt" }]
+
+["workers"]
+
+["workers"."linux-x86_64"]
+"targets" = ["linux-x86_64-gnu", "linux-x86_64"]
+
+["workers"."linux-x86_64"."runner"]
+"host" = "linux-x86_64"
+"runs-on" = ["ubuntu-24.04"]
+"rust-version" = "1.96.0"
+"go-version" = "1.27.4"
+
+["workers"."linux-x86_64"."runner"."nfpm"]
+"version" = "2.49.0"
+"sha256" = "d07fc4ebda767b9153c3ad4160cda8dc0d7efe879f632a6c8ee23170778dbc4e"
+
+["workers"."linux-aarch64"]
+"targets" = ["linux-aarch64-gnu", "linux-aarch64"]
+
+["workers"."linux-aarch64"."runner"]
+"host" = "linux-aarch64"
+"runs-on" = ["ubuntu-24.04-arm"]
+"rust-version" = "1.96.0"
+"go-version" = "1.27.4"
+
+["workers"."linux-aarch64"."runner"."nfpm"]
+"version" = "2.49.0"
+"sha256" = "046c387b16c35f97b80507db3876af679d6cdf8f333cce07d6abe7a2b88f7731"
+
+["workers"."macos-x86_64"]
+"targets" = ["macos-x86_64"]
+
+["workers"."macos-x86_64"."runner"]
+"host" = "macos-x86_64"
+"runs-on" = ["macos-15-intel"]
+"rust-version" = "1.96.0"
+
+["workers"."macos-aarch64"]
+"targets" = ["macos-aarch64"]
+
+["workers"."macos-aarch64"."runner"]
+"host" = "macos-aarch64"
+"runs-on" = ["macos-15"]
+"rust-version" = "1.96.0"
+
+["workers"."windows-x86_64"]
+"targets" = ["windows-x86_64-msvc"]
+
+["workers"."windows-x86_64"."runner"]
+"host" = "windows-x86_64"
+"runs-on" = ["windows-2022"]
+"rust-version" = "1.96.0"
+
+["workers"."windows-aarch64"]
+"targets" = ["windows-aarch64-msvc"]
+
+["workers"."windows-aarch64"."runner"]
+"host" = "windows-aarch64"
+"runs-on" = ["windows-11-vs2026-arm"]
+"rust-version" = "1.96.0"
+
+["coordinator"]
+"host" = "linux-x86_64"
+"runs-on" = ["ubuntu-24.04"]
+
+["trusted"]
+"branch" = "acceptance/cmake-six-platform-20261117"
+"environment" = "relship-acceptance-sealing"
+"signing-secret" = "RELSHIP_ACCEPTANCE_SIGNING_KEY"
+
+["delivery"]
+"repository" = "s3loy/cli-release-kit-acceptance"
+"environment" = "relship-acceptance-delivery"
+"policy" = "release-policy.toml"

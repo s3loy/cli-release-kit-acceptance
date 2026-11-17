@@ -2,11 +2,6 @@ name: Native SDK curation and test engine bootstrap
 
 on:
   workflow_dispatch:
-  push:
-    branches: [acceptance/cmake-six-platform-20261117]
-    paths:
-      - .github/workflows/native-curation.yml
-      - ci/native-curation/**
 
 permissions:
   contents: read

@@ -1,0 +1,11 @@
+{
+  "version": 6,
+  "configurePresets": [{
+    "name": "release",
+    "binaryDir": "${sourceDir}/preset-output-must-not-be-used",
+    "cacheVariables": {
+      "CMAKE_BUILD_TYPE": "Release",
+      "BIRD_ACCEPTANCE_MESSAGE": "source-preset-checked"
+    }
+  }]
+}

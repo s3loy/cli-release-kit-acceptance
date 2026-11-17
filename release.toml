@@ -1,24 +1,19 @@
-schema=2
-timeout-seconds=120
-[[targets]]
-os="macos"
-arch="aarch64"
-[[products]]
-id="rust-demo"
-directory="rust"
-binaries=["sparrow"]
-assets=[{source="README.md",path="README.md"},{source="LICENSE",path="LICENSE"}]
-checks=[{command=["python3","release/check.py"]}]
-[products.build]
-kind="rust"
-package="sparrow"
-[[products]]
-id="go-demo"
-directory="go"
-binaries=["go-demo"]
-assets=[{source="README.md",path="README.md"},{source="LICENSE",path="LICENSE"}]
-checks=[{command=["python3","release/check.py"]}]
-[products.build]
-kind="go"
-version="0.8.1"
-packages=["."]
+"schema" = 5
+"targets" = ["linux-x86_64-gnu", "linux-aarch64-gnu", "macos-x86_64", "macos-aarch64", "windows-x86_64-msvc", "windows-aarch64-msvc", "linux-x86_64", "linux-aarch64"]
+"timeout-seconds" = 300
+"products" = [{ "id" = "c-demo", "directory" = "native-cmake", "binaries" = ["bird"], "build" = { "kind" = "cmake", "version" = "1.2.3", "configure-preset" = "release", "binary-targets" = [{ "binary" = "bird", "target" = "native-cli" }], "cache-variables" = { "BIRD_CRT" = "MultiThreaded", "BIRD_APP_NAME" = "bird" } }, "targets" = ["linux-x86_64-gnu", "linux-aarch64-gnu", "macos-x86_64", "macos-aarch64", "windows-x86_64-msvc", "windows-aarch64-msvc"], "checks" = [{ "command" = ["{binary}", "--echo", "packaged-checked"] }, { "command" = ["{binary}", "--preset-check"] }], "assets" = [{ "source" = "LICENSE", "path" = "LICENSE" }], "packaging" = { "native" = { "name" = "c-demo", "description" = "Native CLI acceptance fixture", "license" = "MIT", "maintainer" = "Relship acceptance <acceptance@example.invalid>", "homepage" = "https://github.com/s3loy/cli-release-kit-acceptance", "install" = [{ "source" = "bird", "destination" = "/usr/bin/bird" }, { "source" = "LICENSE", "destination" = "/usr/share/licenses/c-demo/LICENSE" }] } } }, { "id" = "c-dynamic", "directory" = "native-cmake", "binaries" = ["bird-dynamic"], "build" = { "kind" = "cmake", "version" = "1.2.3", "configure-preset" = "release", "binary-targets" = [{ "binary" = "bird-dynamic", "target" = "native-cli" }], "cache-variables" = { "BIRD_CRT" = "MultiThreadedDLL", "BIRD_APP_NAME" = "bird-dynamic" } }, "targets" = ["windows-x86_64-msvc", "windows-aarch64-msvc"], "checks" = [{ "command" = ["{binary}", "--echo", "packaged-checked"] }, { "command" = ["{binary}", "--preset-check"] }], "assets" = [{ "source" = "LICENSE", "path" = "LICENSE" }] }, { "id" = "rust-demo", "directory" = "rust", "binaries" = ["sparrow"], "build" = { "kind" = "rust", "package" = "sparrow" }, "targets" = ["linux-x86_64-gnu", "linux-aarch64-gnu"], "checks" = [{ "command" = ["{binary}", "--json"] }], "assets" = [{ "source" = "LICENSE", "path" = "LICENSE" }], "packaging" = { "native" = { "name" = "rust-demo", "description" = "Native CLI acceptance fixture", "license" = "MIT", "maintainer" = "Relship acceptance <acceptance@example.invalid>", "homepage" = "https://github.com/s3loy/cli-release-kit-acceptance", "install" = [{ "source" = "sparrow", "destination" = "/usr/bin/sparrow" }, { "source" = "LICENSE", "destination" = "/usr/share/licenses/rust-demo/LICENSE" }] } } }, { "id" = "go-demo", "directory" = "go", "binaries" = ["go-demo"], "build" = { "kind" = "go", "version" = "0.8.1", "packages" = ["."] }, "targets" = ["linux-x86_64", "linux-aarch64"], "checks" = [{ "command" = ["{binary}", "--json"] }], "assets" = [{ "source" = "LICENSE", "path" = "LICENSE" }], "packaging" = { "native" = { "name" = "go-demo", "description" = "Native CLI acceptance fixture", "license" = "MIT", "maintainer" = "Relship acceptance <acceptance@example.invalid>", "homepage" = "https://github.com/s3loy/cli-release-kit-acceptance", "install" = [{ "source" = "go-demo", "destination" = "/usr/bin/go-demo" }, { "source" = "LICENSE", "destination" = "/usr/share/licenses/go-demo/LICENSE" }] } } }, { "id" = "relship", "directory" = "ci/native-curation/engine-src", "binaries" = ["relship"], "build" = { "kind" = "rust", "package" = "relship" }, "targets" = ["linux-x86_64-gnu", "linux-aarch64-gnu", "macos-x86_64", "macos-aarch64", "windows-x86_64-msvc", "windows-aarch64-msvc"], "checks" = [{ "command" = ["{binary}", "build-info", "--json", "--expect-source-id", "ab332de89dc5332a1630e9f0403eb8f44c95ffce1f41068f0517b32c969d12bb"] }, { "command" = ["{binary}", "targets", "--builder", "cmake", "--json"] }], "assets" = [{ "source" = "ci/native-curation/engine-src/LICENSE", "path" = "LICENSE" }], "packaging" = { "native" = { "name" = "relship", "description" = "Source-bound release planning and artifact verification", "license" = "MIT", "maintainer" = "s3loy <1915276056@qq.com>", "homepage" = "https://github.com/s3loy/cli-release-kit", "install" = [{ "source" = "relship", "destination" = "/usr/bin/relship" }, { "source" = "LICENSE", "destination" = "/usr/share/licenses/relship/LICENSE" }] } } }]
+
+["compatibility"]
+
+["compatibility"."linux"]
+"policy" = "broad"
+
+["compatibility"."windows"]
+"crt" = "follow-project"
+
+["packaging"]
+
+["packaging"."formats"]
+"linux" = ["tar.gz", "zip", "deb", "rpm"]
+"macos" = ["tar.gz", "zip"]
+"windows" = ["zip"]
