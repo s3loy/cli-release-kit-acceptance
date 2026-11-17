@@ -1,0 +1,55 @@
+name: Capture explicit native SDK component sets
+on:
+  push:
+    branches: [acceptance/cmake-six-platform-20261117]
+    paths:
+      - .github/workflows/sdk-stability.yml
+      - ci/sdk-stability/**
+permissions:
+  contents: read
+  actions: read
+jobs:
+  capture:
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - host: macos-x86_64
+            runner: macos-15-intel
+            run-id: 44094675424
+          - host: macos-aarch64
+            runner: macos-15
+            run-id: 44094675424
+          - host: windows-x86_64
+            runner: windows-2022
+            run-id: 44091811814
+          - host: windows-aarch64
+            runner: windows-11-vs2026-arm
+            run-id: 44091811814
+    runs-on: ${{ matrix.runner }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+          fetch-depth: 1
+      - name: Download the recorded native SDK inspector
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+        with:
+          name: native-curation-${{ matrix.host }}-${{ matrix.run-id }}-1
+          run-id: ${{ matrix.run-id }}
+          github-token: ${{ github.token }}
+          path: ${{ runner.temp }}/relship-sdk-inspector
+      - name: Verify inspector bytes and capture explicit SDK components
+        env:
+          NATIVE_HOST: ${{ matrix.host }}
+        run: python ci/sdk-stability/capture.py
+      - name: Retain review candidates and diagnostics
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        with:
+          name: sdk-stability-${{ matrix.host }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/relship-sdk-stability/
+          retention-days: 3
+          if-no-files-found: error

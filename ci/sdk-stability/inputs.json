@@ -1,0 +1,36 @@
+{
+  "hosts": {
+    "macos-x86_64": {
+      "run_id": 44094675424,
+      "engine_filename": "relship",
+      "engine_sha256": "771b6a677520d4d5db49f613cb2f4d0ad7eb9c8995d67e29441c2fefcf153ffd",
+      "engine_source_id": "84f7c10a804cb5c492e1515fba7e2e3ba55e2bd56045a94dd036c3be6c12996f",
+      "rust_host": "x86_64-apple-darwin",
+      "sdk_json_sha256": "a2e2193b5bd08d9b2360018b1110c28eed38cf7800df9b29543b7eb501bc5908"
+    },
+    "macos-aarch64": {
+      "run_id": 44094675424,
+      "engine_filename": "relship",
+      "engine_sha256": "e2ba43ba39ac216b717c4e3b56b857ecb75e3ffb2d5d191fa0b077869925494e",
+      "engine_source_id": "84f7c10a804cb5c492e1515fba7e2e3ba55e2bd56045a94dd036c3be6c12996f",
+      "rust_host": "aarch64-apple-darwin",
+      "sdk_json_sha256": "e57a789ca3e9afad66589367b3679eda04642a37b572cc589e003a3d550bc772"
+    },
+    "windows-x86_64": {
+      "run_id": 44091811814,
+      "engine_filename": "relship.exe",
+      "engine_sha256": "ca0430eac28d7c21ccbb2c11de3a61632a3f7dbb16799825e6b3ce59553c7775",
+      "engine_source_id": "84f7c10a804cb5c492e1515fba7e2e3ba55e2bd56045a94dd036c3be6c12996f",
+      "rust_host": "x86_64-pc-windows-msvc",
+      "sdk_json_sha256": "5c4f61dd0b7f09ba165591283b1ca487d5e466d6c108d146c79871b98bdd5908"
+    },
+    "windows-aarch64": {
+      "run_id": 44091811814,
+      "engine_filename": "relship.exe",
+      "engine_sha256": "2c00baf8399de1a3b48082a392ff7edcb43e41dc308552f6e388c981a03f645d",
+      "engine_source_id": "84f7c10a804cb5c492e1515fba7e2e3ba55e2bd56045a94dd036c3be6c12996f",
+      "rust_host": "aarch64-pc-windows-msvc",
+      "sdk_json_sha256": "7c4b2713ffc0332fac5a665d88708c60b07d0d27993113a35faf122d5e341a6a"
+    }
+  }
+}
