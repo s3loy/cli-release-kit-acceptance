@@ -31,6 +31,7 @@ def sha(path):
 
 def run(name, command, *, cwd=None, env=None, timeout=120, persist=True):
     argv = [str(s) for s in command]
+    print(f"curation: {name} (timeout {timeout}s)", flush=True)
     try:
         result = subprocess.run(argv, cwd=cwd, env=env,
                                 capture_output=True, text=True, errors="replace", timeout=timeout)

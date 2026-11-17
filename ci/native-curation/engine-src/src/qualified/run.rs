@@ -1,4 +1,5 @@
 //! Checkpointed execution. Compilers never receive a signing key.
+use super::sdk_progress::Progress;
 use super::{model::*, plan};
 use crate::{
     cohort::{self, io},
@@ -96,6 +97,7 @@ pub fn sdk_tree(root: &Path) -> Result<String> {
         root: &Path,
         at: &Path,
         entries: &mut BTreeMap<String, (String, String)>,
+        progress: &mut Progress,
     ) -> Result<()> {
         let mut children = fs::read_dir(at)?.collect::<std::io::Result<Vec<_>>>()?;
         children.sort_by_key(|e| e.file_name());
@@ -117,25 +119,32 @@ pub fn sdk_tree(root: &Path) -> Result<String> {
                     ),
                 );
             } else if m.is_dir() {
-                walk(root, &p, entries)?;
+                walk(root, &p, entries, progress)?;
             } else {
                 ensure!(m.is_file(), "SDK contains a special file");
                 entries.insert(name, ("file".into(), source::file_digest(&p)?));
             }
+            progress.visit(&p, &m);
         }
         Ok(())
     }
     ensure!(root.is_absolute(), "SDK input must be an absolute path");
+    let mut progress = Progress::new(root, "inventory");
     if root.is_file() {
-        return plan::content_id(b"relship/native-sdk-file/v1\0", &source::file_digest(root)?);
+        let result = plan::content_id(b"relship/native-sdk-file/v1\0", &source::file_digest(root)?);
+        progress.visit(root, &fs::metadata(root)?);
+        progress.finish();
+        return result;
     }
     ensure!(
         root.is_dir(),
         "SDK input must be a regular file or directory"
     );
     let mut entries = BTreeMap::new();
-    walk(root, root, &mut entries)?;
-    plan::content_id(b"relship/native-sdk-tree/v1\0", &entries)
+    walk(root, root, &mut entries, &mut progress)?;
+    let result = plan::content_id(b"relship/native-sdk-tree/v1\0", &entries);
+    progress.finish();
+    result
 }
 pub fn inspect_sdk(
     id: &str,
@@ -2072,7 +2081,12 @@ struct CommandEvidence {
     spawn_error: Option<String>,
 }
 fn validate_sdk_links(roots: &BTreeMap<String, String>) -> Result<()> {
-    fn walk(at: &Path, roots: &BTreeMap<String, String>, count: &mut usize) -> Result<()> {
+    fn walk(
+        at: &Path,
+        roots: &BTreeMap<String, String>,
+        count: &mut usize,
+        progress: &mut Progress,
+    ) -> Result<()> {
         if at.is_file() {
             return Ok(());
         }
@@ -2091,14 +2105,17 @@ fn validate_sdk_links(roots: &BTreeMap<String, String>) -> Result<()> {
                     "SDK link target is outside all pinned SDK roots"
                 );
             } else if m.is_dir() {
-                walk(&path, roots, count)?;
+                walk(&path, roots, count, progress)?;
             }
+            progress.visit(&path, &m);
         }
         Ok(())
     }
     let mut count = 0;
     for root in roots.keys() {
-        walk(Path::new(root), roots, &mut count)?;
+        let mut progress = Progress::new(Path::new(root), "links");
+        walk(Path::new(root), roots, &mut count, &mut progress)?;
+        progress.finish();
     }
     Ok(())
 }

@@ -4,4 +4,5 @@ pub mod config;
 pub mod model;
 pub mod plan;
 pub mod run;
+mod sdk_progress;
 pub mod toolchain;

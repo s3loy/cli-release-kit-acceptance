@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "kind": "uncommitted-engine-source-copy",
-  "engine_source_id": "f06b8569a6cfbdf16c77a97b89debc5eabb3a920d7b286936b5bf96bb66191df",
+  "engine_source_id": "84f7c10a804cb5c492e1515fba7e2e3ba55e2bd56045a94dd036c3be6c12996f",
   "git_commit_claim": null,
   "files": {
     "Cargo.lock": "fabe7e147ab29cde1cb3c9c3290b7368d8420b5331b8b35c2a2d67684733bf43",
@@ -108,10 +108,11 @@
     "src/process.rs": "c46efb4901a728430cf923987e6f3555ebdfda0e292d825a6255f9525575d06b",
     "src/qualified/cmake_boundary.rs": "9b08f7b84c8ed21a2867a97878153afcc67fbcbde7d4eb1bf09d5e4bbb51edfb",
     "src/qualified/config.rs": "a3b713c5c95ea6cc01442de13a5caa6a9c773b899540552b11fd230b09beddb5",
-    "src/qualified/mod.rs": "ac4e1072ace228fe00dfff28e8e000e2155a9a00c666c79236e6af10fc9ee23d",
+    "src/qualified/mod.rs": "ca48e724d4c57c211e7b8b7d428324b42dc4aee4c3145b79fffb1819c4185dcb",
     "src/qualified/model.rs": "e1d16d4f334d7108c8623217b4e48ecfe161aed17e2c339fb7152db2cfc95c90",
     "src/qualified/plan.rs": "84c821eba8bd971c49806b64e25536cedfb2dc556083d65a43ab28c9469a0d25",
-    "src/qualified/run.rs": "36d78218f5340b961af43c401f318455fa39068e6abb22437553518917ab46f5",
+    "src/qualified/run.rs": "795f08a8e231e6a13f28be055d7ff99753028d9f9cfc7a7e644ed873c835b36a",
+    "src/qualified/sdk_progress.rs": "b04073f5066c472cd9cae24240d61abd394864a51f587b6e7423bd244f999ea2",
     "src/qualified/toolchain.rs": "96b2b4037bd46f62ae5e42ccabd639f1177153cb64d4f1d40eb283cc1d5af116",
     "src/qualified_cli.rs": "f20f74f4da4d4ec58a44a22971da48559ef9e49ad72180194899828ed0bfe291",
     "src/settings.rs": "b763bc9c9d01d7ee1643c5855b59856c5b4136cba59016d9f5240e04d77bcaa8",
