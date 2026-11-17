@@ -26,18 +26,8 @@ jobs:
       max-parallel: 6
       matrix:
         include:
-          - host: linux-x86_64
-            runner: ubuntu-24.04
-            rust_host: x86_64-unknown-linux-gnu
-          - host: linux-aarch64
-            runner: ubuntu-24.04-arm
-            rust_host: aarch64-unknown-linux-gnu
-          - host: macos-x86_64
-            runner: macos-15-intel
-            rust_host: x86_64-apple-darwin
-          - host: macos-aarch64
-            runner: macos-15
-            rust_host: aarch64-apple-darwin
+          # Targeted repair run; the original four Unix jobs remain in run
+          # 44075531111 against the same frozen engine source identity.
           - host: windows-x86_64
             runner: windows-2022
             rust_host: x86_64-pc-windows-msvc

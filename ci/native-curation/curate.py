@@ -154,9 +154,17 @@ def windows_candidate():
         raise ValueError("no single Visual Studio candidate installation")
     vs = Path(selected)
     arch = "arm64" if HOST.endswith("aarch64") else "amd64"
-    command = f'call "{vs / "Common7/Tools/VsDevCmd.bat"}" -no_logo -arch={arch} -host_arch={arch} >nul && set'
+    # Keep cmd.exe's /c argument free of nested quotes: Python's Windows argv
+    # quoting targets the C runtime and is not cmd.exe batch quoting.
+    script = OUTPUT / "capture-vs-env.cmd"
+    script.write_text(
+        f'@echo off\ncall "{vs / "Common7/Tools/VsDevCmd.bat"}" '
+        f'-no_logo -arch={arch} -host_arch={arch} '
+        '>vsdevcmd.stdout.log 2>vsdevcmd.stderr.log\n'
+        'if errorlevel 1 exit /b %errorlevel%\nset\n', encoding="utf-8")
     # Keep the complete SET output in memory only. It can contain CI credentials.
-    raw = run("vsdevcmd", ["cmd.exe", "/d", "/s", "/c", command], persist=False)
+    raw = run("vsdevcmd", ["cmd.exe", "/d", "/s", "/c", script.name],
+              cwd=OUTPUT, persist=False)
     env = os.environ.copy()
     for line in raw.splitlines():
         if "=" in line and not line.startswith("="):
