@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "kind": "uncommitted-engine-source-copy",
-  "engine_source_id": "84f7c10a804cb5c492e1515fba7e2e3ba55e2bd56045a94dd036c3be6c12996f",
+  "engine_source_id": "ab332de89dc5332a1630e9f0403eb8f44c95ffce1f41068f0517b32c969d12bb",
   "git_commit_claim": null,
   "files": {
     "Cargo.lock": "fabe7e147ab29cde1cb3c9c3290b7368d8420b5331b8b35c2a2d67684733bf43",
@@ -76,7 +76,7 @@
     "src/compatibility/pins/runtime239-x86_64-manifest.json": "77eb101c607d6e3d4f5ad0c8a02c2136c689b98aba1f359e6502ba517e5c57ec",
     "src/compatibility/pins/rust-key.gpg.ascii": "e54b09a439647e006b4831eec9785cbaaf3e07ab371c3a6ee6a68e1bdb9fbc6b",
     "src/compatibility/pins/rust-signature-status.txt": "b077632190e366983115899b60ada53fe8f7628f2355fc4d359cedf480b96663",
-    "src/compatibility/windows_crt.rs": "db409d11db9d94493e10b2e4926aaaa0bbc0d3901eac37f55fb2896c639205f5",
+    "src/compatibility/windows_crt.rs": "b558a48cdd5f83ab5bae2f02955f0dbe637e16ab304023a211ab525260d3bd0b",
     "src/compatibility/x86_64-image-pins.json": "7baa610d75f577dbda8016abc29b8b70edfa78a547d05f866ecb40a0fcb55f72",
     "src/config.rs": "2453a4ee669c393654be20cd09008f688f6b7c17251d42698c93bc39e7c0ceb2",
     "src/delivery/bundle.rs": "ab2d232f7d99c21a0c83af3de286e2812030420476583f0ebfbf48fe6e7a3882",

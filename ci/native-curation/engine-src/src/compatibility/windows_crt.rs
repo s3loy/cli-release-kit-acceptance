@@ -239,9 +239,8 @@ fn native_source_path(path: &Path) -> Result<String> {
 fn in_sdk(source: &str, sdk: &NativeSdkExpectation) -> Result<()> {
     let source = normalized_absolute(source)?;
     ensure!(
-        sdk.roots
-            .keys()
-            .any(|root| normalized_absolute(root).is_ok_and(|root| within(&source, &root))),
+        sdk.roots.keys().any(|root| normalized_absolute(root)
+            .is_ok_and(|root| source == root || within(&source, &root))),
         "Windows runtime input is outside all planned SDK roots"
     );
     Ok(())
@@ -452,13 +451,14 @@ fn read_bounded_input(source: &str, sdk: &NativeSdkExpectation, maximum: u64) ->
     );
     let actual = fs::canonicalize(path)?;
     ensure!(
-        sdk.roots.keys().any(|root| fs::canonicalize(root)
-            .is_ok_and(|root| actual != root && actual.starts_with(root))),
+        sdk.roots
+            .keys()
+            .any(|root| fs::canonicalize(root).is_ok_and(|root| actual.starts_with(root))),
         "Windows runtime input resolves outside pinned SDK roots"
     );
     // Reject a symlinked ancestor inside the declared root. Host aliases above
     // that root (for example macOS /var -> /private/var) do not change its tree.
-    for ancestor in path.ancestors().skip(1) {
+    for ancestor in path.ancestors() {
         ensure!(
             !fs::symlink_metadata(ancestor)?.file_type().is_symlink(),
             "Windows runtime input has a symlinked ancestor"
